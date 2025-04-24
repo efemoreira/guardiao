@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { planos } from "./utils";
 
 export default function Planos() {
