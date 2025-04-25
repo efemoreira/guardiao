@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SEOSchemas from "./components/SEOSchemas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,6 +74,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" dir="ltr">
+      <head>
+        <SEOSchemas />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
