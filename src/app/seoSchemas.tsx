@@ -1,8 +1,3 @@
-// filepath: /Users/felipemoreira/development/guardiao/src/app/seoSchemas.tsx
-
-// Função para gerar a data atual no formato ISO
-const getCurrentDate = () => new Date().toISOString();
-
 // Esquema principal da organização
 export const organizationSchema = {
   "@context": "https://schema.org",

@@ -1,12 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function HeaderSection() {
   return (
     <header className="bg-red-600 text-white p-6 shadow-md fixed w-full z-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <a href="/" aria-label="Página inicial Guardião Extintores">
+        <Link href="/" aria-label="Página inicial Guardião Extintores">
           <h1 className="text-2xl font-bold">Proteja Já</h1>
-        </a>
+        </Link>
         <nav aria-label="Menu principal" className="space-x-6 mt-4 md:mt-0">
           <a href="#sobre" className="hover:underline" aria-label="Sobre nossa empresa">Sobre</a>
           <a href="#servicos" className="hover:underline" aria-label="Nossos serviços">Serviços</a>
