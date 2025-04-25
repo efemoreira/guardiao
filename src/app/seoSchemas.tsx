@@ -4,8 +4,8 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "Guardião Extintores",
   "alternateName": "Proteja Já",
-  "url": "https://guardiao-extintores.com.br",
-  "logo": "https://guardiao-extintores.com.br/logo.png",
+  "url": "https://guardiao.felipesmoreira.com",
+  "logo": "https://guardiao.felipesmoreira.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+5599999999999",
@@ -147,30 +147,30 @@ export const howToSchema = {
       "@type": "HowToStep",
       "name": "Escolha o Plano",
       "text": "Selecione o melhor plano para sua necessidade",
-      "image": "https://guardiao-extintores.com.br/imagens/escolha-plano.jpg",
-      "url": "https://guardiao-extintores.com.br/#planos",
+      "image": "https://guardiao.felipesmoreira.com/imagens/escolha-plano.jpg",
+      "url": "https://guardiao.felipesmoreira.com/#planos",
       "position": 1
     },
     {
       "@type": "HowToStep",
       "name": "Agende uma Visita",
       "text": "Nossos especialistas irão até você para avaliação",
-      "image": "https://guardiao-extintores.com.br/imagens/agende-visita.jpg",
-      "url": "https://guardiao-extintores.com.br/#contato",
+      "image": "https://guardiao.felipesmoreira.com/imagens/agende-visita.jpg",
+      "url": "https://guardiao.felipesmoreira.com/#contato",
       "position": 2
     },
     {
       "@type": "HowToStep",
       "name": "Receba o Atendimento",
       "text": "Realizamos todos os serviços necessários no local",
-      "image": "https://guardiao-extintores.com.br/imagens/receba-atendimento.jpg",
+      "image": "https://guardiao.felipesmoreira.com/imagens/receba-atendimento.jpg",
       "position": 3
     },
     {
       "@type": "HowToStep",
       "name": "Fique Tranquilo",
       "text": "Sua segurança está garantida com a gente",
-      "image": "https://guardiao-extintores.com.br/imagens/seguranca-garantida.jpg",
+      "image": "https://guardiao.felipesmoreira.com/imagens/seguranca-garantida.jpg",
       "position": 4
     }
   ]
@@ -220,7 +220,7 @@ export const footerSchema = {
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "isPartOf": {
-      "@id": "https://guardiao-extintores.com.br/#website"
+      "@id": "https://guardiao.felipesmoreira.com/#website"
     },
     "hasPart": [
       {
@@ -231,17 +231,17 @@ export const footerSchema = {
           {
             "@type": "WebPage",
             "name": "Sobre",
-            "url": "https://guardiao-extintores.com.br/#sobre"
+            "url": "https://guardiao.felipesmoreira.com/#sobre"
           },
           {
             "@type": "WebPage",
             "name": "Serviços",
-            "url": "https://guardiao-extintores.com.br/#servicos"
+            "url": "https://guardiao.felipesmoreira.com/#servicos"
           },
           {
             "@type": "WebPage",
             "name": "Planos",
-            "url": "https://guardiao-extintores.com.br/#planos"
+            "url": "https://guardiao.felipesmoreira.com/#planos"
           }
         ]
       }

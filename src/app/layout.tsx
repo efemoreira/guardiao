@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SEOSchemas from "@/components/common/SEOSchemas";
@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
   description: "Especialistas em proteção contra incêndio com mais de 10 anos de experiência. Oferecemos extintores, recargas, inspeções e soluções completas para a segurança do seu estabelecimento.",
@@ -26,14 +32,9 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
-  metadataBase: new URL("https://guardiao-extintores.com.br"),
+  metadataBase: new URL("https://guardiao.felipesmoreira.com"),
   alternates: {
     canonical: "/",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
   },
   robots: {
     index: true,
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://guardiao-extintores.com.br",
+    url: "https://guardiao.felipesmoreira.com",
     title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
     description: "Especialistas em proteção contra incêndio com mais de 10 anos de experiência. Extintores, recargas e inspeções.",
     siteName: "Guardião Extintores",
