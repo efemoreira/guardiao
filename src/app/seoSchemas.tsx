@@ -249,8 +249,16 @@ export const footerSchema = {
   }
 };
 
+// Interface para os planos
+export interface Plano {
+  nome: string;
+  inspecoes: number;
+  recargas: number;
+  preco: number;
+}
+
 // Função para gerar esquema de planos com base nos planos disponíveis
-export const getPlansSchema = (planos: any[]) => {
+export const getPlansSchema = (planos: Plano[]) => {
   const offers = planos.map((plano) => ({
     "@type": "Offer",
     "itemOffered": {
