@@ -1,40 +1,102 @@
 import React from 'react';
+import Script from 'next/script';
 
 export default function FooterSection() {
+  // Schema para siteNavigationElement para melhorar SEO de navegação
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WPFooter",
+    "copyrightYear": new Date().getFullYear(),
+    "copyrightHolder": {
+      "@type": "Organization",
+      "name": "Guardião Extintores"
+    },
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "isPartOf": {
+        "@id": "https://guardiao-extintores.com.br/#website"
+      },
+      "hasPart": [
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Links Rápidos",
+          "description": "Menu de navegação rápida do rodapé",
+          "containsPlace": [
+            {
+              "@type": "WebPage",
+              "name": "Sobre",
+              "url": "https://guardiao-extintores.com.br/#sobre"
+            },
+            {
+              "@type": "WebPage",
+              "name": "Serviços",
+              "url": "https://guardiao-extintores.com.br/#servicos"
+            },
+            {
+              "@type": "WebPage",
+              "name": "Planos",
+              "url": "https://guardiao-extintores.com.br/#planos"
+            }
+          ]
+        }
+      ]
+    }
+  };
+
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <h4 className="font-bold text-lg mb-4">Proteja Já</h4>
-            <p className="text-gray-400">Sua segurança é nossa prioridade</p>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Links Rápidos</h4>
-            <ul className="space-y-2">
-              <li><a href="#sobre" className="text-gray-400 hover:text-white">Sobre</a></li>
-              <li><a href="#servicos" className="text-gray-400 hover:text-white">Serviços</a></li>
-              <li><a href="#planos" className="text-gray-400 hover:text-white">Planos</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Contato</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>📱 (99) 99999-9999</li>
-              <li>📧 contato@protejaja.com.br</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-4">Redes Sociais</h4>
-            <div className="flex space-x-4">
-              {/* Adicione seus ícones de redes sociais aqui */}
+    <>
+      <Script
+        id="footer-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <footer className="bg-gray-800 text-white py-8" role="contentinfo">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h2 className="font-bold text-lg mb-4">Proteja Já</h2>
+              <p className="text-gray-400">Sua segurança é nossa prioridade</p>
+            </div>
+            <div>
+              <h2 className="font-bold text-lg mb-4">Links Rápidos</h2>
+              <nav aria-label="Links rápidos do rodapé">
+                <ul className="space-y-2">
+                  <li><a href="#sobre" className="text-gray-400 hover:text-white" aria-label="Ir para seção sobre nós">Sobre</a></li>
+                  <li><a href="#servicos" className="text-gray-400 hover:text-white" aria-label="Ir para seção nossos serviços">Serviços</a></li>
+                  <li><a href="#planos" className="text-gray-400 hover:text-white" aria-label="Ir para seção planos de assinatura">Planos</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h2 className="font-bold text-lg mb-4">Contato</h2>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="tel:+5599999999999" aria-label="Ligar para nosso telefone">(99) 99999-9999</a></li>
+                <li><a href="mailto:contato@protejaja.com.br" aria-label="Enviar email para nós">contato@protejaja.com.br</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-bold text-lg mb-4">Redes Sociais</h2>
+              <div className="flex space-x-4">
+                <a href="https://facebook.com/guardiaoextintores" target="_blank" rel="noopener noreferrer" aria-label="Facebook Guardião Extintores">
+                  <span className="sr-only">Facebook</span>
+                  {/* Ícone do Facebook */}
+                </a>
+                <a href="https://instagram.com/guardiaoextintores" target="_blank" rel="noopener noreferrer" aria-label="Instagram Guardião Extintores">
+                  <span className="sr-only">Instagram</span>
+                  {/* Ícone do Instagram */}
+                </a>
+              </div>
             </div>
           </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>
+              &copy; {new Date().getFullYear()} Proteja Já. Todos os direitos reservados.
+              <span className="mx-2">|</span>
+              <a href="/politica-de-privacidade" className="hover:text-white">Política de Privacidade</a>
+            </p>
+          </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Proteja Já. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
