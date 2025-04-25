@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { planos, precoExtintor, precoInspecao, precoRecarga, precoSinalizacaoWall } from '../../utils';
-import SimuladorInputs from '../SimuladorInputs';
-import SimuladorCard from '../SimuladorCard';
+import { planos, precoExtintor, precoInspecao, precoRecarga, precoSinalizacaoWall } from '@/lib/utils/utils';
+import SimuladorInputs from '@/components/features/simulador/SimuladorInputs';
+import SimuladorCard from '@/components/features/simulador/SimuladorCard';
 
-// Componente principal da seção de Simulador
 export default function SimuladorSection() {
   const [extintores, setExtintores] = useState(0);
   const [recargas, setRecargas] = useState(0);

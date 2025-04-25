@@ -10,8 +10,8 @@ import {
   footerSchema,
   getPlansSchema,
   simulatorSchema
-} from '../seoSchemas';
-import { planos } from '../utils';
+} from '@/app/seoSchemas';
+import { planos } from '@/lib/utils/utils';
 
 export default function SEOSchemas() {
   // Gerando o esquema de planos com base nos planos disponíveis

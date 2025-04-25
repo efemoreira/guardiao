@@ -1,5 +1,5 @@
 import React from 'react';
-import { precoExtintor, precoInspecao, precoRecarga, precoSinalizacaoWall } from '../utils';
+import { precoExtintor, precoInspecao, precoRecarga, precoSinalizacaoWall } from '@/lib/utils/utils';
 
 interface SimuladorCardProps {
   plano: {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { planos } from '../../utils';
-import PlanCard from '../PlanCard';
+import { planos } from '@/lib/utils/utils';
+import PlanCard from '@/components/features/plans/PlanCard';
 
 export default function PlansSection() {
   return (
@@ -21,6 +21,7 @@ export default function PlansSection() {
             href="#simulador" 
             className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition"
             aria-label="Simular custos com nossa calculadora personalizada"
+            role="button"
           >
             Simule Agora
           </a>
