@@ -153,8 +153,6 @@ export default function Simulador() {
           );
         })}
       </div>
-
-      <p className="mt-6 text-gray-600">💵 Custo sem assinatura: R${custoSemPlano.toFixed(2)}</p>
     </div>
   );
 }

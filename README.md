@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Guardião - Sistema de Gestão de Proteção Contra Incêndio
 
-## Getting Started
+## 📋 Sobre
+Sistema web para gestão de serviços de proteção contra incêndio, oferecendo planos de assinatura e simulador de custos.
 
-First, run the development server:
+## 🚀 Funcionalidades
+
+- 🧯 Gestão de extintores
+- 👀 Agendamento de inspeções
+- 🎯 Controle de sinalização
+- 💰 Simulador de custos
+- 📊 Planos de assinatura
+
+## 🛠️ Tecnologias
+
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+
+## 💻 Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+## ⚙️ Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/guardiao.git
+
+# Entre no diretório
+cd guardiao
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Uso
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O sistema estará disponível em `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Páginas
 
-## Learn More
+- **Home**: Apresentação e informações gerais
+- **Planos**: Opções de assinatura disponíveis
+- **Simulador**: Cálculo de custos personalizado
+- **Contato**: Formulário de contato e informações
 
-To learn more about Next.js, take a look at the following resources:
+## 👥 Contribuindo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 Licença
 
-## Deploy on Vercel
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Contato
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: seu-email@exemplo.com
+- WhatsApp: (99) 99999-9999
+
+## ✨ Agradecimentos
+
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React](https://reactjs.org/)

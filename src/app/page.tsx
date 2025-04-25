@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       {/* Serviços */}
-      <section id="servicos" className="py-20 bg-gray-50">
+      <section id="servicos" className="py-20 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h3>
           <div className="grid md:grid-cols-4 gap-8">
@@ -97,12 +97,11 @@ export default function HomePage() {
       </section>
 
       {/* Planos */}
-      <section id="planos" className="py-20 bg-gray-50">
+      <section id="planos" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-3xl font-bold text-center mb-12">Nossos Planos</h3>
           <Planos/>
         </div>
-        {/* Ir para o simulador */}
         <div className="text-center mt-12">
           <a href="#simulador" className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
             Simule Agora
@@ -111,7 +110,7 @@ export default function HomePage() {
       </section>
 
       {/* Como Funciona */}
-      <section id="funciona" className="py-20 bg-white">
+      <section id="funciona" className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4">
           <h3 className="text-3xl font-bold text-center mb-12">Como Funciona</h3>
           <div className="grid md:grid-cols-4 gap-8">
@@ -156,7 +155,7 @@ export default function HomePage() {
       </section>
 
       {/* Fale Conosco */}
-      <section id="contato" className="py-20 bg-gray-50">
+      <section id="contato" className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold mb-8">Fale Conosco</h3>
           <div className="grid md:grid-cols-3 gap-8">
