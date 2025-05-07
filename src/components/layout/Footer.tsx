@@ -247,30 +247,13 @@ const Footer: React.FC<FooterProps> = (props) => {
         position: 'relative',
       }
     : {};
-
-  // Se tiver background, adicione um overlay escuro para melhorar a legibilidade do texto
-  const overlayStyle = footerProps.backgroundImage
-    ? {
-        position: 'relative',
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(9, 30, 62, 0.501)', // Cor secondary com opacidade
-          zIndex: 1,
-        }
-      }
-    : {};
   
   return (
     <footer 
       className={`bg-secondary text-white pt-10`}
       style={{
         ...backgroundStyle,
-        position: 'relative' as 'relative', // Explicitly cast position to a valid CSS value
+        position: 'relative', // Usar sem cast, já que é um valor válido CSS
       }}
     >
       {footerProps.backgroundImage && (
@@ -281,7 +264,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(9, 30, 62, 0.582)', // Cor secondary com opacidade
+            backgroundColor: 'rgba(9, 30, 62, 0.582)',
             zIndex: 1,
           }}
         />

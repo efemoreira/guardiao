@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../utils/IconUtil';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { servicesSectionStrings } from '../../lib/defaultStrings/servicesSectionStrings';
 
 export interface Service {
@@ -28,11 +29,13 @@ const ServiceCard: React.FC<Service & { buttonText?: string }> = ({ title, descr
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className="overflow-hidden mb-4">
-        <img 
-          className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110" 
+      <div className="overflow-hidden mb-4 relative h-48">
+        <Image 
+          className="object-cover transition-transform duration-500 hover:scale-110" 
           src={image} 
-          alt={title} 
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <h4 className="text-2xl font-bold mb-3">{title}</h4>

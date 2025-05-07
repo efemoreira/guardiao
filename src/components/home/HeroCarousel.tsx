@@ -46,7 +46,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
     }, autoPlayInterval);
     
     return () => clearInterval(interval);
-  }, [autoPlayInterval]);
+  }, [autoPlayInterval, nextSlide]);
 
   // Função para destacar determinada palavra no título
   const renderTitle = (title: string, highlightWord?: string) => {

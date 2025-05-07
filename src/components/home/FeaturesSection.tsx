@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../utils/IconUtil';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { featuresSectionStrings } from '../../lib/defaultStrings/featuresSectionStrings';
 
 interface Feature {
@@ -40,10 +41,12 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             transition={{ duration: 0.8 }}
           >
             <div className="relative aspect-video md:aspect-square">
-              <img
+              <Image
                 src={image}
                 alt={imageAlt}
-                className="absolute w-full h-full object-cover rounded-lg"
+                fill
+                className="object-cover rounded-lg"
+                priority
               />
             </div>
           </motion.div>

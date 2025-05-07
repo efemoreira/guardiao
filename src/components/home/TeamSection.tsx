@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '../../utils/IconUtil';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { teamSectionStrings } from '../../lib/defaultStrings/teamSectionStrings';
 
@@ -33,11 +34,13 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
       transition={{ duration: 0.6, delay: member.delay || 0 }}
     >
       <div className="bg-white shadow-md group">
-        <div className="relative overflow-hidden">
-          <img 
+        <div className="relative overflow-hidden h-72">
+          <Image 
             src={member.image} 
             alt={member.name} 
-            className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
           />
           
           {/* Redes sociais */}

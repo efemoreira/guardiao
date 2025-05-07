@@ -21,13 +21,15 @@ const Counter: React.FC<CounterProps> = ({ end, duration = 2 }) => {
       }
     }, { threshold: 0.5 });
     
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    const currentRef = countRef.current; // Copiando a referência para uso no cleanup
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentRef) { // Usando a cópia da referência
+        observer.unobserve(currentRef);
       }
     };
   }, [isVisible]);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from '../../utils/IconUtil';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { testimonialSectionStrings } from '../../lib/defaultStrings/testimonialSectionStrings';
 
@@ -65,11 +66,13 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                     transition={{ duration: 0.5 }}
                   >
                     <div className={`${backgroundColor} p-8 text-center shadow-md`}>
-                      <div className="mx-auto w-24 h-24 mb-5 overflow-hidden rounded-full">
-                        <img
+                      <div className="mx-auto w-24 h-24 mb-5 overflow-hidden rounded-full relative">
+                        <Image
                           src={testimonial.image}
                           alt={testimonial.name}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 96px, 96px"
                         />
                       </div>
                       <p className="text-lg italic mb-6 relative">

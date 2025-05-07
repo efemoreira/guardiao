@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '../../utils/IconUtil';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { pricingSectionStrings } from '../../lib/defaultStrings/pricingSectionStrings';
 
@@ -54,8 +55,13 @@ const PriceCard: React.FC<PricingPlan> = ({
       )}
       <div className="border-b p-4 mb-4">
         {image && (
-          <div className="mb-3 flex justify-center">
-            <img src={image} alt={name} className="h-16 w-16 object-contain" />
+          <div className="mb-3 flex justify-center relative h-16 w-16 mx-auto">
+            <Image 
+              src={image} 
+              alt={name} 
+              fill
+              className="object-contain" 
+            />
           </div>
         )}
         <h5 className="text-primary font-bold mb-1">{name}</h5>
