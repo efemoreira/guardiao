@@ -41,7 +41,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
         '6% de desconto em produtos',
         '1 recarga inclusa por ano',
         'Placa de sinalização para extintores novos',
-        'Demarcação no solo para extintores novos',
+        'Demarcação no chão para extintores novos',
       ],
       delay: 0.4,
       popular: true,
@@ -51,7 +51,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
     {
       id: 3,
       name: 'Premium',
-      price: 219,
+      price: 255.50,
       currency: 'R$',
       period: 'anual',
       features: [
@@ -61,7 +61,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
         '2 recargas inclusas por ano',
         'Placa de sinalização para extintores novos',
         'Demarcação no solo para extintores novos',
-        'Substituição de placas antigas',
+        'Substituição de placas defeituosas por recarga',
       ],
       delay: 0.6,
       buttonText: 'Contratar'
