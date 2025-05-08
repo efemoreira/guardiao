@@ -32,7 +32,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
     {
       id: 2,
       name: 'Intermediário',
-      price: 91.25,
+      price: 127.75,
       currency: 'R$',
       period: 'anual',
       features: [
@@ -51,7 +51,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
     {
       id: 3,
       name: 'Premium',
-      price: 182.5,
+      price: 219,
       currency: 'R$',
       period: 'anual',
       features: [
