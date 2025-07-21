@@ -47,14 +47,14 @@ export const footerStrings: FooterStrings = {
   showQuickLinksColumn: true,
   showNewsletterColumn: true,
   contactInfo: {
-    address: "Rua da Prevenção, 123, Sua Cidade, Estado",
-    phone: "(99) 9999-9999",
-    email: "contato@seudominio.com"
+    address: "Fortaleza, CE",
+    phone: "(85) 98892-8272",
+    email: "contato@felipesmoreira.com"
   },
   socialMediaLinks: [
     { platform: "Facebook", url: "https://facebook.com/", icon: "FaFacebookF" },
     { platform: "Instagram", url: "https://instagram.com/", icon: "FaInstagram" },
-    { platform: "WhatsApp", url: "https://wa.me/5599999999999", icon: "FaWhatsapp" },
+    { platform: "WhatsApp", url: "https://wa.me/5585988928272", icon: "FaWhatsapp" },
     { platform: "YouTube", url: "https://youtube.com/", icon: "FaYoutube" }
   ],
   servicesColumn: {

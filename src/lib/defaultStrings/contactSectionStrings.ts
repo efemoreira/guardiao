@@ -49,11 +49,11 @@ export const contactSectionStrings: ContactSectionStrings = {
   contactInfo: {
     title: "Atendimento Especializado",
     addressTitle: "Endereço",
-    address: "Rua da Prevenção, 123\nSua Cidade, Estado 00000-000",
+    address: "Fortaleza, CE",
     phoneTitle: "Telefone",
-    phone: "(99) 9999-9999",
+    phone: "(85) 98892-8272",
     emailTitle: "Email",
-    email: "contato@seudominio.com",
+    email: "contato@felipesmoreira.com",
     socialMedia: [
       { icon: "FaFacebookF", link: "#" },
       { icon: "FaInstagram", link: "#" },

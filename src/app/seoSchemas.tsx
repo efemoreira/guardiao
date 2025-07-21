@@ -8,7 +8,7 @@ export const organizationSchema = {
   "logo": "https://guardiao.felipesmoreira.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+5599999999999",
+    "telephone": "+5585988928272",
     "contactType": "customer service",
     "availableLanguage": "Portuguese"
   },
@@ -35,7 +35,7 @@ export const aboutSchema = {
       }
     ],
     "numberOfEmployees": "10+",
-    "email": "contato@protejaja.com.br",
+    "email": "contato@felipesmoreira.com",
     "award": "100% certificados",
     "knowsAbout": ["Extintores", "Proteção contra incêndio", "Inspeções de segurança"]
   }
@@ -186,19 +186,19 @@ export const contactSchema = {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+5599999999999",
+        "telephone": "+5585988928272",
         "contactType": "customer service",
         "availableLanguage": "Portuguese",
         "contactOption": "TollFree"
       }
     ],
-    "email": "contato@protejaja.com.br",
+    "email": "contato@felipesmoreira.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Exemplo, 123",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "postalCode": "01000-000",
+      "streetAddress": "",
+      "addressLocality": "Fortaleza",
+      "addressRegion": "CE",
+      "postalCode": "",
       "addressCountry": "BR"
     },
     "sameAs": [

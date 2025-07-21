@@ -52,9 +52,9 @@ export const quoteSectionStrings: QuoteSectionStrings = {
     { value: 'plano-premium', label: 'Plano Premium' }
   ],
   contactInfo: {
-    address: 'Rua da Prevenção, 123, Sua Cidade, Estado',
-    phone: '(99) 9999-9999',
-    email: 'contato@seudominio.com',
+    address: 'Fortaleza - CE',
+    phone: '(85) 98892-8272',
+    email: 'contato@felipesmoreira.com',
     addressIcon: 'FaMapMarkerAlt',
     phoneIcon: 'FaPhoneAlt',
     emailIcon: 'FaEnvelope'
@@ -62,7 +62,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   callout: {
     icon: 'FaShieldAlt',
     title: 'Proteção é prevenção!',
-    phone: '(99) 9999-9999'
+    phone: '(85) 98892-8272'
   },
   submitButtonText: 'Solicitar Avaliação',
   namePlaceholder: 'Seu Nome',

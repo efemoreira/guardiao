@@ -94,7 +94,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📞 Contato
 
-- Email: contato@guardiao.com.br
+- Email: contato@felipesmoreira.com
 - WhatsApp: (11) 99999-9999
 - Site: [www.guardiao.com.br](https://www.guardiao.com.br)
 

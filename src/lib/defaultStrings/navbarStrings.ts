@@ -40,7 +40,7 @@ export const navbarStrings: NavbarStrings = {
   },
   contactInfo: {
     text: 'Precisa de ajuda?',
-    phone: '(99) 9999-9999',
+    phone: '(85) 98892-8272',
     icon: 'FaShieldAlt'
   }
 };

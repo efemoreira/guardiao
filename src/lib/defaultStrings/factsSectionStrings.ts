@@ -16,7 +16,7 @@ export const factsSectionStrings: FactsSectionStrings = {
   title: "Experiência e Segurança Garantida",
   description: "Com mais de 10 anos no mercado, atendemos residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes com soluções completas de proteção contra incêndio. Nossos serviços preventivos garantem que seus equipamentos estejam sempre em conformidade com as normas técnicas.",
   phoneTitle: "Precisa de orientação?",
-  phoneNumber: "(99) 9999-9999",
+  phoneNumber: "(85) 98892-8272",
   phoneIcon: "FaPhoneAlt",
   facts: [
     {
