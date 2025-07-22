@@ -11,7 +11,7 @@ export const heroCarouselStrings: HeroCarouselStrings = {
     {
       id: 1,
       title: "Proteção Contra Incêndio Especializada",
-      subtitle: "Inspeção, Recarga e Venda de Extintores",
+      subtitle: "Inspeção, Recarga de Extintores",
       description: "Serviços completos de proteção contra incêndio para residências, condomínios, empresas, igrejas, colégios, faculdades, restaurantes e outros estabelecimentos.",
       image: "/img/herobanner3.jpeg",
       primaryButtonText: "Nossos Serviços",

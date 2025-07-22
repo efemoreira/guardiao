@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
-  description: "Especialistas em proteção contra incêndio com mais de 10 anos de experiência. Oferecemos extintores, recargas, inspeções e soluções completas para a segurança do seu estabelecimento.",
+  description: "Especialistas em proteção contra incêndio com mais de 12 anos de experiência. Oferecemos extintores, recargas, inspeções e soluções completas para a segurança do seu estabelecimento.",
   keywords: "extintores, proteção contra incêndio, recarga de extintores, inspeções de segurança, extintores de incêndio, sinalização de segurança",
   authors: [{ name: "Guardião Extintores" }],
   applicationName: "Guardião Extintores",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://guardiao.felipesmoreira.com",
     title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
-    description: "Especialistas em proteção contra incêndio com mais de 10 anos de experiência. Extintores, recargas e inspeções.",
+    description: "Especialistas em proteção contra incêndio com mais de 12 anos de experiência. Extintores, recargas e inspeções.",
     siteName: "Guardião Extintores",
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Guardião Extintores | Proteção Contra Incêndio",
-    description: "Especialistas em proteção contra incêndio com mais de 10 anos de experiência.",
+    description: "Especialistas em proteção contra incêndio com mais de 12 anos de experiência.",
     images: ["/twitter-image.jpg"],
   },
 };

@@ -26,7 +26,7 @@ export const aboutSchema = {
   "mainEntity": {
     "@type": "Organization",
     "name": "Guardião Extintores",
-    "description": "Com mais de 10 anos de experiência, somos especialistas em proteção contra incêndio.",
+    "description": "Com mais de 12 anos de experiência, somos especialistas em proteção contra incêndio.",
     "foundingDate": "2014-01-01",
     "founders": [
       {

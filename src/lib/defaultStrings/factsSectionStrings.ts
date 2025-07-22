@@ -21,19 +21,19 @@ export const factsSectionStrings: FactsSectionStrings = {
   facts: [
     {
       icon: "FaFireExtinguisher",
-      count: 5000,
+      count: 1200,
       text: "Extintores Manutenidos",
       backgroundColor: "bg-red-600"
     },
     {
       icon: "FaBuilding",
-      count: 1200,
+      count: 56,
       text: "Clientes Atendidos",
       backgroundColor: "bg-blue-600"
     },
     {
       icon: "FaCalendarCheck",
-      count: 10,
+      count: 12,
       text: "Anos de Experiência",
       backgroundColor: "bg-green-600"
     }

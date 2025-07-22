@@ -78,7 +78,7 @@ export const contactSectionStrings: ContactSectionStrings = {
       { label: "Selecione um serviço", value: "" },
       { label: "Inspeção de Extintores", value: "inspecao" },
       { label: "Recarga de Extintores", value: "recarga" },
-      { label: "Venda de Extintores", value: "venda" },
+      // { label: "Venda de Extintores", value: "venda" },
       { label: "Sinalização de Segurança", value: "sinalizacao" },
       { label: "Treinamento de Incêndio", value: "treinamento" },
       { label: "Estudo de Risco", value: "risco" },

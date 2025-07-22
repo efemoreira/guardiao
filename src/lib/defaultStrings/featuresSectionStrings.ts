@@ -26,7 +26,7 @@ export const featuresSectionStrings: FeaturesSectionStrings = {
       id: 1,
       icon: "FaRegCheckCircle",
       title: "Serviços Completos",
-      description: "Oferecemos soluções completas de proteção contra incêndio: inspeção, recarga e venda de extintores, sinalização, treinamentos e estudos de risco.",
+      description: "Oferecemos soluções completas de proteção contra incêndio: inspeção, recarga de extintores, sinalização, treinamentos e estudos de risco.",
       delay: 0.2,
     },
     {

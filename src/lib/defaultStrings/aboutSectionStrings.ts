@@ -14,7 +14,7 @@ export interface AboutSectionStrings {
 export const aboutSectionStrings: AboutSectionStrings = {
   title: 'Especialistas em Proteção Contra Incêndio',
   subtitle: 'Sobre Nós',
-  description: 'Com mais de 10 anos de experiência, somos especialistas em proteção contra incêndio para residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes. Oferecemos serviços completos de inspeção, recarga e venda de extintores, além de treinamentos e estudos de risco para garantir a segurança do seu estabelecimento.',
+  description: 'Com mais de 12 anos de experiência, somos especialistas em proteção contra incêndio para residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes. Oferecemos serviços completos de inspeção, recarga de extintores, além de treinamentos e estudos de risco para garantir a segurança do seu estabelecimento.',
   imageSrc: 'img/herobanner.jpg',
   imageAlt: 'Sobre Guardião Extintores',
   features: [

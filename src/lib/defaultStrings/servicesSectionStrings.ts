@@ -28,14 +28,14 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       link: "/servicos/recarga-extintores",
       delay: 0.3,
     },
-    {
-      id: 3,
-      title: "Venda de Extintores",
-      description: "Venda de extintores novos para residências, empresas, condomínios e outros estabelecimentos, com entrega e instalação.",
-      image: "img/venda.jpg",
-      link: "/servicos/venda-extintores",
-      delay: 0.5,
-    },
+    // {
+    //   id: 3,
+    //   title: "Venda de Extintores",
+    //   description: "Venda de extintores novos para residências, empresas, condomínios e outros estabelecimentos, com entrega e instalação.",
+    //   image: "img/venda.jpg",
+    //   link: "/servicos/venda-extintores",
+    //   delay: 0.5,
+    // },
     {
       id: 4,
       title: "Sinalização",

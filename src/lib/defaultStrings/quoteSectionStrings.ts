@@ -43,7 +43,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   serviceOptions: [
     { value: 'inspecao', label: 'Inspeção de Extintores' },
     { value: 'recarga', label: 'Recarga de Extintores' },
-    { value: 'venda', label: 'Venda de Extintores' },
+    // { value: 'venda', label: 'Venda de Extintores' },
     { value: 'sinalizacao', label: 'Sinalização de Segurança' },
     { value: 'treinamento', label: 'Treinamento de Incêndio' },
     { value: 'risco', label: 'Estudo de Risco' },

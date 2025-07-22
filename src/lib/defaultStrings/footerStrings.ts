@@ -62,7 +62,7 @@ export const footerStrings: FooterStrings = {
     links: [
       { text: "Inspeção de Extintores", url: "/servicos/inspecao" },
       { text: "Recarga de Extintores", url: "/servicos/recarga" },
-      { text: "Venda de Extintores", url: "/servicos/venda" },
+      // { text: "Venda de Extintores", url: "/servicos/venda" },
       { text: "Sinalização de Segurança", url: "/servicos/sinalizacao" },
       { text: "Treinamento de Incêndio", url: "/servicos/treinamento" },
       { text: "Estudo de Risco", url: "/servicos/estudo-risco" }
