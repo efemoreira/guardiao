@@ -6,9 +6,6 @@ import FactsSection from './FactsSection';
 import FeaturesSection from './FeaturesSection';
 import HowItWorksSection from './HowItWorksSection';
 import PricingSection from './PricingSection';
-import QuoteSection from './QuoteSection';
-import TestimonialSection from './TestimonialSection';
-import TeamSection from './TeamSection';
 import ContactSection from './ContactSection';
 
 const HomePage: React.FC = () => {
@@ -35,18 +32,18 @@ const HomePage: React.FC = () => {
       <div id="how-it-works">
         <HowItWorksSection />
       </div>
-      <div id="quote">
+      {/* <div id="quote">
         <QuoteSection />
-      </div>
+      </div> */}
       <div id="pricing">
         <PricingSection />
       </div>
-      <div id="team">
+      {/* <div id="team">
         <TeamSection />
-      </div>
-      <div id="testimonial">
+      </div> */}
+      {/* <div id="testimonial">
         <TestimonialSection />
-      </div>
+      </div> */}
       <div id="contact">
         <ContactSection />
       </div>

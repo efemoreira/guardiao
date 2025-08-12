@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { heroCarouselStrings } from '../../lib/defaultStrings/heroCarouselStrings';
@@ -30,9 +30,9 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   
   // Função para passar para o próximo slide
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
-  };
+  }, [items.length]);
   
   // Função para voltar ao slide anterior
   const prevSlide = () => {

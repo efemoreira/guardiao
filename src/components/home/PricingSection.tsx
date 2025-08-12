@@ -42,7 +42,7 @@ const PriceCard: React.FC<PricingPlan> = ({
 }) => {
   return (
     <motion.div 
-      className={`bg-white shadow-md flex flex-col ${popular ? 'border-2 border-primary' : ''}`}
+      className={`bg-white shadow-md flex flex-col h-full ${popular ? 'border-2 border-primary' : ''}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -65,19 +65,26 @@ const PriceCard: React.FC<PricingPlan> = ({
           </div>
         )}
         <h5 className="text-primary font-bold mb-1">{name}</h5>
-        <h1 className="text-5xl font-black flex items-baseline">
-          <span className="text-lg align-top">{currency}</span>
-          {price}
-          <span className="text-sm text-gray-500 ml-1">/ {period}</span>
-        </h1>
+        <div className="text-center">
+          <h1 className="text-5xl font-black flex items-baseline justify-center">
+            <span className="text-base align-top">{currency}</span>
+            {(price / 365).toFixed(2).replace('.', ',')}
+            <span className="text-sm text-gray-500 ml-1">/ dia</span>
+          </h1>
+          <p className="text-sm text-gray-500 mt-1">
+            {currency} {price.toFixed(2).replace('.', ',')} / {period}
+          </p>
+        </div>
       </div>
 
-      <div className="p-4 pt-0 flex-grow">
-        {features.map((feature, index) => (
-          <p key={index} className="mb-2 flex items-center">
-            <Icon icon="FaCheck" className="text-success mr-3 text-sm text-green-700" /> {feature}
-          </p>
-        ))}
+      <div className="p-4 pt-0 flex flex-col flex-grow">
+        <div className="flex-grow">
+          {features.map((feature, index) => (
+            <p key={index} className="mb-2 flex items-center">
+              <Icon icon="FaCheck" className="text-success mr-3 text-sm text-green-700" /> {feature}
+            </p>
+          ))}
+        </div>
         <a
           href={buttonLink}
           className="mt-4 inline-flex items-center group relative text-gray-800 hover:text-primary transition-all duration-300"
@@ -113,7 +120,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           {description && <p className="text-gray-600 mt-4 max-w-2xl mx-auto">{description}</p>}
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.map(plan => (
             <PriceCard key={plan.id} {...plan} />
           ))}

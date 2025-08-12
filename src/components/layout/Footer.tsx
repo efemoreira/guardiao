@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '../../utils/IconUtil';
 import Link from 'next/link';
 import { footerStrings } from '../../lib/defaultStrings/footerStrings';
+import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 // Definição dos tipos para as props do Footer
 interface SocialMediaLink {
@@ -77,7 +78,14 @@ const ContactSection: React.FC<{ contactInfo: ContactInfo; socialMediaLinks: Soc
     </p>
     <p className="flex items-center mb-2">
       <Icon icon="FaPhoneAlt" className="mr-3 text-lg" />
-      {contactInfo.phone}
+      <a 
+        href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-primary transition-colors"
+      >
+        {contactInfo.phone}
+      </a>
     </p>
     <p className="flex items-center mb-2">
       <Icon icon="FaEnvelope" className="mr-3 text-lg" />

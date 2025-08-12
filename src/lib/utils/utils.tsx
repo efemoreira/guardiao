@@ -39,4 +39,16 @@ const planos = [
   },
 ];
 
+// Função utilitária para gerar link do WhatsApp
+export const generateWhatsAppLink = (phoneNumber: string, message?: string): string => {
+  // Remove caracteres especiais do número de telefone e adiciona o código do país
+  const cleanPhone = phoneNumber.replace(/\D/g, '');
+  const formattedPhone = cleanPhone.startsWith('85') ? `55${cleanPhone}` : `5585${cleanPhone}`;
+  
+  const baseUrl = 'https://wa.me/';
+  const encodedMessage = message ? `?text=${encodeURIComponent(message)}` : '';
+  
+  return `${baseUrl}${formattedPhone}${encodedMessage}`;
+};
+
 export {planos, precoInspecao, precoRecarga, precoExtintor, precoSinalizacaoWall};
