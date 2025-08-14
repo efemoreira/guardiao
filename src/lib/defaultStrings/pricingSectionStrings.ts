@@ -19,7 +19,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       name: 'Residencial',
       price: 36.50,
       currency: 'R$',
-      period: 'anualmente',
+      period: 'Anualmente',
       features: [
         '1 inspeção visual por ano',
         '5% de desconto em serviços (recarga, troca)',
@@ -28,14 +28,15 @@ export const pricingSectionStrings: PricingSectionStrings = {
         'Para casas e apartamentos - 1 endereço por contrato',
       ],
       delay: 0.2,
-      buttonText: 'Contratar'
+      buttonText: 'Contratar',
+      buttonLink: '85988928272'
     },
     {
       id: 2,
       name: 'Essencial',
       price: 91.25,
       currency: 'R$',
-      period: 'anualmente',
+      period: 'Anualmente',
       features: [
         '1 inspeção técnica por ano',
         '1 visita corretiva extra',
@@ -46,14 +47,15 @@ export const pricingSectionStrings: PricingSectionStrings = {
         'Para pequenos comércios, consultórios, igrejas e salas',
       ],
       delay: 0.3,
-      buttonText: 'Contratar'
+      buttonText: 'Contratar',
+      buttonLink: '85988928272'
     },
     {
       id: 3,
       name: 'Intermediário',
       price: 182.50,
       currency: 'R$',
-      period: 'anualmente',
+      period: 'Anualmente',
       features: [
         '1 inspeção técnica por ano',
         '1 recarga por ano (até 6kg, tipo ABC)',
@@ -66,14 +68,15 @@ export const pricingSectionStrings: PricingSectionStrings = {
       delay: 0.4,
       popular: true,
       textPopular: 'Mais escolhido',
-      buttonText: 'Contratar'
+      buttonText: 'Contratar',
+      buttonLink: '85988928272'
     },
     {
       id: 4,
       name: 'Premium',
       price: 365.00,
       currency: 'R$',
-      period: 'anualmente',
+      period: 'Anualmente',
       features: [
         'Inspeções técnicas ilimitadas',
         '2 recargas por ano (até 6kg, tipo ABC)',
@@ -85,7 +88,8 @@ export const pricingSectionStrings: PricingSectionStrings = {
         'Lembrete automático por WhatsApp/E-mail',
       ],
       delay: 0.6,
-      buttonText: 'Contratar'
+      buttonText: 'Contratar',
+      buttonLink: '85988928272'
     },
   ],
 };

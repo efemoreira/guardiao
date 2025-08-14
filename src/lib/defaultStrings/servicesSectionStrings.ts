@@ -17,7 +17,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Inspeção de Extintores",
       description: "Serviço de inspeção técnica para verificar o estado e funcionalidade dos seus extintores, essencial para manter sua segurança.",
       image: "img/inspecao.jpg",
-      link: "/servicos/inspecao-extintores",
+      link: "/#pricing",
       delay: 0.1,
     },
     {
@@ -25,7 +25,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Recarga de Extintores",
       description: "Recarga profissional para extintores de todos os tipos com garantia e certificação, mantendo seu equipamento sempre pronto para uso.",
       image: "img/recarga.jpg",
-      link: "/servicos/recarga-extintores",
+      link: "/#pricing",
       delay: 0.3,
     },
     {
@@ -33,7 +33,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Retirada e Entrega de Extintores",
       description: "Serviço de retirada e entrega de extintores em seu local para manutenção, recarga ou troca, oferecendo comodidade e praticidade.",
       image: "img/venda.jpg",
-      link: "/servicos/retirada-entrega-extintores",
+      link: "/#pricing",
       delay: 0.5,
     },
     {
@@ -41,7 +41,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Placas de Sinalização",
       description: "Fornecimento e instalação de placas de sinalização de segurança para extintores, rotas de fuga e equipamentos de combate a incêndio.",
       image: "img/sinalizacao.jpeg",
-      link: "/servicos/placas-sinalizacao",
+      link: "/#pricing",
       delay: 0.1,
     },
     {
@@ -49,7 +49,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Demarcação de Solo",
       description: "Demarcação no solo para identificação da localização correta dos extintores, seguindo normas de segurança.",
       image: "img/sinalizacao.jpeg",
-      link: "/servicos/demarcacao-solo",
+      link: "/#pricing",
       delay: 0.3,
     },
     {
@@ -57,7 +57,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Visita Corretiva",
       description: "Visita técnica para correção de problemas identificados durante inspeções ou para ajustes necessários nos equipamentos.",
       image: "img/inspecao.jpg",
-      link: "/servicos/visita-corretiva",
+      link: "/#pricing",
       delay: 0.5,
     },
     {
@@ -65,7 +65,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Visita Consultiva",
       description: "Consultoria especializada com orientações sobre AVCB, NR-23 e melhorias na segurança contra incêndio do seu estabelecimento.",
       image: "img/estudo.jpg",
-      link: "/servicos/visita-consultiva",
+      link: "/#pricing",
       delay: 0.1,
     },
     {
@@ -73,7 +73,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Troca de Placas Danificadas",
       description: "Substituição de placas de sinalização que estejam danificadas, desbotadas ou em desconformidade com as normas.",
       image: "img/sinalizacao.jpeg",
-      link: "/servicos/troca-placas",
+      link: "/#pricing",
       delay: 0.3,
     },
     {
@@ -81,7 +81,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Lembrete Automático",
       description: "Sistema de notificação automática via WhatsApp e e-mail para lembrar sobre vencimentos e manutenções necessárias.",
       image: "img/segurancafeature.png",
-      link: "/servicos/lembrete-automatico",
+      link: "/#pricing",
       delay: 0.5,
     },
     {
@@ -89,7 +89,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Treinamento de Incêndio",
       description: "Treinamentos práticos e teóricos para equipes sobre como agir em situações de incêndio e utilizar corretamente os equipamentos de segurança.",
       image: "img/treinamento.jpg",
-      link: "/servicos/treinamento",
+      link: "/#pricing",
       delay: 0.1,
     },
     {
@@ -97,7 +97,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
       title: "Estudo de Risco",
       description: "Análise profissional dos riscos de incêndio em seu estabelecimento, com recomendações para melhorar a segurança preventiva.",
       image: "img/estudo.jpg",
-      link: "/servicos/estudo-risco",
+      link: "/#pricing",
       delay: 0.3,
     },
   ],

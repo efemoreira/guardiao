@@ -16,8 +16,8 @@ export const heroCarouselStrings: HeroCarouselStrings = {
       image: "/img/herobanner3.jpeg",
       primaryButtonText: "Nossos Serviços",
       secondaryButtonText: "Solicitar Orçamento",
-      primaryButtonLink: "/servicos",
-      secondaryButtonLink: "/orcamento",
+      primaryButtonLink: "/#services",
+      secondaryButtonLink: "/#contact",
       highlightWord: "Proteção"
     },
     {
@@ -28,8 +28,8 @@ export const heroCarouselStrings: HeroCarouselStrings = {
       image: "/img/herobanner2.jpg",
       primaryButtonText: "Conhecer Planos",
       secondaryButtonText: "Agendar Visita",
-      primaryButtonLink: "/planos",
-      secondaryButtonLink: "/visita",
+      primaryButtonLink: "/#pricing",
+      secondaryButtonLink: "/#contact",
       highlightWord: "Planos"
     },
     {
@@ -40,8 +40,8 @@ export const heroCarouselStrings: HeroCarouselStrings = {
       image: "/img/herobanner1.png",
       primaryButtonText: "Saiba Mais",
       secondaryButtonText: "Entre em Contato",
-      primaryButtonLink: "/treinamentos",
-      secondaryButtonLink: "/contato",
+      primaryButtonLink: "/#about",
+      secondaryButtonLink: "/#contact",
       highlightWord: "Treinamentos"
     }
   ],

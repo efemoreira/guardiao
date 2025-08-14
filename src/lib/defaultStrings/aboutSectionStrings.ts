@@ -29,6 +29,6 @@ export const aboutSectionStrings: AboutSectionStrings = {
       description: 'Trabalhamos com foco na prevenção, oferecendo manutenção programada e planos personalizados para manter seus equipamentos sempre em perfeitas condições.'
     }
   ],
-  buttonText: 'Conheça Nossa História',
-  buttonLink: '/sobre'
+  buttonText: 'Entenda Nosso Processo',
+  buttonLink: '/#features'
 };

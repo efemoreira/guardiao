@@ -30,7 +30,6 @@ export const navbarStrings: NavbarStrings = {
     { id: 'services', label: 'Serviços', type: 'section' },
     { id: 'features', label: 'Diferenciais', type: 'section' },
     { id: 'pricing', label: 'Planos', type: 'section' },
-    // { id: 'testimonial', label: 'Depoimentos', type: 'section' },
     { id: 'contact', label: 'Contato', type: 'section' },
   ],
   logo: {
