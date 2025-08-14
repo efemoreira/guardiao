@@ -51,16 +51,17 @@ interface FooterProps {
 
 // Componentes auxiliares para cada seção do Footer
 const SocialMediaLinks: React.FC<{ links: SocialMediaLink[] }> = ({ links }) => (
-  <div className="flex pt-2">
+  <div className="flex justify-center gap-4">
     {links.map((link, index) => (
       <a
         key={index}
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-9 h-9 rounded border border-white flex items-center justify-center mr-2 hover:bg-primary hover:border-primary transition-all duration-300"
+        className="w-12 h-12 rounded-full border-2 border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+        title={`Siga-nos no ${link.platform}`}
       >
-        <Icon icon={link.icon} />
+        <Icon icon={link.icon} className="text-lg" />
       </a>
     ))}
   </div>
@@ -70,28 +71,42 @@ const ContactSection: React.FC<{ contactInfo: ContactInfo; socialMediaLinks: Soc
   contactInfo, 
   socialMediaLinks 
 }) => (
-  <div>
-    <h4 className="text-xl font-bold mb-4">Endereço</h4>
-    <p className="flex items-center mb-2">
-      <Icon icon="FaMapMarkerAlt" className="mr-3 text-lg" />
-      {contactInfo.address}
-    </p>
-    <p className="flex items-center mb-2">
-      <Icon icon="FaPhoneAlt" className="mr-3 text-lg" />
-      <a 
-        href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-primary transition-colors"
-      >
-        {contactInfo.phone}
-      </a>
-    </p>
-    <p className="flex items-center mb-2">
-      <Icon icon="FaEnvelope" className="mr-3 text-lg" />
-      {contactInfo.email}
-    </p>
-    <SocialMediaLinks links={socialMediaLinks} />
+  <div className="text-center w-full max-w-2xl mx-auto">
+    <h4 className="text-2xl font-bold mb-8">Entre em Contato</h4>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="flex flex-col items-center">
+        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
+          <Icon icon="FaMapMarkerAlt" className="text-white text-lg" />
+        </div>
+        <p className="font-semibold">Localização</p>
+        <p className="text-gray-300">{contactInfo.address}</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
+          <Icon icon="FaPhoneAlt" className="text-white text-lg" />
+        </div>
+        <p className="font-semibold">Telefone</p>
+        <a 
+          href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-primary transition-colors"
+        >
+          {contactInfo.phone}
+        </a>
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
+          <Icon icon="FaEnvelope" className="text-white text-lg" />
+        </div>
+        <p className="font-semibold">Email</p>
+        <p className="text-gray-300">{contactInfo.email}</p>
+      </div>
+    </div>
+    <div className="border-t border-gray-700 pt-6">
+      <h5 className="text-lg font-semibold mb-4">Siga-nos nas redes sociais</h5>
+      <SocialMediaLinks links={socialMediaLinks} />
+    </div>
   </div>
 );
 
@@ -174,14 +189,14 @@ const getGridColumnsClass = (columnsCount: number): string => {
     case 0:
       return "";
     case 1:
-      return "grid-cols-1";
+      return "w-full flex justify-center"; // Uma coluna ocupa toda a largura como linha
     case 2:
-      return "grid-cols-1 md:grid-cols-2";
+      return "grid grid-cols-1 md:grid-cols-2";
     case 3:
-      return "grid-cols-1 md:grid-cols-3";
+      return "grid grid-cols-1 md:grid-cols-3";
     case 4:
     default:
-      return "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
+      return "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
   }
 };
 
@@ -191,6 +206,10 @@ const Footer: React.FC<FooterProps> = (props) => {
   const footerProps = { ...defaultFooterProps, ...props };
   
   // Determinar quais colunas estão ativas
+  // Para ativar outras colunas, altere os valores em footerStrings.ts:
+  // - showServicesColumn: true (para mostrar coluna de serviços)
+  // - showQuickLinksColumn: true (para mostrar coluna de links úteis)  
+  // - showNewsletterColumn: true (para mostrar coluna de newsletter)
   const columns: React.ReactNode[] = [];
   
   if (footerProps.showContactColumn) {
@@ -279,7 +298,7 @@ const Footer: React.FC<FooterProps> = (props) => {
       )}
       {showColumnsSection && (
         <div className="container mx-auto px-4" style={{ position: 'relative', zIndex: 2 }}>
-          <div className={`grid ${gridClass} gap-8 py-8`}>
+          <div className={`${gridClass} ${columns.length > 1 ? 'gap-8' : ''} py-8`}>
             {columns}
           </div>
         </div>

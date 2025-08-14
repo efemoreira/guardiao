@@ -43,9 +43,9 @@ export interface FooterStrings {
 
 export const footerStrings: FooterStrings = {
   showContactColumn: true,
-  showServicesColumn: true,
-  showQuickLinksColumn: true,
-  showNewsletterColumn: true,
+  showServicesColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
+  showQuickLinksColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
+  showNewsletterColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
   contactInfo: {
     address: "Fortaleza, CE",
     phone: "(85) 98892-8272",
@@ -60,26 +60,27 @@ export const footerStrings: FooterStrings = {
   servicesColumn: {
     title: "Nossos Serviços",
     links: [
-      { text: "Inspeção de Extintores", url: "/servicos/inspecao" },
-      { text: "Recarga de Extintores", url: "/servicos/recarga" },
-      // { text: "Venda de Extintores", url: "/servicos/venda" },
-      { text: "Sinalização de Segurança", url: "/servicos/sinalizacao" },
-      { text: "Treinamento de Incêndio", url: "/servicos/treinamento" },
-      { text: "Estudo de Risco", url: "/servicos/estudo-risco" }
+      // Conteúdo será adicionado quando o site estiver mais completo
+      // { text: "Inspeção de Extintores", url: "/servicos/inspecao" },
+      // { text: "Recarga de Extintores", url: "/servicos/recarga" },
+      // { text: "Sinalização de Segurança", url: "/servicos/sinalizacao" },
+      // { text: "Treinamento de Incêndio", url: "/servicos/treinamento" },
+      // { text: "Estudo de Risco", url: "/servicos/estudo-risco" }
     ]
   },
   quickLinksColumn: {
     title: "Links Úteis",
     links: [
-      { text: "Plano Essencial", url: "/planos/essencial" },
-      { text: "Plano Intermediário", url: "/planos/intermediario" },
-      { text: "Plano Premium", url: "/planos/premium" },
-      { text: "Sobre Nós", url: "/sobre" },
-      { text: "Contato", url: "/contato" }
+      // Conteúdo será adicionado quando o site estiver mais completo
+      // { text: "Plano Essencial", url: "/planos/essencial" },
+      // { text: "Plano Intermediário", url: "/planos/intermediario" },
+      // { text: "Plano Premium", url: "/planos/premium" },
+      // { text: "Sobre Nós", url: "/sobre" },
+      // { text: "Contato", url: "/contato" }
     ]
   },
   newsletterTitle: "Newsletter",
-  newsletterText: "Inscreva-se para receber dicas de prevenção contra incêndio e manter-se atualizado sobre normas de segurança",
+  newsletterText: "Em breve: Newsletter com dicas de prevenção contra incêndio e atualizações sobre normas de segurança",
   newsletterPlaceholder: "Seu Email",
   copyright: {
     companyName: "Guardião Extintores",
