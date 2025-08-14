@@ -98,7 +98,7 @@ const FactsSection: React.FC<FactsSectionProps> = ({
             transition={{ duration: 0.6 }}
           >
             <h6 className="text-cyan-400 uppercase font-bold text-lg mb-3">{subtitle}</h6>
-            <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold mb-5">
+            <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold mb-5 text-gray-900">
               {title}
             </h1>
             <p className="text-gray-700 mb-5">
@@ -110,7 +110,7 @@ const FactsSection: React.FC<FactsSectionProps> = ({
                 <Icon icon={phoneIcon} className="text-2xl" />
               </div>
               <div>
-                <h6 className="text-base">{phoneTitle}</h6>
+                <h6 className="text-base text-gray-900">{phoneTitle}</h6>
                 <h3 className="text-primary font-bold text-2xl">{phoneNumber}</h3>
               </div>
             </div>

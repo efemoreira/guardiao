@@ -29,7 +29,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
   imageAlt = featuresSectionStrings.imageAlt,
 }) => {
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
+    <section className="py-12 md:py-16 overflow-hidden bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap flex-col-reverse lg:flex-row-reverse -mx-4">
           {/* Coluna de Imagem */}
@@ -64,7 +64,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                 <h6 className="text-cyan-400 uppercase font-bold mb-3">
                   {subtitle}
                 </h6>
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-5">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-5 text-gray-900">
                   {title}
                 </h1>
               </motion.div>
@@ -73,7 +73,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                 {features.map((feature) => (
                   <motion.div
                     key={feature.id}
-                    className="flex items-start p-4 bg-white rounded-lg shadow-sm"
+                    className="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200"
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -87,7 +87,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                       )}
                     </div>
                     <div>
-                      <h5 className="text-lg font-bold mb-2">{feature.title}</h5>
+                      <h5 className="text-lg font-bold mb-2 text-gray-900">{feature.title}</h5>
                       <p className="text-gray-700 text-sm">{feature.description}</p>
                     </div>
                   </motion.div>

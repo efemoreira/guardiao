@@ -37,7 +37,7 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
           <h6 className="text-cyan-500 uppercase font-bold mb-3">
             {subtitle}
           </h6>
-          <h2 className="text-3xl md:text-4xl font-black mb-5">
+          <h2 className="text-3xl md:text-4xl font-black mb-5 text-gray-900">
             {title}
           </h2>
           {description && (
@@ -57,7 +57,7 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: step.delay || 0.2 * step.id }}
             >
-              <div className="bg-white rounded-lg shadow-lg p-8 h-full relative z-10">
+              <div className="bg-white rounded-lg shadow-lg p-8 h-full relative z-10 border border-gray-200">
                 <div className="absolute -top-5 -left-5 w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center text-xl font-bold">
                   {step.id}
                 </div>
@@ -68,7 +68,7 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
                     step.icon
                   )}
                 </div>
-                <h4 className="text-xl font-bold mb-3">{step.title}</h4>
+                <h4 className="text-xl font-bold mb-3 text-gray-900">{step.title}</h4>
                 <p className="text-gray-600">{step.description}</p>
               </div>
               {step.id !== steps.length && (

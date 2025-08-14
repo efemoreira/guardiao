@@ -42,7 +42,7 @@ const PriceCard: React.FC<PricingPlan> = ({
 }) => {
   return (
     <motion.div 
-      className={`bg-white shadow-md flex flex-col h-full ${popular ? 'border-2 border-primary' : ''}`}
+      className={`bg-white shadow-md flex flex-col h-full border border-gray-200 ${popular ? 'border-2 border-primary' : ''}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -66,7 +66,7 @@ const PriceCard: React.FC<PricingPlan> = ({
         )}
         <h5 className="text-primary font-bold mb-1">{name}</h5>
         <div className="text-center">
-          <h1 className="text-5xl font-black flex items-baseline justify-center">
+          <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
             <span className="text-base align-top">{currency}</span>
             {(price / 365).toFixed(2).replace('.', ',')}
             <span className="text-sm text-gray-500 ml-1">/ dia</span>
@@ -80,7 +80,7 @@ const PriceCard: React.FC<PricingPlan> = ({
       <div className="p-4 pt-0 flex flex-col flex-grow">
         <div className="flex-grow">
           {features.map((feature, index) => (
-            <p key={index} className="mb-2 flex items-center">
+            <p key={index} className="mb-2 flex items-center text-gray-700">
               <Icon icon="FaCheck" className="text-success mr-3 text-sm text-green-700" /> {feature}
             </p>
           ))}
@@ -116,7 +116,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           transition={{ duration: 0.6 }}
         >
           <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
-          <h2 className="text-4xl md:text-5xl font-black">{title}</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900">{title}</h2>
           {description && <p className="text-gray-600 mt-4 max-w-2xl mx-auto">{description}</p>}
         </motion.div>
         

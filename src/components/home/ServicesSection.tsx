@@ -23,7 +23,7 @@ interface ServicesSectionProps {
 const ServiceCard: React.FC<Service & { buttonText?: string }> = ({ title, description, image, link, delay = 0, buttonText }) => {
   return (
     <motion.div 
-      className="bg-white shadow-md py-4 px-4 md:px-6 flex flex-col h-full"
+      className="bg-white shadow-md py-4 px-4 md:px-6 flex flex-col h-full border border-gray-200"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -40,7 +40,7 @@ const ServiceCard: React.FC<Service & { buttonText?: string }> = ({ title, descr
       </div>
       <div className="flex flex-col justify-between flex-grow">
         <div>
-          <h4 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">{title}</h4>
+          <h4 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900">{title}</h4>
           <p className="text-gray-700 text-sm md:text-base mb-3 leading-relaxed">{description}</p>
         </div>
         <a 
@@ -62,7 +62,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
   buttonText = servicesSectionStrings.buttonText
 }) => {
   return (
-    <section className="py-16 min-h-screen w-full lg:w-4/6 mx-auto">
+    <section className="py-16 min-h-screen w-full lg:w-4/6 mx-auto bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-4">
         <motion.div 
           className="text-center mb-12"
@@ -72,7 +72,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
           transition={{ duration: 0.6 }}
         >
           <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">{title}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">{title}</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

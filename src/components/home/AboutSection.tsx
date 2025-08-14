@@ -33,7 +33,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   buttonLink = aboutSectionStrings.buttonLink
 }) => {
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
+    <section className="py-12 md:py-16 overflow-hidden bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
           {/* Imagem */}
@@ -65,21 +65,21 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           >
             <div className="max-w-xl">
               <h6 className="text-cyan-400 uppercase font-bold mb-3">{subtitle}</h6>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-5">{title}</h1>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-5 text-gray-900">{title}</h1>
               <p className="text-gray-700 mb-8">{description}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {features.map((feature, index) => (
                   <motion.div 
                     key={index}
-                    className="p-4 bg-white rounded-lg shadow-sm"
+                    className="p-4 bg-white rounded-lg shadow-sm border border-gray-200"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.3 + (index * 0.2) }}
                   >
                     <Icon icon={feature.icon} className="text-4xl text-primary mb-3" />
-                    <h5 className="text-lg font-bold mb-2">{feature.title}</h5>
+                    <h5 className="text-lg font-bold mb-2 text-gray-900">{feature.title}</h5>
                     <p className="text-gray-700 text-sm">{feature.description}</p>
                   </motion.div>
                 ))}

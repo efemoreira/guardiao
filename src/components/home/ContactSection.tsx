@@ -107,7 +107,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           <h6 className="text-cyan-500 uppercase font-bold mb-3">
             {subtitle}
           </h6>
-          <h2 className="text-3xl md:text-4xl font-black mb-5">
+          <h2 className="text-3xl md:text-4xl font-black mb-5 text-gray-900">
             {title}
           </h2>
           {description && (
@@ -126,15 +126,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-lg shadow-lg p-8 h-full">
-              <h4 className="text-2xl font-semibold mb-6">{contactInfo.title}</h4>
+            <div className="bg-white rounded-lg shadow-lg p-8 h-full border border-gray-200">
+              <h4 className="text-2xl font-semibold mb-6 text-gray-900">{contactInfo.title}</h4>
               
               <div className="flex items-start mb-6">
                 <div className="mr-4 mt-1">
                   <Icon icon="FaMapMarkerAlt" className="text-cyan-500 text-xl" />
                 </div>
                 <div>
-                  <h5 className="font-bold mb-1">{contactInfo.addressTitle}</h5>
+                  <h5 className="font-bold mb-1 text-gray-900">{contactInfo.addressTitle}</h5>
                   <p className="text-gray-600">{contactInfo.address.split('\n').map((line, i) => (
                     <React.Fragment key={i}>
                       {line}
@@ -149,7 +149,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <Icon icon="FaPhone" className="text-cyan-500 text-xl" />
                 </div>
                 <div>
-                  <h5 className="font-bold mb-1">{contactInfo.phoneTitle}</h5>
+                  <h5 className="font-bold mb-1 text-gray-900">{contactInfo.phoneTitle}</h5>
                   <a 
                     href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
                     target="_blank"
@@ -166,7 +166,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <Icon icon="FaEnvelope" className="text-cyan-500 text-xl" />
                 </div>
                 <div>
-                  <h5 className="font-bold mb-1">{contactInfo.emailTitle}</h5>
+                  <h5 className="font-bold mb-1 text-gray-900">{contactInfo.emailTitle}</h5>
                   <p className="text-gray-600">{contactInfo.email}</p>
                 </div>
               </div>
@@ -193,8 +193,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h4 className="text-2xl font-semibold mb-6">{formLabels.title}</h4>
+            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+              <h4 className="text-2xl font-semibold mb-6 text-gray-900">{formLabels.title}</h4>
               
               {/* Mensagem de Sucesso */}
               <AnimatePresence>
@@ -230,7 +230,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-600 mb-2">{formLabels.name}</label>
+                    <label htmlFor="name" className="block text-gray-700 mb-2 font-medium">{formLabels.name}</label>
                     <input 
                       type="text" 
                       id="name"
@@ -238,13 +238,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       value={formData.name}
                       onChange={handleInputChange}
                       disabled={isSubmitting}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed bg-white text-gray-900" 
                       placeholder={formLabels.placeholder.name}
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-gray-600 mb-2">{formLabels.email}</label>
+                    <label htmlFor="email" className="block text-gray-700 mb-2 font-medium">{formLabels.email}</label>
                     <input 
                       type="email" 
                       id="email"
@@ -252,7 +252,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       value={formData.email}
                       onChange={handleInputChange}
                       disabled={isSubmitting}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed bg-white text-gray-900" 
                       placeholder={formLabels.placeholder.email}
                       required
                     />
@@ -261,7 +261,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="phone" className="block text-gray-600 mb-2">{formLabels.phone}</label>
+                    <label htmlFor="phone" className="block text-gray-700 mb-2 font-medium">{formLabels.phone}</label>
                     <input 
                       type="text" 
                       id="phone"
@@ -269,20 +269,20 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       value={formData.phone}
                       onChange={handleInputChange}
                       disabled={isSubmitting}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed bg-white text-gray-900" 
                       placeholder={formLabels.placeholder.phone}
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="service" className="block text-gray-600 mb-2">{formLabels.service}</label>
+                    <label htmlFor="service" className="block text-gray-700 mb-2 font-medium">{formLabels.service}</label>
                     <select 
                       id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
                       disabled={isSubmitting}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed bg-white text-gray-900"
                     >
                       {formLabels.serviceOptions.map((option, index) => (
                         <option key={index} value={option.value}>{option.label}</option>
@@ -292,14 +292,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-gray-600 mb-2">{formLabels.message}</label>
+                  <label htmlFor="message" className="block text-gray-700 mb-2 font-medium">{formLabels.message}</label>
                   <textarea 
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent h-32 disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent h-32 disabled:bg-gray-100 disabled:cursor-not-allowed bg-white text-gray-900" 
                     placeholder={formLabels.placeholder.message}
                     required
                   ></textarea>
