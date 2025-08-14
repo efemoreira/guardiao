@@ -19,7 +19,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       name: 'Residencial',
       price: 36.50,
       currency: 'R$',
-      period: 'anual',
+      period: 'anualmente',
       features: [
         '1 inspeção visual por ano',
         '5% de desconto em serviços (recarga, troca)',
@@ -35,7 +35,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       name: 'Essencial',
       price: 91.25,
       currency: 'R$',
-      period: 'anual',
+      period: 'anualmente',
       features: [
         '1 inspeção técnica por ano',
         '1 visita corretiva extra',
@@ -53,7 +53,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       name: 'Intermediário',
       price: 182.50,
       currency: 'R$',
-      period: 'anual',
+      period: 'anualmente',
       features: [
         '1 inspeção técnica por ano',
         '1 recarga por ano (até 6kg, tipo ABC)',
@@ -73,7 +73,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       name: 'Premium',
       price: 365.00,
       currency: 'R$',
-      period: 'anual',
+      period: 'anualmente',
       features: [
         'Inspeções técnicas ilimitadas',
         '2 recargas por ano (até 6kg, tipo ABC)',
