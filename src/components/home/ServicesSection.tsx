@@ -62,8 +62,8 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
   buttonText = servicesSectionStrings.buttonText
 }) => {
   return (
-    <section className="py-16 min-h-screen w-full lg:w-4/6 mx-auto bg-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-4">
+    <section className="py-16 min-h-screen w-full bg-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
