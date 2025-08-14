@@ -52,9 +52,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     setIsSubmitting(true);
     
     try {
-      // Simular envio do formulário (substitua por sua lógica real de envio)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      // Endpoint do Google Script para processar o formulário
+      await fetch('https://script.google.com/macros/s/AKfycbyJDiDaCJ6enbsr-5LHculNCRZqgL7HghB68ae5mN9pzHeeCz7mP8fJjc7HMIi3Aiff8w/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        redirect: 'follow',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(formData),
+      });
+
       setIsSuccess(true);
       setShowSuccess(true);
       
