@@ -52,6 +52,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     setIsSubmitting(true);
     
     try {
+      // Preparar os dados do formulário
+      const dataToSend = {
+        ...formData,
+        service: formData.service || "Serviço não escolhido"
+      };
+      
       // Endpoint do Google Script para processar o formulário
       await fetch('https://script.google.com/macros/s/AKfycbyJDiDaCJ6enbsr-5LHculNCRZqgL7HghB68ae5mN9pzHeeCz7mP8fJjc7HMIi3Aiff8w/exec', {
         method: 'POST',
@@ -60,7 +66,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(dataToSend),
       });
 
       setIsSuccess(true);

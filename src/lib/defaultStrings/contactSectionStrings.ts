@@ -75,7 +75,7 @@ export const contactSectionStrings: ContactSectionStrings = {
       message: "Descreva sua necessidade (quantidade e tipo de extintores, localização, tipo de estabelecimento etc.)"
     },
     serviceOptions: [
-      { label: "Selecione um serviço", value: "" },
+      { label: "Selecione um serviço (opcional)", value: "" },
       { label: "Inspeção de Extintores", value: "inspecao" },
       { label: "Recarga de Extintores", value: "recarga" },
       // { label: "Venda de Extintores", value: "venda" },
