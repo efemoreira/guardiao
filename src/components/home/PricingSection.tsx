@@ -121,7 +121,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           {description && <p className="text-gray-600 mt-4 max-w-2xl mx-auto">{description}</p>}
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map(plan => (
             <PriceCard key={plan.id} {...plan} />
           ))}
