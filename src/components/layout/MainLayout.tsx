@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import BackToTopButton from '../shared/BackToTopButton';
+import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
 
 export interface NavItem {
   id: string;
@@ -42,6 +43,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </main>
       <Footer />
       <BackToTopButton />
+      <WhatsAppFloatingButton />
     </>
   );
 };
