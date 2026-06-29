@@ -44,9 +44,9 @@ const HomePage: React.FC = () => {
       {/* <div id="testimonial">
         <TestimonialSection />
       </div> */}
-      <div id="contact">
+      {/* <div id="contact">
         <ContactSection />
-      </div>
+      </div> */}
     </>
   );
 };
