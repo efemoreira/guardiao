@@ -29,6 +29,7 @@ interface FooterColumnProps {
 
 interface CopyrightInfo {
   companyName: string;
+  cnpj?: string;
   links: FooterLink[];
 }
 
@@ -154,6 +155,9 @@ const CopyrightSection: React.FC<{ copyright: CopyrightInfo }> = ({ copyright })
     <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
       <div className="mb-4 md:mb-0">
         <p>&copy; {new Date().getFullYear()} <Link href="/" className="text-primary hover:underline">{copyright.companyName}</Link>, Todos os Direitos Reservados.</p>
+        {copyright.cnpj && (
+          <p className="text-sm text-gray-400">Faço por Você - Serviços &middot; CNPJ: {copyright.cnpj}</p>
+        )}
       </div>
       <div className="flex">
         {copyright.links.map((link, index) => (

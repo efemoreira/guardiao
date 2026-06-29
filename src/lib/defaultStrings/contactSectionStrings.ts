@@ -82,9 +82,9 @@ export const contactSectionStrings: ContactSectionStrings = {
       { label: "Sinalização de Segurança", value: "sinalizacao" },
       { label: "Treinamento de Incêndio", value: "treinamento" },
       { label: "Estudo de Risco", value: "risco" },
+      { label: "Plano Vigia", value: "plano-vigia" },
       { label: "Plano Essencial", value: "plano-essencial" },
-      { label: "Plano Intermediário", value: "plano-intermediario" },
-      { label: "Plano Premium", value: "plano-premium" }
+      { label: "Plano Completo", value: "plano-completo" }
     ]
   }
 };

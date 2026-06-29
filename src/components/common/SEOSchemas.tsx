@@ -8,8 +8,7 @@ import {
   howToSchema,
   contactSchema,
   footerSchema,
-  getPlansSchema,
-  simulatorSchema
+  getPlansSchema
 } from '@/app/seoSchemas';
 import { planos } from '@/lib/utils/utils';
 
@@ -26,8 +25,7 @@ export default function SEOSchemas() {
     { id: 'howto-schema', schema: howToSchema },
     { id: 'contact-schema', schema: contactSchema },
     { id: 'footer-schema', schema: footerSchema },
-    { id: 'plans-schema', schema: plansSchema },
-    { id: 'simulator-schema', schema: simulatorSchema }
+    { id: 'plans-schema', schema: plansSchema }
   ];
 
   return (

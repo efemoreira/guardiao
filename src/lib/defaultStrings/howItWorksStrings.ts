@@ -16,7 +16,7 @@ export const howItWorksStrings: HowItWorksStrings = {
       id: 1,
       icon: "FaClipboardList",
       title: "Escolha o Plano",
-      description: "Selecione entre nossos planos Essencial, Intermediário ou Premium de acordo com suas necessidades de proteção.",
+      description: "Selecione entre nossos planos Vigia, Essencial ou Completo de acordo com suas necessidades de proteção.",
       delay: 0.2,
     },
     {

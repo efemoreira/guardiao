@@ -20,8 +20,8 @@ export const aboutSectionStrings: AboutSectionStrings = {
   features: [
     {
       icon: 'FaShieldAlt',
-      title: 'Serviço Certificado',
-      description: 'Todos os nossos serviços são realizados conforme as normas técnicas vigentes, garantindo total conformidade com a legislação de segurança contra incêndio.'
+      title: 'Parceiros Certificados',
+      description: 'Coordenamos toda a manutenção dos seus extintores trabalhando com empresas e profissionais certificados: recarga executada por empresa registrada no INMETRO e treinamentos conduzidos por bombeiro civil habilitado, em conformidade com as normas técnicas vigentes.'
     },
     {
       icon: 'FaClock',

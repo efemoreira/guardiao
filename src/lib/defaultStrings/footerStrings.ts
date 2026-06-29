@@ -22,6 +22,7 @@ export interface FooterColumnProps {
 
 export interface CopyrightInfo {
   companyName: string;
+  cnpj?: string;
   links: FooterLink[];
 }
 
@@ -72,9 +73,9 @@ export const footerStrings: FooterStrings = {
     title: "Links Úteis",
     links: [
       // Conteúdo será adicionado quando o site estiver mais completo
+      // { text: "Plano Vigia", url: "/planos/vigia" },
       // { text: "Plano Essencial", url: "/planos/essencial" },
-      // { text: "Plano Intermediário", url: "/planos/intermediario" },
-      // { text: "Plano Premium", url: "/planos/premium" },
+      // { text: "Plano Completo", url: "/planos/completo" },
       // { text: "Sobre Nós", url: "/sobre" },
       // { text: "Contato", url: "/contato" }
     ]
@@ -84,6 +85,7 @@ export const footerStrings: FooterStrings = {
   newsletterPlaceholder: "Seu Email",
   copyright: {
     companyName: "Guardião Extintores",
+    cnpj: "17.078.739/0001-19",
     links: [
       { text: "Política de Privacidade", url: "/privacidade" },
       { text: "Termos de Serviço", url: "/termos" },

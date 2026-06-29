@@ -26,7 +26,7 @@ export const aboutSchema = {
   "mainEntity": {
     "@type": "Organization",
     "name": "Guardião Extintores",
-    "description": "Com mais de 12 anos de experiência, somos especialistas em proteção contra incêndio.",
+    "description": "Com mais de 12 anos de experiência, atuamos na intermediação e gestão da manutenção de extintores, com recargas executadas por empresa parceira registrada no INMETRO e treinamentos conduzidos por bombeiro civil habilitado.",
     "foundingDate": "2014-01-01",
     "founders": [
       {
@@ -36,7 +36,6 @@ export const aboutSchema = {
     ],
     "numberOfEmployees": "10+",
     "email": "contato@felipesmoreira.com",
-    "award": "100% certificados",
     "knowsAbout": ["Extintores", "Proteção contra incêndio", "Inspeções de segurança"]
   }
 };
@@ -287,22 +286,4 @@ export const getPlansSchema = (planos: Plano[]) => {
       "item": offer
     }))
   };
-};
-
-// Esquema para o simulador financeiro
-export const simulatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "FinancialProduct",
-  "name": "Simulador de economia para serviços de proteção contra incêndio",
-  "description": "Compare os custos dos nossos planos de proteção contra incêndio e veja quanto você pode economizar",
-  "provider": {
-    "@type": "Organization",
-    "name": "Guardião Extintores"
-  },
-  "feesAndCommissionsSpecification": "Nossos planos oferecem descontos de até 20% em produtos e 15% em serviços",
-  "interestRate": {
-    "@type": "QuantitativeValue",
-    "value": "0",
-    "unitText": "PERCENT"
-  }
 };

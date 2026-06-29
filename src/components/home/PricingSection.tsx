@@ -11,6 +11,10 @@ export interface PricingPlan {
   price: number;
   currency?: string;
   period?: string;
+  /** Sobrescreve o texto exibido após o preço (ex.: "/ extintor / mês"). Quando informado, o preço não é convertido para valor por dia. */
+  priceSuffix?: string;
+  /** Texto pequeno exibido abaixo do preço (ex.: condição de anuidade). */
+  priceNote?: string;
   features: string[];
   delay?: number;
   image?: string;
@@ -28,12 +32,14 @@ export interface PricingSectionProps {
   backgroundColor?: string;
 }
 
-const PriceCard: React.FC<PricingPlan> = ({ 
-  name, 
-  price, 
-  currency = 'R$', 
-  period = 'mês', 
-  features, 
+const PriceCard: React.FC<PricingPlan> = ({
+  name,
+  price,
+  currency = 'R$',
+  period = 'mês',
+  priceSuffix,
+  priceNote,
+  features,
   delay = 0.3,
   image,
   buttonText = 'Contratar Agora',
@@ -41,8 +47,12 @@ const PriceCard: React.FC<PricingPlan> = ({
   popular,
   textPopular = 'Mais popular',
 }) => {
+  // Planos com priceSuffix (ex.: "/ extintor / mês") têm preço por unidade, não anual,
+  // então não faz sentido converter para valor por dia.
+  const isPerUnit = Boolean(priceSuffix);
+
   return (
-    <motion.div 
+    <motion.div
       className={`bg-white shadow-md flex flex-col h-full border border-gray-200 ${popular ? 'border-2 border-primary' : ''}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -57,24 +67,36 @@ const PriceCard: React.FC<PricingPlan> = ({
       <div className="border-b p-4 mb-4">
         {image && (
           <div className="mb-3 flex justify-center relative h-16 w-16 mx-auto">
-            <Image 
-              src={image} 
-              alt={name} 
+            <Image
+              src={image}
+              alt={name}
               fill
-              className="object-contain" 
+              className="object-contain"
             />
           </div>
         )}
         <h5 className="text-primary font-bold mb-1">{name}</h5>
         <div className="text-center">
-          <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
-            <span className="text-base align-top">{currency}</span>
-            {(price / 365).toFixed(2).replace('.', ',')}
-            <span className="text-sm text-gray-500 ml-1">/ dia</span>
-          </h1>
+          {isPerUnit ? (
+            <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
+              <span className="text-base align-top">{currency}</span>
+              {price.toFixed(2).replace('.', ',')}
+            </h1>
+          ) : (
+            <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
+              <span className="text-base align-top">{currency}</span>
+              {(price / 365).toFixed(2).replace('.', ',')}
+              <span className="text-sm text-gray-500 ml-1">/ dia</span>
+            </h1>
+          )}
           <p className="text-sm text-gray-500 mt-1">
-            {currency} {price.toFixed(2).replace('.', ',')} / {period}
+            {isPerUnit
+              ? priceSuffix
+              : `${currency} ${price.toFixed(2).replace('.', ',')} / ${period}`}
           </p>
+          {priceNote && (
+            <p className="text-xs text-gray-400 mt-1">{priceNote}</p>
+          )}
         </div>
       </div>
 

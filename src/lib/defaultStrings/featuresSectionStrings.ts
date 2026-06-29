@@ -40,7 +40,7 @@ export const featuresSectionStrings: FeaturesSectionStrings = {
       id: 3,
       icon: "FaShieldAlt",
       title: "Planos Econômicos",
-      description: "Nossos planos mensais (Essencial, Intermediário e Premium) oferecem descontos em serviços, produtos e inspeções/recargas gratuitas incluídas.",
+      description: "Nossos planos (Vigia, Essencial e Completo) oferecem gestão de vencimentos, inspeções, recarga inclusa e descontos em serviços avulsos.",
       delay: 0.6,
     },
   ],

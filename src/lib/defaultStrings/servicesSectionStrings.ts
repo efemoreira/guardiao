@@ -63,7 +63,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
     {
       id: 7,
       title: "Visita Consultiva",
-      description: "Consultoria especializada com orientações sobre AVCB, NR-23 e melhorias na segurança contra incêndio do seu estabelecimento.",
+      description: "Assessoria de organização e acompanhamento para a obtenção do Certificado de Conformidade junto ao CBMCE, além de orientações sobre melhorias na segurança contra incêndio do seu estabelecimento.",
       image: "img/estudo.jpg",
       link: "/#pricing",
       delay: 0.1,
