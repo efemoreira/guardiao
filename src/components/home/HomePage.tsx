@@ -6,7 +6,6 @@ import FactsSection from './FactsSection';
 import FeaturesSection from './FeaturesSection';
 import HowItWorksSection from './HowItWorksSection';
 import PricingSection from './PricingSection';
-import ContactSection from './ContactSection';
 
 const HomePage: React.FC = () => {
   // Efeito para rolar a página para o topo quando o componente é montado
