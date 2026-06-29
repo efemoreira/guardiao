@@ -49,6 +49,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       ],
       delay: 0.3,
       textPopular: 'Mais popular',
+      popular: true,
       buttonText: 'Contratar',
       buttonLink: '85988928272'
     },
@@ -67,7 +68,6 @@ export const pricingSectionStrings: PricingSectionStrings = {
         'Guia de orientação para regularização junto ao CBMCE',
       ],
       delay: 0.4,
-      popular: true,
       buttonText: 'Contratar',
       buttonLink: '85988928272'
     },
