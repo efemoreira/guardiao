@@ -48,6 +48,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
         '10% de desconto em serviços avulsos',
       ],
       delay: 0.3,
+      textPopular: 'Mais popular',
       buttonText: 'Contratar',
       buttonLink: '85988928272'
     },
@@ -67,7 +68,6 @@ export const pricingSectionStrings: PricingSectionStrings = {
       ],
       delay: 0.4,
       popular: true,
-      textPopular: 'Mais completo',
       buttonText: 'Contratar',
       buttonLink: '85988928272'
     },
