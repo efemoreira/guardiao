@@ -186,13 +186,13 @@ const Navbar: React.FC<NavbarProps> = ({
       <div className="w-full pr-4">
         <div className="flex items-center justify-between">
           {/* Logo à esquerda */}
-          <Link 
+          <Link
             href={logo.path}
-            className="bg-primary px-12 py-4 lg:px-12 lg:py-4 flex flex-col items-center"
+            className="bg-primary px-6 py-3 lg:px-12 lg:py-4 flex flex-col items-center"
           >
-            <h2 className="text-white font-bold text-3xl text-center w-full">{logo.text}</h2>
+            <h2 className="text-white font-bold text-xl lg:text-3xl text-center w-full">{logo.text}</h2>
             {logo.subtext && (
-              <h3 className="text-white font-semibold text-xl text-center w-full tracking-widest">{logo.subtext}</h3>
+              <h3 className="text-white font-semibold text-sm lg:text-xl text-center w-full tracking-widest">{logo.subtext}</h3>
             )}
           </Link>
 

@@ -40,30 +40,47 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
         </motion.div>
 
         <motion.div
-          className="overflow-x-auto bg-white shadow-sm border border-gray-200"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-secondary text-white">
-                <th className="py-3 px-4 font-bold">Serviço</th>
-                <th className="py-3 px-4 font-bold text-right">Preço</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.map((item) => (
-                <tr key={item.id} className="even:bg-gray-50 odd:bg-white border-b border-gray-100">
-                  <td className="py-3 px-4 text-gray-700">{item.name}</td>
-                  <td className={`py-3 px-4 text-right font-bold ${item.price === 'Grátis' ? 'text-green-600' : 'text-gray-900'}`}>
-                    {item.price}
-                  </td>
+          {/* Mobile: lista de cards empilhados */}
+          <ul className="md:hidden flex flex-col gap-2">
+            {items.map((item) => (
+              <li
+                key={item.id}
+                className="bg-white border border-gray-200 px-4 py-3 flex justify-between items-center"
+              >
+                <span className="text-gray-700 text-sm pr-4">{item.name}</span>
+                <span className={`font-bold text-sm whitespace-nowrap ${item.price === 'Grátis' ? 'text-green-600' : 'text-gray-900'}`}>
+                  {item.price}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop md+: tabela */}
+          <div className="hidden md:block overflow-x-auto bg-white shadow-sm border border-gray-200">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="py-3 px-4 font-bold">Serviço</th>
+                  <th className="py-3 px-4 font-bold text-right">Preço</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {items.map((item) => (
+                  <tr key={item.id} className="even:bg-gray-50 odd:bg-white border-b border-gray-100">
+                    <td className="py-3 px-4 text-gray-700">{item.name}</td>
+                    <td className={`py-3 px-4 text-right font-bold ${item.price === 'Grátis' ? 'text-green-600' : 'text-gray-900'}`}>
+                      {item.price}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </motion.div>
 
         <p className="text-sm text-gray-500 mt-4">{note}</p>

@@ -59,7 +59,7 @@ const Counter: React.FC<CounterProps> = ({ end, duration = 2 }) => {
 
 export interface Fact {
   icon: string;
-  count: number;
+  count?: number;
   text: string;
   backgroundColor: string;
 }
@@ -129,9 +129,11 @@ const FactsSection: React.FC<FactsSectionProps> = ({
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                 >
                   <Icon icon={fact.icon} className="text-4xl text-white mb-3" />
-                  <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
-                    <Counter end={fact.count} />
-                  </h2>
+                  {fact.count !== undefined && (
+                    <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+                      <Counter end={fact.count} />
+                    </h2>
+                  )}
                   <p className="text-white text-lg">{fact.text}</p>
                 </motion.div>
               ))}

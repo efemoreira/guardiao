@@ -49,5 +49,5 @@ export const heroCarouselStrings: HeroCarouselStrings = {
     }
   ],
   autoPlayInterval: 12000,
-  height: "h-[80vh] md:h-[90vh]"
+  height: "h-[90vh] sm:h-[80vh] md:h-[90vh]"
 };

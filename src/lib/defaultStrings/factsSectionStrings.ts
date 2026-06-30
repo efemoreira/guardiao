@@ -12,30 +12,28 @@ export interface FactsSectionStrings {
 }
 
 export const factsSectionStrings: FactsSectionStrings = {
-  subtitle: "Números que Impressionam",
+  subtitle: "Por que confiar na Guardião",
   title: "Experiência e Segurança Garantida",
-  description: "Com mais de 10 anos no mercado, atendemos residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes com soluções completas de proteção contra incêndio. Nossos serviços preventivos garantem que seus equipamentos estejam sempre em conformidade com as normas técnicas.",
+  description: "Com mais de 12 anos no mercado, atendemos residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes com soluções completas de proteção contra incêndio. Nossos serviços preventivos garantem que seus equipamentos estejam sempre em conformidade com as normas técnicas.",
   phoneTitle: "Precisa de orientação?",
   phoneNumber: "(85) 98671-8305",
   phoneIcon: "FaPhoneAlt",
   facts: [
     {
-      icon: "FaFireExtinguisher",
-      count: 1200,
-      text: "Extintores Manutenidos",
-      backgroundColor: "bg-red-600"
-    },
-    {
-      icon: "FaBuilding",
-      count: 56,
-      text: "Clientes Atendidos",
-      backgroundColor: "bg-blue-600"
-    },
-    {
       icon: "FaCalendarCheck",
       count: 12,
       text: "Anos de Experiência",
       backgroundColor: "bg-green-600"
+    },
+    {
+      icon: "FaShieldAlt",
+      text: "Parceiro registrado no INMETRO",
+      backgroundColor: "bg-blue-600"
+    },
+    {
+      icon: "FaFireExtinguisher",
+      text: "Conformidade com o Corpo de Bombeiros (CBMCE)",
+      backgroundColor: "bg-red-600"
     }
   ],
   backgroundColor: "bg-gray-50"

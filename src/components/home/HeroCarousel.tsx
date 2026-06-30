@@ -92,8 +92,8 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
                     {items[currentIndex].subtitle}
                   </motion.h6>
                   
-                  <motion.h1 
-                    className="text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-6"
+                  <motion.h1
+                    className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-6"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.4 }}

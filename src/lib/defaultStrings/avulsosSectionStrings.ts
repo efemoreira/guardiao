@@ -24,7 +24,7 @@ export const avulsosSectionStrings: AvulsosSectionStrings = {
     { id: 2, name: "Recarga extintor ABC 4 kg", price: "R$ 100" },
     { id: 3, name: "Recarga extintor BC 6 kg", price: "R$ 80" },
     { id: 4, name: "Recarga extintor BC 4 kg", price: "R$ 70" },
-    { id: 5, name: "Recarga extintor CO₂ 6 kg", price: "R$ 190" },
+    { id: 5, name: "Recarga extintor CO₂ 6 kg", price: "R$ 160" },
     { id: 6, name: "Recarga extintor CO₂ 4 kg", price: "R$ 130" },
     { id: 7, name: "Recarga extintor de água 10 L", price: "R$ 85" },
     { id: 8, name: "Inspeção técnica + laudo", price: "Grátis" },
