@@ -53,7 +53,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   ],
   contactInfo: {
     address: 'Fortaleza - CE',
-    phone: '(85) 98892-8272',
+    phone: '(85) 98671-8305',
     email: 'contato@felipesmoreira.com',
     addressIcon: 'FaMapMarkerAlt',
     phoneIcon: 'FaPhoneAlt',
@@ -62,7 +62,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   callout: {
     icon: 'FaShieldAlt',
     title: 'Proteção é prevenção!',
-    phone: '(85) 98892-8272'
+    phone: '(85) 98671-8305'
   },
   submitButtonText: 'Solicitar Avaliação',
   namePlaceholder: 'Seu Nome',

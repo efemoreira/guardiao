@@ -10,6 +10,6 @@ export const finalCtaSectionStrings: FinalCtaSectionStrings = {
   title: "Inspeção gratuita",
   description: "Sem compromisso. Fazemos uma inspeção dos seus extintores e te dizemos exatamente o que está vencido ou irregular para a vistoria do Bombeiro.",
   buttonText: "Agendar no WhatsApp",
-  phoneNumber: "(85) 98892-8272",
+  phoneNumber: "(85) 98671-8305",
   message: "Olá! Gostaria de agendar uma inspeção gratuita dos meus extintores.",
 };

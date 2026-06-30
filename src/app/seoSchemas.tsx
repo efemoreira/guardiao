@@ -8,7 +8,7 @@ export const organizationSchema = {
   "logo": "https://guardiao.felipesmoreira.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+5585988928272",
+    "telephone": "+5585986718305",
     "contactType": "customer service",
     "availableLanguage": "Portuguese"
   },
@@ -185,7 +185,7 @@ export const contactSchema = {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+5585988928272",
+        "telephone": "+5585986718305",
         "contactType": "customer service",
         "availableLanguage": "Portuguese",
         "contactOption": "TollFree"

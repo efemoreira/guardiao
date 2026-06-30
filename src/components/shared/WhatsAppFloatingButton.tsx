@@ -9,7 +9,7 @@ interface WhatsAppFloatingButtonProps {
 }
 
 const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
-  phoneNumber = '(85) 98892-8272',
+  phoneNumber = '(85) 98671-8305',
   message = 'Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.',
 }) => {
   return (

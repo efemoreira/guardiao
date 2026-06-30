@@ -49,13 +49,13 @@ export const footerStrings: FooterStrings = {
   showNewsletterColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
   contactInfo: {
     address: "Fortaleza, CE",
-    phone: "(85) 98892-8272",
+    phone: "(85) 98671-8305",
     email: "contato@felipesmoreira.com"
   },
   socialMediaLinks: [
     { platform: "Facebook", url: "https://facebook.com/", icon: "FaFacebookF" },
     { platform: "Instagram", url: "https://instagram.com/", icon: "FaInstagram" },
-    { platform: "WhatsApp", url: "https://wa.me/5585988928272", icon: "FaWhatsapp" },
+    { platform: "WhatsApp", url: "https://wa.me/5585986718305", icon: "FaWhatsapp" },
     { platform: "YouTube", url: "https://youtube.com/", icon: "FaYoutube" }
   ],
   servicesColumn: {

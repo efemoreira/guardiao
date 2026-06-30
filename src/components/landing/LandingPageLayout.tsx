@@ -10,7 +10,7 @@ interface LandingPageLayoutProps {
   children: ReactNode;
 }
 
-const phoneNumber = '(85) 98892-8272';
+const phoneNumber = '(85) 98671-8305';
 
 const LandingPageLayout: React.FC<LandingPageLayoutProps> = ({ children }) => {
   return (

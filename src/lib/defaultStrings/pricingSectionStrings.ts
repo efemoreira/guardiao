@@ -30,7 +30,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       ],
       delay: 0.2,
       buttonText: 'Contratar',
-      buttonLink: '85988928272'
+      buttonLink: '85986718305'
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       textPopular: 'Mais popular',
       popular: true,
       buttonText: 'Contratar',
-      buttonLink: '85988928272'
+      buttonLink: '85986718305'
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ export const pricingSectionStrings: PricingSectionStrings = {
       ],
       delay: 0.4,
       buttonText: 'Contratar',
-      buttonLink: '85988928272'
+      buttonLink: '85986718305'
     },
   ],
 };

@@ -46,7 +46,7 @@ export default function CookiesPage() {
       <p>
         Dúvidas sobre o uso de cookies podem ser enviadas para{' '}
         <a href="mailto:contato@felipesmoreira.com">contato@felipesmoreira.com</a> ou pelo WhatsApp{' '}
-        <a href="https://wa.me/5585988928272" target="_blank" rel="noopener noreferrer">(85) 98892-8272</a>.
+        <a href="https://wa.me/5585986718305" target="_blank" rel="noopener noreferrer">(85) 98671-8305</a>.
       </p>
     </LegalContent>
   );

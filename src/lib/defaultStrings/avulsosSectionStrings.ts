@@ -35,6 +35,6 @@ export const avulsosSectionStrings: AvulsosSectionStrings = {
   ],
   note: "Preços avulsos sem desconto. Assinantes dos planos Vigia e Essencial têm 5% e 10% de desconto, respectivamente, nesses serviços.",
   ctaText: "Solicitar um desses serviços",
-  ctaLink: "(85) 98892-8272",
+  ctaLink: "(85) 98671-8305",
   ctaMessage: "Olá! Gostaria de solicitar um serviço avulso.",
 };

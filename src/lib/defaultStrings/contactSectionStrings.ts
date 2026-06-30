@@ -51,7 +51,7 @@ export const contactSectionStrings: ContactSectionStrings = {
     addressTitle: "Endereço",
     address: "Fortaleza, CE",
     phoneTitle: "Telefone",
-    phone: "(85) 98892-8272",
+    phone: "(85) 98671-8305",
     emailTitle: "Email",
     email: "contato@felipesmoreira.com",
     socialMedia: [
