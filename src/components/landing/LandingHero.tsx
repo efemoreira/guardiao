@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { landingHeroStrings } from '../../lib/defaultStrings/landingHeroStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface LandingHeroProps {
   title?: string;
@@ -65,6 +66,7 @@ const LandingHero: React.FC<LandingHeroProps> = ({
           href={generateWhatsAppLink(phoneNumber, message)}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick('landing_hero')}
           className="inline-block bg-primary text-white py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

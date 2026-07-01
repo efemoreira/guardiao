@@ -3,6 +3,7 @@ import { Icon } from '../../utils/IconUtil';
 import Link from 'next/link';
 import { footerStrings } from '../../lib/defaultStrings/footerStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 // Definição dos tipos para as props do Footer
 interface SocialMediaLink {
@@ -87,10 +88,11 @@ const ContactSection: React.FC<{ contactInfo: ContactInfo; socialMediaLinks: Soc
           <Icon icon="FaPhoneAlt" className="text-white text-lg" />
         </div>
         <p className="font-semibold">Telefone</p>
-        <a 
+        <a
           href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick('footer_phone')}
           className="text-gray-300 hover:text-primary transition-colors"
         >
           {contactInfo.phone}
@@ -153,13 +155,13 @@ const NewsletterSection: React.FC<{ title: string; text: string; placeholder: st
 const CopyrightSection: React.FC<{ copyright: CopyrightInfo }> = ({ copyright }) => (
   <div className="py-4 border-t border-gray-700" style={{ position: 'relative', zIndex: 2 }}>
     <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <div className="mb-4 md:mb-0">
+      <div className="mb-4 md:mb-0 text-center md:text-left">
         <p>&copy; {new Date().getFullYear()} <Link href="/" className="text-primary hover:underline">{copyright.companyName}</Link>, Todos os Direitos Reservados.</p>
         {copyright.cnpj && (
           <p className="text-sm text-gray-400">Faço por Você - Serviços &middot; CNPJ: {copyright.cnpj}</p>
         )}
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap justify-center">
         {copyright.links.map((link, index) => (
           <Link key={index} href={link.url} className="mx-2 hover:text-primary transition-colors">
             {link.text}

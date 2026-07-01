@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { pricingSectionStrings } from '../../lib/defaultStrings/pricingSectionStrings';
 import { generateWhatsAppLink } from '@/lib/utils/utils';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export interface PricingPlan {
   id: number;
@@ -110,6 +111,7 @@ const PriceCard: React.FC<PricingPlan> = ({
         </div>
         <a
           href={generateWhatsAppLink(buttonLink, `Quero saber mais sobre o plano ${name}`)}
+          onClick={() => trackWhatsAppClick(`pricing_plan_${name.toLowerCase()}`)}
           className="mt-4 inline-flex items-center group relative text-gray-800 hover:text-primary transition-all duration-300"
         >
           <span className="mr-2">{buttonText}</span>

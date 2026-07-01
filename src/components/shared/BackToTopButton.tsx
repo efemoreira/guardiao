@@ -38,7 +38,7 @@ const BackToTopButton: React.FC = () => {
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
           aria-label="Voltar ao topo"
-          className="fixed bottom-6 right-6 z-50 bg-primary text-white h-12 w-12 rounded-none flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
+          className="fixed bottom-6 right-6 z-[70] bg-primary text-white h-12 w-12 rounded-none flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
         >
           <Icon icon="FaArrowUp" />
         </motion.button>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Icon } from '../../utils/IconUtil';
 import { finalCtaSectionStrings } from '../../lib/defaultStrings/finalCtaSectionStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface FinalCtaSectionProps {
   title?: string;
@@ -44,6 +45,7 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
           href={generateWhatsAppLink(phoneNumber, message)}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick('landing_final_cta')}
           className="inline-flex items-center gap-2 bg-white text-primary py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

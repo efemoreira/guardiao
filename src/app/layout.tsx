@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SEOSchemas from "@/components/common/SEOSchemas";
+import GoogleAnalytics from "@/components/common/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     siteName: "Guardião Extintores",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/img/herobanner2.jpg",
         width: 1200,
-        height: 630,
+        height: 628,
         alt: "Guardião Extintores - Proteção Contra Incêndio Profissional",
       },
     ],
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Guardião Extintores | Proteção Contra Incêndio",
     description: "Especialistas em proteção contra incêndio com mais de 12 anos de experiência.",
-    images: ["/twitter-image.jpg"],
+    images: ["/img/herobanner2.jpg"],
   },
 };
 
@@ -77,6 +78,7 @@ export default function RootLayout({
     <html lang="pt-BR" dir="ltr">
       <head>
         <SEOSchemas />
+        <GoogleAnalytics />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

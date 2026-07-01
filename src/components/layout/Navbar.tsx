@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navbarStrings } from '../../lib/defaultStrings/navbarStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface NavItem {
   id: string;
@@ -161,10 +162,11 @@ const Navbar: React.FC<NavbarProps> = ({
           <Icon icon={contactInfo.icon} className="text-primary mr-3 text-2xl" />
           <div>
             <p className="text-base font-medium text-gray-600">{contactInfo.text}</p>
-            <a 
+            <a
               href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('navbar_desktop_phone')}
               className="text-black font-bold text-2xl hover:text-primary transition-colors"
             >
               {contactInfo.phone}
@@ -258,10 +260,11 @@ const Navbar: React.FC<NavbarProps> = ({
                   <Icon icon={contactInfo.icon} className="text-primary mr-3 text-2xl flex-shrink-0" />
                   <div className="flex-grow">
                     <p className="text-base font-medium text-gray-600 mb-0.5">{contactInfo.text}</p>
-                    <a 
+                    <a
                       href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick('navbar_mobile_phone')}
                       className="text-primary font-bold text-xl break-words hover:text-cyan-600 transition-colors"
                     >
                       {contactInfo.phone}

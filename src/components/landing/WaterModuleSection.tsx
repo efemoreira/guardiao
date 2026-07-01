@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Icon } from '../../utils/IconUtil';
 import { waterModuleSectionStrings } from '../../lib/defaultStrings/waterModuleSectionStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface WaterModuleSectionProps {
   subtitle?: string;
@@ -43,6 +44,7 @@ const WaterModuleSection: React.FC<WaterModuleSectionProps> = ({
               href={generateWhatsAppLink(ctaLink, ctaMessage)}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('landing_water_module_cta')}
               className="inline-block bg-secondary text-white py-3 px-6 font-bold hover:opacity-90 transition duration-300"
             >
               {ctaText}

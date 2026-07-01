@@ -3,6 +3,7 @@ import { Icon } from '../../utils/IconUtil';
 import { motion, AnimatePresence } from 'framer-motion';
 import { contactSectionStrings, ContactInfo, FormLabels } from '../../lib/defaultStrings/contactSectionStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface ContactSectionProps {
   title?: string;
@@ -150,10 +151,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
                 <div>
                   <h5 className="font-bold mb-1 text-gray-900">{contactInfo.phoneTitle}</h5>
-                  <a 
+                  <a
                     href={generateWhatsAppLink(contactInfo.phone, "Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.")}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('contact_section_phone')}
                     className="text-gray-600 hover:text-cyan-500 transition-colors"
                   >
                     {contactInfo.phone}

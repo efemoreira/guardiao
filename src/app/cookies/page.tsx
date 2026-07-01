@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <LegalContent title="Política de Cookies" updatedAt="29 de junho de 2026">
+    <LegalContent title="Política de Cookies" updatedAt="1 de julho de 2026">
       <p>
         Cookies são pequenos arquivos de texto armazenados no seu navegador que ajudam um site a funcionar
         corretamente e a entender como é utilizado. Esta página explica como o site da{' '}
@@ -24,10 +24,11 @@ export default function CookiesPage() {
 
       <h2>2. Cookies de análise e publicidade</h2>
       <p>
-        Atualmente este site não utiliza cookies de análise de tráfego (como Google Analytics) ou de
-        publicidade (como Meta/Google Ads). Caso essas ferramentas sejam adotadas no futuro — por exemplo, para
-        medir o desempenho de campanhas de anúncio — esta política será atualizada antes da ativação, informando
-        quais cookies passam a ser usados e como você pode gerenciá-los.
+        Utilizamos o <strong>Google Analytics</strong> para entender como os visitantes usam o site (páginas
+        acessadas, origem do acesso, cliques nos botões de contato) e medir o desempenho de campanhas de anúncio.
+        Essas informações são agregadas e não identificam você pessoalmente. Caso outras ferramentas de
+        publicidade (como Meta/Google Ads) passem a usar cookies próprios no futuro, esta política será
+        atualizada antes da ativação.
       </p>
 
       <h2>3. Como gerenciar cookies</h2>

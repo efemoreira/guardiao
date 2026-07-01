@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { avulsosSectionStrings, AvulsoServiceItem } from '../../lib/defaultStrings/avulsosSectionStrings';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface AvulsosSectionProps {
   subtitle?: string;
@@ -90,6 +91,7 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
             href={generateWhatsAppLink(ctaLink, ctaMessage)}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('landing_avulsos_cta')}
             className="inline-block bg-primary text-white py-3 px-6 font-bold hover:opacity-90 transition duration-300"
           >
             {ctaText}
