@@ -14,7 +14,7 @@ export interface FactsSectionStrings {
 export const factsSectionStrings: FactsSectionStrings = {
   subtitle: "Por que confiar na Guardião",
   title: "Experiência e Segurança Garantida",
-  description: "Com mais de 12 anos no mercado, atendemos residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes com soluções completas de proteção contra incêndio. Nossos serviços preventivos garantem que seus equipamentos estejam sempre em conformidade com as normas técnicas.",
+  description: "Com mais de 14 anos no mercado, atendemos residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes com soluções completas de proteção contra incêndio. Nossos serviços preventivos garantem que seus equipamentos estejam sempre em conformidade com as normas técnicas.",
   phoneTitle: "Precisa de orientação?",
   phoneNumber: "(85) 98671-8305",
   phoneIcon: "FaPhoneAlt",

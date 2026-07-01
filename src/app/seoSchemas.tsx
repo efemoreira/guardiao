@@ -26,7 +26,7 @@ export const aboutSchema = {
   "mainEntity": {
     "@type": "Organization",
     "name": "Guardião Extintores",
-    "description": "Com mais de 12 anos de experiência, atuamos na intermediação e gestão da manutenção de extintores, com recargas executadas por empresa parceira registrada no INMETRO e treinamentos conduzidos por bombeiro civil habilitado.",
+    "description": "Com mais de 14 anos de experiência, atuamos na intermediação e gestão da manutenção de extintores, com recargas executadas por empresa parceira registrada no INMETRO e treinamentos conduzidos por bombeiro civil habilitado.",
     "foundingDate": "2014-01-01",
     "founders": [
       {
