@@ -34,12 +34,12 @@
 
     <clipPath id="shieldClip">
       <path
-        d="M200 78
-           L288 112
-           V205
-           C288 275 250 315 200 345
-           C150 315 112 275 112 205
-           V112
+        d="M200 54
+           L304 94
+           V204
+           C304 286 259 334 200 369
+           C141 334 96 286 96 204
+           V94
            Z"
       />
     </clipPath>
@@ -51,50 +51,50 @@
   <!-- Escudo, proporção mais equilibrada (menos esticado) -->
   <g filter="url(#softShadow)">
     <path
-      d="M200 78
-         L288 112
-         V205
-         C288 275 250 315 200 345
-         C150 315 112 275 112 205
-         V112
+      d="M200 54
+         L304 94
+         V204
+         C304 286 259 334 200 369
+         C141 334 96 286 96 204
+         V94
          Z"
       fill="url(#shieldGrad)"
       stroke="#091E3E"
-      stroke-width="5"
+      stroke-width="6"
       stroke-linejoin="round"
     />
     <!-- brilho superior, dá volume, desvanece suavemente -->
-    <rect x="112" y="78" width="176" height="140" fill="url(#glossGrad)" clip-path="url(#shieldClip)" />
+    <rect x="96" y="54" width="208" height="160" fill="url(#glossGrad)" clip-path="url(#shieldClip)" />
   </g>
 
-  <!-- Prédio dentro do escudo -->
-  <g stroke="#7A1113" stroke-width="3.5" stroke-linejoin="round">
+  <!-- Prédio dentro do escudo (escalado junto com o escudo maior) -->
+  <g stroke="#7A1113" stroke-width="4" stroke-linejoin="round">
     <!-- torre esquerda, mais baixa -->
-    <rect x="140" y="212" width="50" height="85" rx="3" fill="url(#towerGradLeft)" />
+    <rect x="129" y="212" width="59" height="100" rx="3.5" fill="url(#towerGradLeft)" />
     <!-- torre direita, mais alta -->
-    <rect x="196" y="168" width="56" height="129" rx="3" fill="url(#towerGradRight)" />
+    <rect x="195" y="160" width="66" height="152" rx="3.5" fill="url(#towerGradRight)" />
 
     <!-- janelas torre esquerda -->
-    <rect x="150" y="224" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="169" y="224" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="150" y="245" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="169" y="245" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="150" y="266" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="169" y="266" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
+    <rect x="141" y="226" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="163" y="226" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="141" y="251" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="163" y="251" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="141" y="276" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="163" y="276" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
 
     <!-- janelas torre direita -->
-    <rect x="206" y="182" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="227" y="182" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="206" y="203" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="227" y="203" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="206" y="224" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="227" y="224" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="206" y="245" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="227" y="245" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="206" y="266" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
-    <rect x="227" y="266" width="9" height="9" rx="1.5" fill="#FBF6DC" stroke-width="1.5" />
+    <rect x="207" y="177" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="232" y="177" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="207" y="201" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="232" y="201" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="207" y="226" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="232" y="226" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="207" y="251" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="232" y="251" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="207" y="276" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
+    <rect x="232" y="276" width="10.5" height="10.5" rx="2" fill="#FBF6DC" stroke-width="2" />
 
     <!-- base -->
-    <rect x="136" y="297" width="120" height="9" rx="2" fill="#E5292C" />
+    <rect x="124" y="312" width="142" height="11" rx="2.5" fill="#E5292C" />
   </g>
 </svg>
