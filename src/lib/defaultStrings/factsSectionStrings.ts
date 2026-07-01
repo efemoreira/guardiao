@@ -21,7 +21,7 @@ export const factsSectionStrings: FactsSectionStrings = {
   facts: [
     {
       icon: "FaCalendarCheck",
-      count: 12,
+      count: 14,
       text: "Anos de Experiência",
       backgroundColor: "bg-green-600"
     },
