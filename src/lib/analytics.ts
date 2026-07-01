@@ -1,4 +1,5 @@
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
+// ID público do GA4 (não é segredo: qualquer site expõe esse valor no HTML/JS do navegador).
+export const GA_MEASUREMENT_ID = 'G-EFQZQNXG5Q';
 
 type GtagEventParams = Record<string, string | number | boolean | undefined>;
 
