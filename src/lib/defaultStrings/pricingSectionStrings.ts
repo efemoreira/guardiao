@@ -11,7 +11,7 @@ export interface PricingSectionStrings {
 export const pricingSectionStrings: PricingSectionStrings = {
   title: 'Planos de Proteção',
   subtitle: 'Nossos Planos',
-  description: 'Escolha o melhor plano para manter a segurança contra incêndio do seu estabelecimento sempre em dia, seja residência, condomínio, empresa, igreja, colégio ou restaurante.',
+  description: 'Escolha o melhor plano para manter a segurança preventiva de seu patrimônio sempre em dia, seja residência, condomínio, empresa, igreja, colégio ou restaurante. Veja como é barato manter a segurança preventiva de seu patrimônio. Nossos planos cabem em seu orçamento.',
   backgroundColor: 'bg-gray-50',
   plans: [
     {
