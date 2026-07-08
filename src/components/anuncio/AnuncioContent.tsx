@@ -2,7 +2,7 @@
 
 import React from 'react';
 import AnuncioLayout from './AnuncioLayout';
-import LandingHero from './LandingHero';
+import LandingHero from './AnuncioHero';
 import TrustSection from './TrustSection';
 import PricingSection from '../home/PricingSection';
 import WaterModuleSection from './WaterModuleSection';

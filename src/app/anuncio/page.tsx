@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import AnuncioContent from '@/components/landing/AnuncioContent';
+import AnuncioContent from '@/components/anuncio/AnuncioContent';
 
 export const metadata: Metadata = {
   title: 'Extintores em Dia, Sem Complicação | Guardião Extintores',
