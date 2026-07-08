@@ -6,13 +6,13 @@ import Footer from '../layout/Footer';
 import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
 
-interface LandingPageLayoutProps {
+interface AnuncioLayoutProps {
   children: ReactNode;
 }
 
 const phoneNumber = '(85) 98671-8305';
 
-const LandingPageLayout: React.FC<LandingPageLayoutProps> = ({ children }) => {
+const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
   return (
     <>
       <header className="bg-secondary py-4">
@@ -38,4 +38,4 @@ const LandingPageLayout: React.FC<LandingPageLayoutProps> = ({ children }) => {
   );
 };
 
-export default LandingPageLayout;
+export default AnuncioLayout;

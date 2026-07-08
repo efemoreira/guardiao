@@ -89,9 +89,9 @@ Grátis e mais rápido que qualquer campanha. Prova a oferta antes de investir e
 - [ ] Meta Ads geo-segmentado para o ICP
 - [ ] Verba de teste reservada (não gastar tudo de uma vez) — rodar 2 semanas, medir CAC por canal
 - [ ] Decidir o que escala com base no CAC medido
-- [x] Página de destino dedicada para os anúncios *(criada em 2026-06-29: `/landingpage` — landing page de uma página só, seguindo a estrutura do `plano.md` §8, com header minimalista sem menu de navegação, hero estático com CTA único, bloco de confiança/conformidade, planos, diferencial de leitura de água com case da Igreja, tabela de avulsos, prova social leve e CTA final. A home institucional (`/`) não foi alterada — ver `plano.md` §8 para o status dela)*
-- [ ] Confirmar autorização formal de uso de nome/logo dos clientes (Igreja, UNIATENEU etc.) antes de citá-los nominalmente em qualquer página — até lá, a seção "Prova social" de `/landingpage` usa apenas descrição genérica do segmento (igreja, instituição de ensino, restaurante, comércio), sem nomes próprios
-- [ ] Apontar os anúncios (Google Search / Meta Ads) para `/landingpage`, não para `/`
+- [x] Página de destino dedicada para os anúncios *(criada em 2026-06-29: `/anuncio` — landing page de uma página só, seguindo a estrutura do `plano.md` §8, com header minimalista sem menu de navegação, hero estático com CTA único, bloco de confiança/conformidade, planos, diferencial de leitura de água com case da Igreja, tabela de avulsos, prova social leve e CTA final. A home institucional (`/`) não foi alterada — ver `plano.md` §8 para o status dela)*
+- [ ] Confirmar autorização formal de uso de nome/logo dos clientes (Igreja, UNIATENEU etc.) antes de citá-los nominalmente em qualquer página — até lá, a seção "Prova social" de `/anuncio` usa apenas descrição genérica do segmento (igreja, instituição de ensino, restaurante, comércio), sem nomes próprios
+- [ ] Apontar os anúncios (Google Search / Meta Ads) para `/anuncio`, não para `/`
 
 > **NÃO fazer agora:** tocar em CRM/política/turismo/outros projetos · lançar plano sem cobrança automática resolvida.
 >

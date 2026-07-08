@@ -213,7 +213,7 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 
 **Função:** o site existe para (a) converter o tráfego dos anúncios em conversa no WhatsApp e (b) passar credibilidade (INMETRO, CBMCE, CNPJ). Não é vitrine institucional.
 
-**Destino dos anúncios:** rota `/landingpage` — landing page de uma página só, sem Navbar de navegação, hero estático com CTA único, blocos em sequência: conformidade → planos → diferencial de água (case da Igreja ~40% economia) → tabela de avulsos → prova social → CTA final "Inspeção gratuita". WhatsApp: **(85) 98671-8305**.
+**Destino dos anúncios:** rota `/anuncio` — landing page de uma página só, sem Navbar de navegação, hero estático com CTA único, blocos em sequência: conformidade → planos → diferencial de água (case da Igreja ~40% economia) → tabela de avulsos → prova social → CTA final "Inspeção gratuita". WhatsApp: **(85) 98671-8305**.
 
 **Home institucional (`/`):** mantida separada da landing page, com Navbar completa — não é o destino de anúncios, serve para tráfego orgânico/direto.
 
@@ -223,14 +223,14 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 - [x] CNPJ visível no rodapé; parceiros certificados declarados (INMETRO para recarga, bombeiro civil para treinamento)
 - [x] Hero da home: headline de conformidade + manutenção preventiva recorrente
 - [x] Páginas legais: `/privacidade`, `/termos`, `/cookies`
-- [x] Landing page `/landingpage` com todos os 7 blocos
+- [x] Landing page `/anuncio` com todos os 7 blocos
 - [x] Botão de WhatsApp flutuante global (home + landing + páginas legais)
 - [x] Número atualizado para (85) 98671-8305 em todo o site
 
 ### O que falta
 - [-] Trocar e-mail de contato para domínio da marca (mantido `contato@felipesmoreira.com` por ora)
 - [-] Conectar redes sociais reais no rodapé (Facebook/Instagram/YouTube apontam para URLs genéricas)
-- [-] Confirmar autorização de clientes para citá-los nominalmente na prova social da `/landingpage`
+- [-] Confirmar autorização de clientes para citá-los nominalmente na prova social da `/anuncio`
 - [x] Google Meu Negócio (perfil no Maps — grátis, prioridade alta antes dos anúncios)
 - [-] Fotos/vídeos reais da equipe trabalhando (material para anúncio e prova social)
 
@@ -284,13 +284,13 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 ### Mês 2 — Recorrência e site
 - [x] Ativar no bot: lembrete de vencimento (9.2) e alerta de água → lead (9.1) — *implementado 2026-06-30*
 - [x] Qualificação de lead de anúncio (9.3) — *implementado 2026-06-30*
-- [x] Landing page de uma página com WhatsApp como destino (`/landingpage`)
+- [x] Landing page de uma página com WhatsApp como destino (`/anuncio`)
 - [x] Mini-CRM operacional do bot (cadastro/edição/remoção guiados, relatórios, self-service) — *implementado 2026-06-30*, ver `BOT_ADMIN_PLANO.md`
 - [x] Criar Google Meu Negócio
 - [ ] **Pendência operacional:** Oscar cadastrar extintores dos clientes atuais pelo bot (`/cadastrar` ou `/extintor`)
 
 ### Mês 3 — Aquisição
-- [ ] Subir Google Ads (R$15–25/dia) apontando para `/landingpage`
+- [ ] Subir Google Ads (R$15–25/dia) apontando para `/anuncio`
 - [ ] Postar campanha "inspeção grátis" em grupos de síndicos e Instagram local
 - [ ] Ativar programa de indicação ("indique e ganhe 1 mês")
 - [ ] Meta do trimestre: 5 novos prédios em assinatura

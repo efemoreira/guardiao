@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import LandingPageLayout from './LandingPageLayout';
+import AnuncioLayout from './AnuncioLayout';
 import LandingHero from './LandingHero';
 import TrustSection from './TrustSection';
 import PricingSection from '../home/PricingSection';
@@ -10,9 +10,9 @@ import AvulsosSection from './AvulsosSection';
 import SocialProofSection from './SocialProofSection';
 import FinalCtaSection from './FinalCtaSection';
 
-const LandingPageContent: React.FC = () => {
+const AnuncioContent: React.FC = () => {
   return (
-    <LandingPageLayout>
+    <AnuncioLayout>
       <LandingHero />
       <TrustSection />
       <PricingSection />
@@ -20,8 +20,8 @@ const LandingPageContent: React.FC = () => {
       <AvulsosSection />
       <SocialProofSection />
       <FinalCtaSection />
-    </LandingPageLayout>
+    </AnuncioLayout>
   );
 };
 
-export default LandingPageContent;
+export default AnuncioContent;
