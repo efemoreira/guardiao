@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import { finalCtaSectionStrings } from '../../lib/defaultStrings/finalCtaSectionStrings';
-import { generateWhatsAppLink } from '../../lib/utils/utils';
 import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface FinalCtaSectionProps {
@@ -41,20 +41,21 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
         >
           {description}
         </motion.p>
-        <motion.a
-          href={generateWhatsAppLink(phoneNumber, message)}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackWhatsAppClick('landing_final_cta')}
-          className="inline-flex items-center gap-2 bg-white text-primary py-3 px-8 font-bold hover:opacity-90 transition duration-300"
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Icon icon="FaWhatsapp" className="text-xl" />
-          {buttonText}
-        </motion.a>
+          <Link
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}`}
+            onClick={() => trackWhatsAppClick('landing_final_cta')}
+            className="inline-flex items-center gap-2 bg-white text-primary py-3 px-8 font-bold hover:opacity-90 transition duration-300"
+          >
+            <Icon icon="FaWhatsapp" className="text-xl" />
+            {buttonText}
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

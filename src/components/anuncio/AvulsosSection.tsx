@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { avulsosSectionStrings, AvulsoServiceItem } from '../../lib/defaultStrings/avulsosSectionStrings';
-import { generateWhatsAppLink } from '../../lib/utils/utils';
 import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface AvulsosSectionProps {
@@ -87,15 +87,13 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
         <p className="text-sm text-gray-500 mt-4">{note}</p>
 
         <div className="text-center mt-8">
-          <a
-            href={generateWhatsAppLink(ctaLink, ctaMessage)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(ctaLink)}&message=${encodeURIComponent(ctaMessage)}`}
             onClick={() => trackWhatsAppClick('landing_avulsos_cta')}
             className="inline-block bg-primary text-white py-3 px-6 font-bold hover:opacity-90 transition duration-300"
           >
             {ctaText}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

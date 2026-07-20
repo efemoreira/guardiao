@@ -1,16 +1,17 @@
 'use client';
 
 import React, { ReactNode } from 'react';
+import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import Footer from '../layout/Footer';
 import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
-import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 interface AnuncioLayoutProps {
   children: ReactNode;
 }
 
 const phoneNumber = '(85) 98671-8305';
+const message = 'Olá! Vim pela página de anúncio e gostaria de falar com vocês.';
 
 const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
   return (
@@ -20,15 +21,13 @@ const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
           <span className="text-white font-bold text-xl">
             Guardião <span className="text-primary">Extintores</span>
           </span>
-          <a
-            href={generateWhatsAppLink(phoneNumber, 'Olá! Vim pela página de anúncio e gostaria de falar com vocês.')}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}`}
             className="inline-flex items-center gap-2 bg-primary text-white py-2 px-4 font-bold hover:opacity-90 transition duration-300"
           >
             <Icon icon="FaWhatsapp" />
             <span className="hidden sm:inline">Falar no WhatsApp</span>
-          </a>
+          </Link>
         </div>
       </header>
       <main>{children}</main>
