@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateWhatsAppLink } from '@/lib/utils/utils';
 
@@ -8,17 +8,23 @@ export default function RedirectWhatsApp() {
   const searchParams = useSearchParams();
   const phone = searchParams.get('phone');
   const message = searchParams.get('message');
+  const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (countdown === 0) {
       if (phone) {
         const whatsappLink = generateWhatsAppLink(phone, message || undefined);
         window.location.href = whatsappLink;
       }
-    }, 3000);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setCountdown(countdown - 1);
+    }, 1000);
 
     return () => clearTimeout(timer);
-  }, [phone, message]);
+  }, [countdown, phone, message]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-secondary">
@@ -57,9 +63,14 @@ export default function RedirectWhatsApp() {
         </p>
 
         <div className="bg-primary/10 border border-primary rounded-lg p-6">
-          <p className="text-primary font-semibold">
-            Redirecionando em 3 segundos...
+          <p className="text-primary font-semibold mb-4">
+            Redirecionando em...
           </p>
+          <div className="flex justify-center">
+            <div className="w-20 h-20 rounded-full border-4 border-primary flex items-center justify-center">
+              <span className="text-4xl font-bold text-primary">{countdown}</span>
+            </div>
+          </div>
         </div>
 
         <p className="text-sm text-gray-400 mt-8">
