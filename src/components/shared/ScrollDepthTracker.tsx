@@ -1,13 +1,18 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics';
 
 const THRESHOLDS = [25, 50, 75, 90, 100];
 
 // Dispara eventos de profundidade de scroll no GA4, uma vez por marco por sessão de página.
 // Complementa o "scroll" automático do Enhanced Measurement (que só reporta 90%).
+// Montado uma única vez no layout raiz, que não remonta em navegações client-side
+// (Link do Next) — por isso o reset depende do pathname, não só do mount.
 const ScrollDepthTracker: React.FC = () => {
+  const pathname = usePathname();
+
   useEffect(() => {
     const fired = new Set<number>();
 
@@ -31,7 +36,7 @@ const ScrollDepthTracker: React.FC = () => {
     checkScrollDepth();
 
     return () => window.removeEventListener('scroll', checkScrollDepth);
-  }, []);
+  }, [pathname]);
 
   return null;
 };
