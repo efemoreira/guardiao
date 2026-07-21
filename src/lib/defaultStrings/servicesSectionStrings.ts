@@ -8,7 +8,7 @@ export interface ServicesSectionStrings {
 }
 
 export const servicesSectionStrings: ServicesSectionStrings = {
-  title: "Nossos Serviços",
+  title: "Extintores e Recarga em Fortaleza e no Ceará",
   subtitle: "Proteção Completa Contra Incêndio",
   buttonText: "Contratar serviço",
   services: [
@@ -23,7 +23,7 @@ export const servicesSectionStrings: ServicesSectionStrings = {
     {
       id: 2,
       title: "Recarga de Extintores",
-      description: "Recarga profissional para extintores de todos os tipos com garantia e certificação, mantendo seu equipamento sempre pronto para uso.",
+      description: "Recarga de extintores em Fortaleza e em todo o Ceará, para todos os tipos de equipamento, com garantia e certificação, mantendo seu extintor sempre pronto para uso.",
       image: "img/recarga.jpg",
       link: "/#pricing",
       delay: 0.3,

@@ -65,7 +65,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           >
             <div className="max-w-xl">
               <h6 className="text-cyan-400 uppercase font-bold mb-3">{subtitle}</h6>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-5 text-gray-900">{title}</h1>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-5 text-gray-900">{title}</h2>
               <p className="text-gray-700 mb-8">{description}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

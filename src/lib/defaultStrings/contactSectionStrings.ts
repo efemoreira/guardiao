@@ -53,7 +53,7 @@ export const contactSectionStrings: ContactSectionStrings = {
     phoneTitle: "Telefone",
     phone: "(85) 98671-8305",
     emailTitle: "Email",
-    email: "contato@felipesmoreira.com",
+    email: "contato@guardiaoextintores.com.br",
     socialMedia: [
       { icon: "FaFacebookF", link: "#" },
       { icon: "FaInstagram", link: "#" },

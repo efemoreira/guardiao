@@ -98,9 +98,9 @@ const FactsSection: React.FC<FactsSectionProps> = ({
             transition={{ duration: 0.6 }}
           >
             <h6 className="text-cyan-400 uppercase font-bold text-lg mb-3">{subtitle}</h6>
-            <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold mb-5 text-gray-900">
+            <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold mb-5 text-gray-900">
               {title}
-            </h1>
+            </h2>
             <p className="text-gray-700 mb-5">
               {description}
             </p>

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://guardiao.felipesmoreira.com/sitemap.xml',
+    sitemap: 'https://guardiaoextintores.com.br/sitemap.xml',
   };
 }

@@ -6,6 +6,7 @@ import FactsSection from './FactsSection';
 import FeaturesSection from './FeaturesSection';
 import HowItWorksSection from './HowItWorksSection';
 import PricingSection from './PricingSection';
+import FAQSection from './FAQSection';
 
 const HomePage: React.FC = () => {
   // Efeito para rolar a página para o topo quando o componente é montado
@@ -36,6 +37,9 @@ const HomePage: React.FC = () => {
       </div> */}
       <div id="pricing">
         <PricingSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
       </div>
       {/* <div id="team">
         <TeamSection />

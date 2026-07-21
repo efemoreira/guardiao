@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
 
-const baseUrl = 'https://guardiao.felipesmoreira.com';
+const baseUrl = 'https://guardiaoextintores.com.br';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: { path: string; priority: number }[] = [

@@ -79,16 +79,16 @@ const PriceCard: React.FC<PricingPlan> = ({
         <h5 className="text-primary font-bold mb-1">{name}</h5>
         <div className="text-center">
           {isPerUnit ? (
-            <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
+            <p className="text-5xl font-black flex items-baseline justify-center text-gray-900">
               <span className="text-base align-top">{currency}</span>
               {price.toFixed(2).replace('.', ',')}
-            </h1>
+            </p>
           ) : (
-            <h1 className="text-5xl font-black flex items-baseline justify-center text-gray-900">
+            <p className="text-5xl font-black flex items-baseline justify-center text-gray-900">
               <span className="text-base align-top">{currency}</span>
               {(price / 365).toFixed(2).replace('.', ',')}
               <span className="text-sm text-gray-500 ml-1">/ dia</span>
-            </h1>
+            </p>
           )}
           <p className="text-sm text-gray-500 mt-1">
             {isPerUnit

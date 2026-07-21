@@ -21,9 +21,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
-  description: "Especialistas em proteção contra incêndio com mais de 14 anos de experiência. Oferecemos extintores, recargas, inspeções e soluções completas para a segurança do seu estabelecimento.",
-  keywords: "extintores, proteção contra incêndio, recarga de extintores, inspeções de segurança, extintores de incêndio, sinalização de segurança",
+  title: "Extintores e Recarga de Extintores em Fortaleza-CE | Guardião Extintores",
+  description: "Recarga, inspeção e manutenção de extintores em Fortaleza e todo o Ceará. Mais de 14 anos de experiência, empresa parceira registrada no INMETRO. Peça um orçamento pelo WhatsApp.",
+  keywords: "extintores, extintores no Ceará, extintores Fortaleza, recarga de extintores, recarga de extintores Fortaleza, recarga de extintores Ceará, manutenção de extintores, inspeção de extintores, proteção contra incêndio, sinalização de segurança",
   authors: [{ name: "Guardião Extintores" }],
   applicationName: "Guardião Extintores",
   creator: "Guardião Extintores",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
-  metadataBase: new URL("https://guardiao.felipesmoreira.com"),
+  metadataBase: new URL("https://guardiaoextintores.com.br"),
   alternates: {
     canonical: "/",
   },
@@ -48,23 +48,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://guardiao.felipesmoreira.com",
-    title: "Guardião Extintores | Proteção Contra Incêndio Profissional",
-    description: "Especialistas em proteção contra incêndio com mais de 14 anos de experiência. Extintores, recargas e inspeções.",
+    url: "https://guardiaoextintores.com.br",
+    title: "Extintores e Recarga de Extintores em Fortaleza-CE | Guardião Extintores",
+    description: "Recarga, inspeção e manutenção de extintores em Fortaleza e todo o Ceará. Mais de 14 anos de experiência, empresa parceira registrada no INMETRO.",
     siteName: "Guardião Extintores",
     images: [
       {
         url: "/img/herobanner2.jpg",
         width: 1200,
         height: 628,
-        alt: "Guardião Extintores - Proteção Contra Incêndio Profissional",
+        alt: "Guardião Extintores - Recarga e Manutenção de Extintores em Fortaleza-CE",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guardião Extintores | Proteção Contra Incêndio",
-    description: "Especialistas em proteção contra incêndio com mais de 14 anos de experiência.",
+    title: "Extintores e Recarga de Extintores em Fortaleza-CE | Guardião Extintores",
+    description: "Recarga, inspeção e manutenção de extintores em Fortaleza e todo o Ceará. Mais de 14 anos de experiência.",
     images: ["/img/herobanner2.jpg"],
   },
 };

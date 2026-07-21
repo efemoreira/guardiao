@@ -44,13 +44,13 @@ export interface FooterStrings {
 
 export const footerStrings: FooterStrings = {
   showContactColumn: true,
-  showServicesColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
-  showQuickLinksColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
+  showServicesColumn: true,
+  showQuickLinksColumn: true,
   showNewsletterColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
   contactInfo: {
     address: "Fortaleza, CE",
     phone: "(85) 98671-8305",
-    email: "contato@felipesmoreira.com"
+    email: "contato@guardiaoextintores.com.br"
   },
   socialMediaLinks: [
     { platform: "Facebook", url: "https://facebook.com/", icon: "FaFacebookF" },
@@ -61,23 +61,21 @@ export const footerStrings: FooterStrings = {
   servicesColumn: {
     title: "Nossos Serviços",
     links: [
-      // Conteúdo será adicionado quando o site estiver mais completo
-      // { text: "Inspeção de Extintores", url: "/servicos/inspecao" },
-      // { text: "Recarga de Extintores", url: "/servicos/recarga" },
-      // { text: "Sinalização de Segurança", url: "/servicos/sinalizacao" },
-      // { text: "Treinamento de Incêndio", url: "/servicos/treinamento" },
-      // { text: "Estudo de Risco", url: "/servicos/estudo-risco" }
+      { text: "Inspeção de Extintores", url: "/#services" },
+      { text: "Recarga de Extintores", url: "/#services" },
+      { text: "Sinalização de Segurança", url: "/#services" },
+      { text: "Treinamento de Incêndio", url: "/#services" },
+      { text: "Visita Consultiva", url: "/#services" }
     ]
   },
   quickLinksColumn: {
     title: "Links Úteis",
     links: [
-      // Conteúdo será adicionado quando o site estiver mais completo
-      // { text: "Plano Vigia", url: "/planos/vigia" },
-      // { text: "Plano Essencial", url: "/planos/essencial" },
-      // { text: "Plano Completo", url: "/planos/completo" },
-      // { text: "Sobre Nós", url: "/sobre" },
-      // { text: "Contato", url: "/contato" }
+      { text: "Sobre Nós", url: "/#about" },
+      { text: "Planos", url: "/#pricing" },
+      { text: "Como Funciona", url: "/#how-it-works" },
+      { text: "Política de Privacidade", url: "/privacidade" },
+      { text: "Termos de Serviço", url: "/termos" }
     ]
   },
   newsletterTitle: "Newsletter",

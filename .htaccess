@@ -7,13 +7,13 @@
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^(.+)/(.*?)$ /$1 [R=301,L]
 
-  # Redirect HTTP to HTTPS (uncomment if using HTTPS)
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Redirect www to non-www (uncomment to enforce)
-  # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-  # RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+  # Redirect www to non-www (canonical host: guardiaoextintores.com.br)
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
   # Remove .html extension from URLs
   RewriteCond %{REQUEST_FILENAME} !-f

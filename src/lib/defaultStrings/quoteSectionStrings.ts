@@ -54,7 +54,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   contactInfo: {
     address: 'Fortaleza - CE',
     phone: '(85) 98671-8305',
-    email: 'contato@felipesmoreira.com',
+    email: 'contato@guardiaoextintores.com.br',
     addressIcon: 'FaMapMarkerAlt',
     phoneIcon: 'FaPhoneAlt',
     emailIcon: 'FaEnvelope'

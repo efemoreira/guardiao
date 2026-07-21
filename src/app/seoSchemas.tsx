@@ -4,18 +4,55 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "Guardião Extintores",
   "alternateName": "Proteja Já",
-  "url": "https://guardiao.felipesmoreira.com",
-  "logo": "https://guardiao.felipesmoreira.com/logo.png",
+  "url": "https://guardiaoextintores.com.br",
+  "logo": "https://guardiaoextintores.com.br/logo-guardiao.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+5585986718305",
     "contactType": "customer service",
+    "areaServed": "BR",
     "availableLanguage": "Portuguese"
   },
   "sameAs": [
     "https://www.facebook.com/guardiaoextintores",
     "https://www.instagram.com/guardiaoextintores",
     "https://linkedin.com/company/guardiaoextintores"
+  ]
+};
+
+// Esquema de negócio local — essencial para o Google entender a área de
+// atuação (Fortaleza/Ceará) e exibir a empresa em buscas locais/mapa.
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://guardiaoextintores.com.br/#localbusiness",
+  "name": "Guardião Extintores",
+  "alternateName": "Proteja Já",
+  "image": "https://guardiaoextintores.com.br/logo-guardiao.png",
+  "url": "https://guardiaoextintores.com.br",
+  "telephone": "+5585986718305",
+  "email": "contato@guardiaoextintores.com.br",
+  "priceRange": "$$",
+  "description": "Recarga, inspeção e gestão de vencimento de extintores em Fortaleza e em todo o Ceará, com recarga executada por empresa parceira registrada no INMETRO.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fortaleza",
+    "addressRegion": "CE",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Ceará"
+    },
+    {
+      "@type": "City",
+      "name": "Fortaleza"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/guardiaoextintores",
+    "https://www.instagram.com/guardiaoextintores"
   ]
 };
 
@@ -35,7 +72,7 @@ export const aboutSchema = {
       }
     ],
     "numberOfEmployees": "10+",
-    "email": "contato@felipesmoreira.com",
+    "email": "contato@guardiaoextintores.com.br",
     "knowsAbout": ["Extintores", "Proteção contra incêndio", "Inspeções de segurança"]
   }
 };
@@ -51,7 +88,10 @@ export const mainServiceSchema = {
   },
   "description": "Serviços completos de proteção contra incêndio para empresas e residências, incluindo venda, instalação e manutenção de extintores.",
   "serviceType": "Proteção Contra Incêndio",
-  "areaServed": "Brasil",
+  "areaServed": {
+    "@type": "State",
+    "name": "Ceará"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Serviços de Proteção Contra Incêndio",
@@ -146,30 +186,30 @@ export const howToSchema = {
       "@type": "HowToStep",
       "name": "Escolha o Plano",
       "text": "Selecione o melhor plano para sua necessidade",
-      "image": "https://guardiao.felipesmoreira.com/imagens/escolha-plano.jpg",
-      "url": "https://guardiao.felipesmoreira.com/#planos",
+      "image": "https://guardiaoextintores.com.br/imagens/escolha-plano.jpg",
+      "url": "https://guardiaoextintores.com.br/#planos",
       "position": 1
     },
     {
       "@type": "HowToStep",
       "name": "Agende uma Visita",
       "text": "Nossos especialistas irão até você para avaliação",
-      "image": "https://guardiao.felipesmoreira.com/imagens/agende-visita.jpg",
-      "url": "https://guardiao.felipesmoreira.com/#contato",
+      "image": "https://guardiaoextintores.com.br/imagens/agende-visita.jpg",
+      "url": "https://guardiaoextintores.com.br/#contato",
       "position": 2
     },
     {
       "@type": "HowToStep",
       "name": "Receba o Atendimento",
       "text": "Realizamos todos os serviços necessários no local",
-      "image": "https://guardiao.felipesmoreira.com/imagens/receba-atendimento.jpg",
+      "image": "https://guardiaoextintores.com.br/imagens/receba-atendimento.jpg",
       "position": 3
     },
     {
       "@type": "HowToStep",
       "name": "Fique Tranquilo",
       "text": "Sua segurança está garantida com a gente",
-      "image": "https://guardiao.felipesmoreira.com/imagens/seguranca-garantida.jpg",
+      "image": "https://guardiaoextintores.com.br/imagens/seguranca-garantida.jpg",
       "position": 4
     }
   ]
@@ -191,13 +231,11 @@ export const contactSchema = {
         "contactOption": "TollFree"
       }
     ],
-    "email": "contato@felipesmoreira.com",
+    "email": "contato@guardiaoextintores.com.br",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "",
       "addressLocality": "Fortaleza",
       "addressRegion": "CE",
-      "postalCode": "",
       "addressCountry": "BR"
     },
     "sameAs": [
@@ -219,7 +257,7 @@ export const footerSchema = {
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "isPartOf": {
-      "@id": "https://guardiao.felipesmoreira.com/#website"
+      "@id": "https://guardiaoextintores.com.br/#website"
     },
     "hasPart": [
       {
@@ -230,23 +268,37 @@ export const footerSchema = {
           {
             "@type": "WebPage",
             "name": "Sobre",
-            "url": "https://guardiao.felipesmoreira.com/#sobre"
+            "url": "https://guardiaoextintores.com.br/#sobre"
           },
           {
             "@type": "WebPage",
             "name": "Serviços",
-            "url": "https://guardiao.felipesmoreira.com/#servicos"
+            "url": "https://guardiaoextintores.com.br/#servicos"
           },
           {
             "@type": "WebPage",
             "name": "Planos",
-            "url": "https://guardiao.felipesmoreira.com/#planos"
+            "url": "https://guardiaoextintores.com.br/#planos"
           }
         ]
       }
     ]
   }
 };
+
+// Esquema de perguntas frequentes, gerado a partir do conteúdo da seção de FAQ
+export const getFaqSchema = (items: { question: string; answer: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+});
 
 // Interface para os planos
 export interface Plano {

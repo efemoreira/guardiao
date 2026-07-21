@@ -12,9 +12,9 @@ export interface AboutSectionStrings {
 }
 
 export const aboutSectionStrings: AboutSectionStrings = {
-  title: 'Especialistas em Proteção Contra Incêndio',
+  title: 'Especialistas em Extintores em Fortaleza e no Ceará',
   subtitle: 'Sobre Nós',
-  description: 'Com mais de 14 anos de experiência, somos especialistas em proteção contra incêndio para residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes. Oferecemos serviços completos de inspeção, recarga de extintores, além de treinamentos e estudos de risco para garantir a segurança do seu estabelecimento.',
+  description: 'Com mais de 14 anos de experiência, somos especialistas em extintores e proteção contra incêndio em Fortaleza e em todo o Ceará, atendendo residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes. Oferecemos serviços completos de inspeção e recarga de extintores, além de treinamentos e estudos de risco para garantir a segurança do seu estabelecimento.',
   imageSrc: 'img/herobanner.jpg',
   imageAlt: 'Sobre Guardião Extintores',
   features: [

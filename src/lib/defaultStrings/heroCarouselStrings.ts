@@ -14,8 +14,8 @@ export const heroCarouselStrings: HeroCarouselStrings = {
     {
       id: 1,
       title: "Extintores Sempre em Conformidade",
-      subtitle: "Manutenção preventiva recorrente, sem você precisar lembrar",
-      description: "Gestão de vencimentos, inspeção periódica e recarga no prazo, com a documentação que você precisa para a vistoria do Corpo de Bombeiros — para residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes.",
+      subtitle: "Recarga de extintores e manutenção preventiva em Fortaleza e no Ceará",
+      description: "Gestão de vencimentos, inspeção periódica e recarga de extintores no prazo, com a documentação que você precisa para a vistoria do Corpo de Bombeiros — para residências, condomínios, empresas, igrejas, colégios, faculdades e restaurantes em Fortaleza e região metropolitana.",
       image: "/img/herobanner3.jpeg",
       primaryButtonText: "Nossos Serviços",
       secondaryButtonText: "Solicitar Orçamento",
@@ -26,8 +26,8 @@ export const heroCarouselStrings: HeroCarouselStrings = {
     {
       id: 2,
       title: "Planos de Manutenção Recorrente",
-      subtitle: "Extintores sempre prontos e dentro da validade",
-      description: "Oferecemos planos com inspeção periódica, recarga no prazo, descontos em serviços avulsos e gestão automática de vencimentos para sua segurança.",
+      subtitle: "Extintores sempre prontos e dentro da validade em todo o Ceará",
+      description: "Oferecemos planos com inspeção periódica, recarga de extintores no prazo, descontos em serviços avulsos e gestão automática de vencimentos para sua segurança, em Fortaleza e todo o Ceará.",
       image: "/img/herobanner2.jpg",
       primaryButtonText: "Conhecer Planos",
       secondaryButtonText: "Agendar Visita",
