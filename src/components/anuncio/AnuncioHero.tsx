@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { landingHeroStrings } from '../../lib/defaultStrings/landingHeroStrings';
 import { trackWhatsAppClick } from '../../lib/analytics';
+import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 interface LandingHeroProps {
   title?: string;
@@ -68,7 +69,9 @@ const LandingHero: React.FC<LandingHeroProps> = ({
           transition={{ delay: 0.4 }}
         >
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}&source=landing_hero`}
+            href={generateWhatsAppLink(phoneNumber, message)}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('landing_hero')}
             className="inline-block bg-primary text-white py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           >

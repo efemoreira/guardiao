@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import { waterModuleSectionStrings } from '../../lib/defaultStrings/waterModuleSectionStrings';
 import { trackWhatsAppClick } from '../../lib/analytics';
+import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 interface WaterModuleSectionProps {
   subtitle?: string;
@@ -41,7 +42,9 @@ const WaterModuleSection: React.FC<WaterModuleSectionProps> = ({
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
             <p className="text-gray-600 mb-6">{description}</p>
             <Link
-              href={`/redirect-whatsapp?phone=${encodeURIComponent(ctaLink)}&message=${encodeURIComponent(ctaMessage)}&source=landing_water_module_cta`}
+              href={generateWhatsAppLink(ctaLink, ctaMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick('landing_water_module_cta')}
               className="inline-block bg-secondary text-white py-3 px-6 font-bold hover:opacity-90 transition duration-300"
             >

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import { finalCtaSectionStrings } from '../../lib/defaultStrings/finalCtaSectionStrings';
 import { trackWhatsAppClick } from '../../lib/analytics';
+import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 interface FinalCtaSectionProps {
   title?: string;
@@ -48,7 +49,9 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}&source=landing_final_cta`}
+            href={generateWhatsAppLink(phoneNumber, message)}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('landing_final_cta')}
             className="inline-flex items-center gap-2 bg-white text-primary py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           >
