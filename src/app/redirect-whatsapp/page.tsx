@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateWhatsAppLink } from '@/lib/utils/utils';
+import { trackEvent } from '@/lib/analytics';
 
 function RedirectWhatsAppContent() {
   const searchParams = useSearchParams();
@@ -13,6 +14,12 @@ function RedirectWhatsAppContent() {
   useEffect(() => {
     if (countdown === 0) {
       if (phone) {
+        // Evento de conversão: o usuário efetivamente chegou ao redirecionamento
+        // para o WhatsApp (mais confiável que o clique no CTA, que pode ser
+        // abandonado antes da navegação de fato acontecer).
+        trackEvent('whatsapp_redirect_completed', {
+          event_category: 'conversion',
+        });
         const whatsappLink = generateWhatsAppLink(phone, message || undefined);
         window.location.href = whatsappLink;
       }

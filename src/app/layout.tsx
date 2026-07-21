@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SEOSchemas from "@/components/common/SEOSchemas";
 import GoogleAnalytics from "@/components/common/GoogleAnalytics";
+import ScrollDepthTracker from "@/components/shared/ScrollDepthTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export default function RootLayout({
         <GoogleAnalytics />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ScrollDepthTracker />
         {children}
       </body>
     </html>

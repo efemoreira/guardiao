@@ -7,6 +7,7 @@ import FeaturesSection from './FeaturesSection';
 import HowItWorksSection from './HowItWorksSection';
 import PricingSection from './PricingSection';
 import FAQSection from './FAQSection';
+import SectionView from '../shared/SectionView';
 
 const HomePage: React.FC = () => {
   // Efeito para rolar a página para o topo quando o componente é montado
@@ -17,29 +18,45 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div id="home">
-        <HeroCarousel />
+        <SectionView name="home_hero">
+          <HeroCarousel />
+        </SectionView>
       </div>
       <div id="about">
-        <AboutSection />
+        <SectionView name="home_about">
+          <AboutSection />
+        </SectionView>
       </div>
-      <FactsSection />
+      <SectionView name="home_facts">
+        <FactsSection />
+      </SectionView>
       <div id="services">
-        <ServicesSection />
+        <SectionView name="home_services">
+          <ServicesSection />
+        </SectionView>
       </div>
       <div id="features">
-        <FeaturesSection />
+        <SectionView name="home_features">
+          <FeaturesSection />
+        </SectionView>
       </div>
       <div id="how-it-works">
-        <HowItWorksSection />
+        <SectionView name="home_how_it_works">
+          <HowItWorksSection />
+        </SectionView>
       </div>
       {/* <div id="quote">
         <QuoteSection />
       </div> */}
       <div id="pricing">
-        <PricingSection />
+        <SectionView name="home_pricing">
+          <PricingSection />
+        </SectionView>
       </div>
       <div id="faq">
-        <FAQSection />
+        <SectionView name="home_faq">
+          <FAQSection />
+        </SectionView>
       </div>
       {/* <div id="team">
         <TeamSection />

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { heroCarouselStrings } from '../../lib/defaultStrings/heroCarouselStrings';
+import { trackEvent, trackWhatsAppClick } from '../../lib/analytics';
 
 export interface CarouselItem {
   id: number;
@@ -115,15 +116,20 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.8 }}
                   >
-                    <Link 
-                      href={items[currentIndex].primaryButtonLink} 
+                    <Link
+                      href={items[currentIndex].primaryButtonLink}
+                      onClick={() => trackEvent('cta_click', {
+                        event_category: 'engagement',
+                        location: `home_hero_slide_${items[currentIndex].id}_primary`,
+                      })}
                       className="bg-primary text-white py-2 px-4 md:py-3 md:px-5 mr-3 inline-block hover:opacity-90 transition duration-300"
                     >
                       {items[currentIndex].primaryButtonText}
                     </Link>
-                    
-                    <Link 
-                      href={items[currentIndex].secondaryButtonLink} 
+
+                    <Link
+                      href={items[currentIndex].secondaryButtonLink}
+                      onClick={() => trackWhatsAppClick(`home_hero_slide_${items[currentIndex].id}_secondary`)}
                       className="bg-secondary text-white py-2 px-4 md:py-3 md:px-5 inline-block hover:opacity-90 transition duration-300"
                     >
                       {items[currentIndex].secondaryButtonText}
