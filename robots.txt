@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://guardiao.felipesmoreira.com/sitemap.xml
+Sitemap: https://guardiaoextintores.com.br/sitemap.xml
