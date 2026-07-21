@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import Footer from '../layout/Footer';
 import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
+import { trackWhatsAppClick } from '../../lib/analytics';
 
 interface AnuncioLayoutProps {
   children: ReactNode;
@@ -22,7 +23,8 @@ const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
             Guardião <span className="text-primary">Extintores</span>
           </span>
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}`}
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}&source=anuncio_header`}
+            onClick={() => trackWhatsAppClick('anuncio_header')}
             className="inline-flex items-center gap-2 bg-primary text-white py-2 px-4 font-bold hover:opacity-90 transition duration-300"
           >
             <Icon icon="FaWhatsapp" />

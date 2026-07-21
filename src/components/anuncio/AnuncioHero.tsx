@@ -68,7 +68,7 @@ const LandingHero: React.FC<LandingHeroProps> = ({
           transition={{ delay: 0.4 }}
         >
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}`}
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}&source=landing_hero`}
             onClick={() => trackWhatsAppClick('landing_hero')}
             className="inline-block bg-primary text-white py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           >

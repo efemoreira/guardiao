@@ -9,6 +9,7 @@ function RedirectWhatsAppContent() {
   const searchParams = useSearchParams();
   const phone = searchParams.get('phone');
   const message = searchParams.get('message');
+  const source = searchParams.get('source') || 'unknown';
   const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
@@ -17,8 +18,11 @@ function RedirectWhatsAppContent() {
         // Evento de conversão: o usuário efetivamente chegou ao redirecionamento
         // para o WhatsApp (mais confiável que o clique no CTA, que pode ser
         // abandonado antes da navegação de fato acontecer).
+        // `source` identifica qual CTA originou a conversão (granularidade por botão).
         trackEvent('whatsapp_redirect_completed', {
           event_category: 'conversion',
+          event_label: source,
+          source,
         });
         const whatsappLink = generateWhatsAppLink(phone, message || undefined);
         window.location.href = whatsappLink;
@@ -31,7 +35,7 @@ function RedirectWhatsAppContent() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [countdown, phone, message]);
+  }, [countdown, phone, message, source]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-secondary">
@@ -87,6 +91,11 @@ function RedirectWhatsAppContent() {
         <button
           onClick={() => {
             if (phone) {
+              trackEvent('whatsapp_redirect_completed', {
+                event_category: 'conversion',
+                event_label: source,
+                source,
+              });
               const whatsappLink = generateWhatsAppLink(phone, message || undefined);
               window.location.href = whatsappLink;
             }

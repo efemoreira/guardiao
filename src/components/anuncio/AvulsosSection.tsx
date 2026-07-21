@@ -88,7 +88,7 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
 
         <div className="text-center mt-8">
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(ctaLink)}&message=${encodeURIComponent(ctaMessage)}`}
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(ctaLink)}&message=${encodeURIComponent(ctaMessage)}&source=landing_avulsos_cta`}
             onClick={() => trackWhatsAppClick('landing_avulsos_cta')}
             className="inline-block bg-primary text-white py-3 px-6 font-bold hover:opacity-90 transition duration-300"
           >

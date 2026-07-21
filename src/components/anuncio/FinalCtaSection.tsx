@@ -48,7 +48,7 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Link
-            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}`}
+            href={`/redirect-whatsapp?phone=${encodeURIComponent(phoneNumber)}&message=${encodeURIComponent(message)}&source=landing_final_cta`}
             onClick={() => trackWhatsAppClick('landing_final_cta')}
             className="inline-flex items-center gap-2 bg-white text-primary py-3 px-8 font-bold hover:opacity-90 transition duration-300"
           >
