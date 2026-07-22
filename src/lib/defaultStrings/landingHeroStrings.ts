@@ -15,5 +15,5 @@ export const landingHeroStrings: LandingHeroStrings = {
   description: "Gestão de vencimentos, inspeção periódica e recarga no prazo, com a documentação que você precisa para a vistoria do Corpo de Bombeiros. A gente cuida de tudo — você não pensa mais nisso.",
   buttonText: "Quero inspeção gratuita",
   phoneNumber: "(85) 98671-8305",
-  message: "Olá! Vim pela página de anúncio e gostaria de agendar uma inspeção gratuita.",
+  message: "Oi! Vi o anúncio e quero agendar a inspeção gratuita.",
 };

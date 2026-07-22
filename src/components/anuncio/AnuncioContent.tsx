@@ -20,14 +20,14 @@ const AnuncioContent: React.FC = () => {
       <SectionView name="anuncio_trust">
         <TrustSection />
       </SectionView>
+      <SectionView name="anuncio_avulsos">
+        <AvulsosSection />
+      </SectionView>
       <SectionView name="anuncio_pricing">
         <PricingSection />
       </SectionView>
       <SectionView name="anuncio_water_module">
         <WaterModuleSection />
-      </SectionView>
-      <SectionView name="anuncio_avulsos">
-        <AvulsosSection />
       </SectionView>
       <SectionView name="anuncio_social_proof">
         <SocialProofSection />

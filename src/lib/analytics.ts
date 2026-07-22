@@ -24,3 +24,14 @@ export const trackWhatsAppClick = (location: string): void => {
     location,
   });
 };
+
+// Evento de conversão alternativo: clique em um link de ligação (tel:) — para quem
+// hesita em enviar mensagem no WhatsApp mas topa uma ligação.
+// `location` identifica de onde veio o clique (ex.: "landing_hero", "landing_final_cta").
+export const trackPhoneCallClick = (location: string): void => {
+  trackEvent('phone_call_click', {
+    event_category: 'engagement',
+    event_label: location,
+    location,
+  });
+};

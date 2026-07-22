@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import { finalCtaSectionStrings } from '../../lib/defaultStrings/finalCtaSectionStrings';
-import { trackWhatsAppClick } from '../../lib/analytics';
+import { trackWhatsAppClick, trackPhoneCallClick } from '../../lib/analytics';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
 
 interface FinalCtaSectionProps {
@@ -13,6 +13,9 @@ interface FinalCtaSectionProps {
   phoneNumber?: string;
   message?: string;
 }
+
+const CALL_PHONE_DISPLAY = '(85) 98699-9181';
+const CALL_PHONE_HREF = 'tel:+5585986999181';
 
 const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
   title = finalCtaSectionStrings.title,
@@ -58,6 +61,16 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
             <Icon icon="FaWhatsapp" className="text-xl" />
             {buttonText}
           </Link>
+          <p className="mt-3 text-sm text-white/80">
+            Prefere ligar?{' '}
+            <a
+              href={CALL_PHONE_HREF}
+              onClick={() => trackPhoneCallClick('landing_final_cta')}
+              className="underline hover:text-white"
+            >
+              {CALL_PHONE_DISPLAY}
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
