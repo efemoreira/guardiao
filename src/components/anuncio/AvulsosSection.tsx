@@ -43,7 +43,8 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
         </motion.div>
 
         <motion.div
-          className="mb-8 bg-green-50 border border-green-200 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
+          id="inspecao"
+          className="scroll-mt-20 mb-8 bg-green-50 border border-green-200 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

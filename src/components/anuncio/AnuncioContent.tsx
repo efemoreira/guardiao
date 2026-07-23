@@ -20,16 +20,16 @@ const AnuncioContent: React.FC = () => {
         <LandingHero />
       </SectionView>
       <CredentialsStrip />
-      <SectionView name="anuncio_trust">
+      <SectionView name="anuncio_trust" id="quem-somos">
         <TrustSection />
       </SectionView>
-      <SectionView name="anuncio_como_funciona">
+      <SectionView name="anuncio_como_funciona" id="how-it-works">
         <ComoFuncionaSection />
       </SectionView>
-      <SectionView name="anuncio_avulsos">
+      <SectionView name="anuncio_avulsos" id="servicos">
         <AvulsosSection />
       </SectionView>
-      <SectionView name="anuncio_pricing">
+      <SectionView name="anuncio_pricing" id="planos">
         <PricingSection />
       </SectionView>
       <SectionView name="anuncio_water_module">
@@ -38,7 +38,7 @@ const AnuncioContent: React.FC = () => {
       <SectionView name="anuncio_social_proof">
         <SocialProofSection />
       </SectionView>
-      <SectionView name="anuncio_final_cta">
+      <SectionView name="anuncio_final_cta" id="contato">
         <FinalCtaSection />
       </SectionView>
     </AnuncioLayout>

@@ -6,12 +6,14 @@ import { trackEvent } from '@/lib/analytics';
 interface SectionViewProps {
   name: string;
   children: React.ReactNode;
+  /** Âncora opcional (ex.: para deep-link de sitelinks do Google Ads). */
+  id?: string;
 }
 
 // Dispara um evento GA4 "section_view" na primeira vez que a seção entra na
 // viewport. Mostra até onde da página os visitantes realmente chegam,
 // diferente do scroll_depth (que mede só a posição, não o conteúdo visto).
-const SectionView: React.FC<SectionViewProps> = ({ name, children }) => {
+const SectionView: React.FC<SectionViewProps> = ({ name, children, id }) => {
   const ref = useRef<HTMLDivElement>(null);
   const alreadySeen = useRef(false);
 
@@ -37,7 +39,7 @@ const SectionView: React.FC<SectionViewProps> = ({ name, children }) => {
     return () => observer.disconnect();
   }, [name]);
 
-  return <div ref={ref}>{children}</div>;
+  return <div ref={ref} id={id} className={id ? 'scroll-mt-20' : undefined}>{children}</div>;
 };
 
 export default SectionView;

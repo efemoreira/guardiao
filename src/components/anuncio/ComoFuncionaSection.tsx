@@ -31,7 +31,7 @@ const passos: Passo[] = [
 
 const ComoFuncionaSection: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-12 md:py-16 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           className="text-center mb-12 max-w-2xl mx-auto"
