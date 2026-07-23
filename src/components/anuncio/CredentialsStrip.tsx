@@ -4,6 +4,7 @@ import { Icon } from '../../utils/IconUtil';
 // Credenciais reais e verificáveis (mesmas da TrustSection), em versão curta,
 // exibidas logo abaixo do Hero para dar credibilidade imediata ao tráfego pago.
 const credenciais = [
+  '+14 anos de experiência',
   'CNPJ ativo',
   'Parceiro registrado no INMETRO',
   'Treinamento com bombeiro civil',
