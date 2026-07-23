@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { avulsosSectionStrings, AvulsoServiceItem } from '../../lib/defaultStrings/avulsosSectionStrings';
 import { trackWhatsAppClick } from '../../lib/analytics';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { Icon } from '../../utils/IconUtil';
 
 interface AvulsosSectionProps {
   subtitle?: string;
@@ -39,6 +40,32 @@ const AvulsosSection: React.FC<AvulsosSectionProps> = ({
           <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
           <p className="text-gray-600">{description}</p>
+        </motion.div>
+
+        <motion.div
+          className="mb-8 bg-green-50 border border-green-200 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="shrink-0 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center">
+            <Icon icon="FaClipboardCheck" className="text-white text-2xl" />
+          </div>
+          <div className="flex-1">
+            <p className="font-bold text-green-700 text-lg">Inspeção técnica + laudo: <span className="uppercase">Grátis</span></p>
+            <p className="text-sm text-gray-600">Sem compromisso — verificamos seus extintores e apontamos o que está vencido ou irregular para a vistoria do Bombeiro.</p>
+          </div>
+          <Link
+            href={generateWhatsAppLink('(85) 98671-8305', 'Oi! Quero agendar a inspeção gratuita dos meus extintores.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('landing_avulsos_inspecao')}
+            className="shrink-0 inline-flex items-center gap-2 bg-green-600 text-white py-2.5 px-5 font-bold rounded hover:bg-green-700 transition duration-300"
+          >
+            <Icon icon="FaWhatsapp" className="text-lg" />
+            Agendar grátis
+          </Link>
         </motion.div>
 
         <motion.div

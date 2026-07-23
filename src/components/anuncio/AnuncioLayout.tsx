@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Icon } from '../../utils/IconUtil';
 import Footer from '../layout/Footer';
 import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
+import MobileStickyCta from './MobileStickyCta';
 import { trackWhatsAppClick } from '../../lib/analytics';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
 
@@ -37,7 +38,10 @@ const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
       </header>
       <main>{children}</main>
       <Footer />
-      <WhatsAppFloatingButton />
+      {/* Espaço no mobile para a barra sticky não cobrir o final do conteúdo */}
+      <div className="h-20 md:hidden" aria-hidden="true" />
+      <WhatsAppFloatingButton desktopOnly />
+      <MobileStickyCta />
     </>
   );
 };

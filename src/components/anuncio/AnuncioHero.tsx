@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { landingHeroStrings } from '../../lib/defaultStrings/landingHeroStrings';
 import { trackWhatsAppClick, trackPhoneCallClick } from '../../lib/analytics';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
+import { Icon } from '../../utils/IconUtil';
 
 interface LandingHeroProps {
   title?: string;
@@ -71,23 +72,30 @@ const LandingHero: React.FC<LandingHeroProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <Link
-            href={generateWhatsAppLink(phoneNumber, message)}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackWhatsAppClick('landing_hero')}
-            className="inline-block bg-primary text-white py-3 px-8 font-bold hover:opacity-90 transition duration-300"
-          >
-            {buttonText}
-          </Link>
+          <div className="mb-5 inline-flex items-center gap-2 bg-green-500/15 text-green-300 border border-green-500/30 rounded-full py-1.5 px-4 text-sm font-semibold">
+            <Icon icon="FaCheckCircle" />
+            <span>Inspeção + laudo grátis · sem compromisso</span>
+          </div>
+          <div>
+            <Link
+              href={generateWhatsAppLink(phoneNumber, message)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('landing_hero')}
+              className="inline-flex items-center gap-2 bg-primary text-white py-3 px-8 font-bold hover:opacity-90 transition duration-300"
+            >
+              <Icon icon="FaWhatsapp" className="text-xl" />
+              {buttonText}
+            </Link>
+          </div>
           <p className="mt-3 text-sm text-gray-400">
-            Prefere ligar?{' '}
+            Resposta rápida no WhatsApp · ou{' '}
             <a
               href={CALL_PHONE_HREF}
               onClick={() => trackPhoneCallClick('landing_hero')}
               className="underline hover:text-gray-300"
             >
-              {CALL_PHONE_DISPLAY}
+              ligue {CALL_PHONE_DISPLAY}
             </a>
           </p>
         </motion.div>

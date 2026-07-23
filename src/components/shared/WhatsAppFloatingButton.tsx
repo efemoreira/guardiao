@@ -7,11 +7,14 @@ import { trackWhatsAppClick } from '../../lib/analytics';
 interface WhatsAppFloatingButtonProps {
   phoneNumber?: string;
   message?: string;
+  /** Esconde no mobile (usado quando há uma barra sticky de CTA cobrindo o rodapé). */
+  desktopOnly?: boolean;
 }
 
 const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
   phoneNumber = '(85) 98671-8305',
   message = 'Olá! Gostaria de saber mais sobre os serviços da Guardião Extintores.',
+  desktopOnly = false,
 }) => {
   return (
     <motion.a
@@ -23,7 +26,7 @@ const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed bottom-24 right-6 z-[70] bg-green-500 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
+      className={`${desktopOnly ? 'hidden md:flex' : 'flex'} fixed bottom-24 right-6 z-[70] bg-green-500 text-white h-12 w-12 rounded-full items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300`}
     >
       <Icon icon="FaWhatsapp" className="text-2xl" />
     </motion.a>
