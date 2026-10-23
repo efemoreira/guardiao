@@ -1,5 +1,6 @@
 # GUARDIÃO EXTINTORES — Contrato de Prestação de Serviços
 
+> **Oferta atualizada em 23/10/2026:** mantidos os preços e benefícios do site por decisão do responsável. Referência técnica: `src/lib/catalog.ts`. Completo inclui placa, lacre, suporte ou mangote, pintura personalizada e 10% de desconto avulso; CO₂ 6 kg: R$ 160. As estimativas históricas de custo/margem precisam ser revistas com os custos efetivos desses benefícios.
 **CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO, MONITORAMENTO E GESTÃO DE SEGURANÇA CONTRA INCÊNDIO E PÂNICO**
 
 *Nº ______/2026*
@@ -203,7 +204,7 @@ Fortaleza/CE, ____ de _______________ de 20____.
 | Plano | Valor | Recarga inclusa | Escopo incluso | Desconto avulso |
 |---|---|---|---|---|
 | **Essencial** | R$ 11/extintor/mês *(anuidade à vista = 2 meses grátis)* | 1×/ano (ABC/BC/água até 6 kg/10 L) | Gestão e lembrete de vencimentos; inventário e cadastro; inspeção semestral (2×/ano) + laudo; recarga no vencimento inclusa; comprovante de cada recarga (selo INMETRO, nota, laudo) | 10% |
-| **Completo** | R$ 18/extintor/mês *(anuidade à vista = 2 meses grátis)* | 1×/ano (ABC/BC/água até 6 kg/10 L) | Tudo do Essencial + troca de itens de desgaste (placa, lacre, suporte — mangote não incluso, cobrado pelo preço avulso normal) + atendimento prioritário (SLA de 48h para diagnóstico, ver Cláusula Nona) + guia de orientação para regularização junto ao CBMCE | 10% |
+| **Completo** | R$ 18/extintor/mês *(anuidade à vista = 2 meses grátis)* | 1×/ano (ABC/BC/água até 6 kg/10 L) | Tudo do Essencial + troca de itens de desgaste (placa, lacre, suporte ou mangote, além de pintura personalizada) + atendimento prioritário (SLA de 48h para diagnóstico, ver Cláusula Nona) + guia de orientação para regularização junto ao CBMCE | 10% |
 
 > **Observação:** o pagamento anual à vista dos planos por extintor equivale a aproximadamente 2 (dois) meses de cortesia frente ao mensal. **Não há desconto por volume de extintores** — o valor por extintor é o mesmo independentemente da quantidade contratada.
 
@@ -215,7 +216,7 @@ Fortaleza/CE, ____ de _______________ de 20____.
 | Recarga extintor ABC 4 kg | R$ 100 |
 | Recarga extintor BC 6 kg | R$ 80 |
 | Recarga extintor BC 4 kg | R$ 70 |
-| Recarga extintor CO₂ 6 kg | R$ 190 |
+| Recarga extintor CO₂ 6 kg | R$ 160 |
 | Recarga extintor CO₂ 4 kg | R$ 130 |
 | Recarga extintor de água 10 L | R$ 85 |
 | Inspeção técnica + laudo | Grátis |

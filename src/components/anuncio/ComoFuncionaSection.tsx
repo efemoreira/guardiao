@@ -40,7 +40,7 @@ const ComoFuncionaSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h6 className="text-cyan-400 uppercase font-bold mb-2">Simples e sem compromisso</h6>
+          <h6 className="text-cyan-700 uppercase font-bold mb-2">Simples e sem compromisso</h6>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Como funciona</h2>
           <p className="text-gray-600">Em 3 passos você descobre o que precisa regularizar antes da vistoria.</p>
         </motion.div>

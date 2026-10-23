@@ -1,5 +1,6 @@
 # Plano de Saída de Dívidas e Crescimento — Faço por Você / Guardião
 
+> **Oferta atualizada em 23/10/2026:** mantidos os preços e benefícios do site por decisão do responsável. Referência técnica: `src/lib/catalog.ts`. Completo inclui placa, lacre, suporte ou mangote, pintura personalizada e 10% de desconto avulso; CO₂ 6 kg: R$ 160. As estimativas históricas de custo/margem precisam ser revistas com os custos efetivos desses benefícios.
 > **Premissa do financeiro:** os números de receita/despesa abaixo estão sendo lidos como **anuais**. Se algum for mensal, o quadro muda completamente — corrija e o modelo é refeito.
 >
 > **Premissa legal (verificada):** ABC, BC, água e espuma têm **validade da carga de 1 ano** (recarga anual obrigatória). CO₂ tem validade de até 5 anos, mas **inspeção semestral obrigatória**. Teste hidrostático a cada 5 anos. Recarga/manutenção só pode ser executada por **empresa registrada no INMETRO** — isso é o ponto de credibilidade nº 1 do negócio (ver seção 4). Em 2026 a cor do lacre é **amarelo** — detalhe útil para anúncio e abordagem.
@@ -48,13 +49,13 @@ Seu **custo de recarga é R$40 fixo** (pelo acordo com quem recarrega), enquanto
 |---|---|---|---|---|---|
 | **Vigia** | **R$99/ano** *(flat, todos os extintores)* | ❌ | Gestão e lembrete de vencimentos + canal direto/prioritário + 1 inspeção visual/ano | **5%** | Quem quer só acompanhar e ganhar desconto |
 | **Essencial** | **R$11/extintor/mês** | ✅ 1/ano | Gestão de vencimentos + recarga no prazo + inspeção semestral + comprovante da recarga (selo/nota/laudo) | **10%** | Cliente novo que quer estar legal sem pensar |
-| **Completo** | **R$18/extintor/mês** | ✅ 1/ano | Essencial + troca de itens de desgaste (placa, lacre, suporte) + **atendimento prioritário** (resposta em até 48h — ver nota de SLA abaixo) + **guia de regularização CBMCE** | **sem desconto avulso** | Condomínio/empresa que não quer surpresa de custo |
+| **Completo** | **R$18/extintor/mês** | ✅ 1/ano | Essencial + troca de itens de desgaste (placa, lacre, suporte ou mangote) + pintura personalizada + **atendimento prioritário** (resposta em até 48h — ver nota de SLA abaixo) + **guia de regularização CBMCE** | **10%** | Condomínio/empresa que não quer surpresa de custo |
 
 > Os planos por extintor (Essencial/Completo) têm **anuidade à vista = 2 meses grátis** (paga 10 meses). O Vigia já é valor anual único.
 
 **Atenção ao SLA do Completo:** as **48h são o prazo de atendimento/diagnóstico**, não de conclusão do reparo. A correção em si, dependendo do problema, pode levar **até 1 semana**. Deixe essa distinção explícita para o cliente (no contrato e na venda) — prometer "resolvido em 48h" sem essa ressalva é a forma mais rápida de gerar reclamação.
 
-**Sem desconto por volume:** não existe desconto adicional por quantidade de extintores contratados — nem por cliente grande (ex.: Igreja com 400 unidades), nem por faixa (11–30 / 31+). O único desconto é o avulso por plano (Vigia 5%, Essencial 10%); o Completo não tem desconto avulso, porque o benefício do tier já é o atendimento prioritário.
+**Sem desconto por volume:** não existe desconto adicional por quantidade de extintores contratados — nem por cliente grande (ex.: Igreja com 400 unidades), nem por faixa (11–30 / 31+). O desconto avulso por plano é Vigia 5%, Essencial 10% e Completo 10%.
 
 **Módulo Água (add-on, sob projeto):** o antigo tier "Prédio (Total)" foi **descontinuado** — leitura de água deixa de ser um plano fixo e passa a ser um **adicional contratável sobre o Completo**, sob projeto, para clientes com hidrômetro (Igreja, escolas, condomínios grandes). Inclui leitura mensal de hidrômetro com alerta de consumo e pode agregar treinamento/apoio à regularização CBMCE conforme o caso.
 
@@ -72,7 +73,7 @@ Seu **custo de recarga é R$40 fixo** (pelo acordo com quem recarrega), enquanto
 
 *Vigia é flat por cliente, não por extintor: a margem real depende de quantas recargas avulsas o cliente faz no ano (cada uma rende ~R$74 líquidos já com 5% off). O Vigia existe para **prender o contato e gerar upsell na visita anual**, não pela mensalidade.
 
-**Trava do Completo (importante):** "troca de itens" inclui só **desgaste normal barato — placa, lacre, suporte**. O **mangote não está incluso** e é cobrado pelo preço avulso normal — sem desconto, já que o Completo não aplica desconto avulso. Isso elimina o risco de uma frota azarada estourar a margem.
+**Escopo do Completo:** inclui troca de placa, lacre, suporte ou mangote por desgaste, pintura personalizada e desconto avulso de 10%. Conferir o custo real desses benefícios antes de reutilizar as margens históricas abaixo.
 
 **CO₂ entra como item especial** (validade 5 anos, sem recarga anual): mensalidade reduzida (~R$6) só com inspeção semestral + gestão, ou via Vigia — não faz sentido cobrar R$11 num extintor que não recarrega todo ano.
 

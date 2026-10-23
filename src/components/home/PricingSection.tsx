@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { pricingSectionStrings } from '../../lib/defaultStrings/pricingSectionStrings';
 import { generateWhatsAppLink } from '@/lib/utils/utils';
 import { trackWhatsAppClick } from '@/lib/analytics';
+import PlanSimulator from '../commercial/PlanSimulator';
+import { PLAN_ELIGIBILITY } from '@/lib/catalog';
 
 export interface PricingPlan {
   id: number;
@@ -41,7 +43,7 @@ const PriceCard: React.FC<PricingPlan> = ({
   priceSuffix,
   priceNote,
   features,
-  delay = 0.3,
+  delay = 0,
   image,
   buttonText = 'Contratar Agora',
   buttonLink = '#',
@@ -55,7 +57,7 @@ const PriceCard: React.FC<PricingPlan> = ({
   return (
     <motion.div
       className={`bg-white shadow-md flex flex-col h-full border border-gray-200 ${popular ? 'border-2 border-primary' : ''}`}
-      initial={{ opacity: 0, y: 30 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
@@ -86,29 +88,30 @@ const PriceCard: React.FC<PricingPlan> = ({
           ) : (
             <p className="text-5xl font-black flex items-baseline justify-center text-gray-900">
               <span className="text-base align-top">{currency}</span>
-              {(price / 365).toFixed(2).replace('.', ',')}
-              <span className="text-sm text-gray-500 ml-1">/ dia</span>
+              {price.toFixed(2).replace('.', ',')}
+              <span className="text-sm text-gray-500 ml-1">/ ano</span>
             </p>
           )}
           <p className="text-sm text-gray-500 mt-1">
             {isPerUnit
               ? priceSuffix
-              : `${currency} ${price.toFixed(2).replace('.', ',')} / ${period}`}
+              : `Pagamento ${period === 'ano' ? 'anual' : period}`}
           </p>
           {priceNote && (
-            <p className="text-xs text-gray-400 mt-1">{priceNote}</p>
+            <p className="text-sm text-gray-600 mt-1">{priceNote}</p>
           )}
         </div>
       </div>
 
       <div className="p-4 pt-0 flex flex-col flex-grow">
-        <div className="flex-grow">
+        <details className="flex-grow">
+          <summary className="mb-3 cursor-pointer font-semibold text-secondary">O que está incluído</summary>
           {features.map((feature, index) => (
-            <p key={index} className="mb-2 flex items-center text-gray-700">
-              <Icon icon="FaCheck" className="text-success mr-3 text-sm text-green-700" /> {feature}
+            <p key={index} className="mb-2 flex items-start text-gray-700">
+              <Icon icon="FaCheck" className="mt-1 mr-3 shrink-0 text-sm text-green-700" /> {feature}
             </p>
           ))}
-        </div>
+        </details>
         <a
           href={generateWhatsAppLink(buttonLink, `Quero saber mais sobre o plano ${name}`)}
           onClick={() => trackWhatsAppClick(`pricing_plan_${name.toLowerCase()}`)}
@@ -140,7 +143,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
+          <h6 className="text-cyan-700 uppercase font-bold mb-2">{subtitle}</h6>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900">{title}</h2>
           {description && <p className="text-gray-600 mt-4 max-w-2xl mx-auto">{description}</p>}
         </motion.div>
@@ -150,6 +153,8 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             <PriceCard key={plan.id} {...plan} />
           ))}
         </div>
+        <p className="mx-auto mt-5 max-w-4xl text-sm text-slate-600">{PLAN_ELIGIBILITY} Vigia não inclui recarga. No Completo, 48h úteis é o prazo de diagnóstico, não de conclusão do reparo.</p>
+        <PlanSimulator />
       </div>
     </section>
   );

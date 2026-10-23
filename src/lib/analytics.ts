@@ -1,3 +1,5 @@
+import { readConsent } from './consent';
+
 // ID público do GA4 (não é segredo: qualquer site expõe esse valor no HTML/JS do navegador).
 export const GA_MEASUREMENT_ID = 'G-EFQZQNXG5Q';
 
@@ -11,11 +13,11 @@ declare global {
 }
 
 export const trackEvent = (eventName: string, params?: GtagEventParams): void => {
-  if (typeof window === 'undefined' || !window.gtag) return;
+  if (typeof window === 'undefined' || readConsent() !== 'accepted' || !window.gtag) return;
   window.gtag('event', eventName, params);
 };
 
-// Evento de conversão: clique em qualquer CTA que abre o WhatsApp.
+// Indicador de contato: abrir o WhatsApp não confirma conversa ou venda.
 // `location` identifica de onde veio o clique (ex.: "floating_button", "landing_hero").
 export const trackWhatsAppClick = (location: string): void => {
   trackEvent('whatsapp_click', {

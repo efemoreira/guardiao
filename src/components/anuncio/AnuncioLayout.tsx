@@ -22,13 +22,14 @@ const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
       <header className="bg-secondary py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <span className="text-white font-bold text-xl">
-            Guardião <span className="text-primary">Extintores</span>
+            Guardião <span className="text-red-300">Extintores</span>
           </span>
           <Link
             href={generateWhatsAppLink(phoneNumber, message)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('anuncio_header')}
+            aria-label="Conversar com a equipe no WhatsApp"
             className="inline-flex items-center gap-2 bg-primary text-white py-2 px-4 font-bold hover:opacity-90 transition duration-300"
           >
             <Icon icon="FaWhatsapp" />
@@ -36,7 +37,7 @@ const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {
           </Link>
         </div>
       </header>
-      <main>{children}</main>
+      <main id="conteudo">{children}</main>
       <Footer />
       {/* Espaço no mobile para a barra sticky não cobrir o final do conteúdo */}
       <div className="h-20 md:hidden" aria-hidden="true" />

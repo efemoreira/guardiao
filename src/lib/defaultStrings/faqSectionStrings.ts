@@ -15,7 +15,7 @@ export const faqSectionStrings: FaqSectionStrings = {
   items: [
     {
       question: "Quanto custa a recarga de extintores em Fortaleza?",
-      answer: "O valor da recarga de extintores varia de acordo com o tipo e a capacidade do equipamento. Trabalhamos com planos de assinatura (Vigia, Essencial e Completo) que já incluem recarga e inspeção, além de atendimento avulso. Fale com a gente no WhatsApp para um orçamento personalizado."
+      answer: "O valor da recarga de extintores varia de acordo com o tipo e a capacidade do equipamento. O Vigia acompanha vencimentos, sem recarga inclusa. Essencial e Completo incluem recarga de equipamentos elegíveis, além de inspeções. Também atendemos serviços avulsos. Fale com a gente no WhatsApp para um orçamento personalizado."
     },
     {
       question: "Vocês atendem extintores em toda a Região Metropolitana de Fortaleza e no Ceará?",
@@ -23,7 +23,7 @@ export const faqSectionStrings: FaqSectionStrings = {
     },
     {
       question: "Com que frequência preciso fazer a recarga do extintor?",
-      answer: "Em geral, extintores de pó químico e CO2 têm recarga anual, enquanto os de água pressurizada podem ter prazos diferentes conforme a norma técnica. Nossos planos incluem gestão automática de vencimento, então você recebe o lembrete antes do prazo vencer."
+      answer: "O prazo depende do tipo, do estado do equipamento e das informações da etiqueta e da manutenção anterior. Envie uma foto para a equipe conferir a identificação e orientar o próximo atendimento. Não use um prazo genérico para decidir se o equipamento está apto."
     },
     {
       question: "A recarga tem certificação aceita pelo Corpo de Bombeiros (CBMCE)?",

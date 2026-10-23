@@ -8,8 +8,9 @@ import TrustSection from './TrustSection';
 import ComoFuncionaSection from './ComoFuncionaSection';
 import PricingSection from '../home/PricingSection';
 import WaterModuleSection from './WaterModuleSection';
+import QuoteForm from '../commercial/QuoteForm';
+import ServicePreview from '../commercial/ServicePreview';
 import AvulsosSection from './AvulsosSection';
-import SocialProofSection from './SocialProofSection';
 import FinalCtaSection from './FinalCtaSection';
 import SectionView from '../shared/SectionView';
 
@@ -20,24 +21,16 @@ const AnuncioContent: React.FC = () => {
         <LandingHero />
       </SectionView>
       <CredentialsStrip />
-      <SectionView name="anuncio_trust" id="quem-somos">
-        <TrustSection />
-      </SectionView>
-      <SectionView name="anuncio_como_funciona" id="how-it-works">
-        <ComoFuncionaSection />
-      </SectionView>
-      <SectionView name="anuncio_avulsos" id="servicos">
-        <AvulsosSection />
-      </SectionView>
-      <SectionView name="anuncio_pricing" id="planos">
-        <PricingSection />
-      </SectionView>
-      <SectionView name="anuncio_water_module">
+      <SectionView name="anuncio_quote" id="inspecao"><QuoteForm /></SectionView>
+      <SectionView name="anuncio_como_funciona" id="how-it-works"><ComoFuncionaSection /></SectionView>
+      <SectionView name="anuncio_preview"><ServicePreview /></SectionView>
+      <SectionView name="anuncio_pricing" id="planos"><PricingSection /></SectionView>
+      <SectionView name="anuncio_avulsos" id="servicos"><AvulsosSection /></SectionView>
+      <SectionView name="anuncio_trust" id="quem-somos"><TrustSection /></SectionView>
+      <details className="mx-auto max-w-6xl border-t border-slate-200 px-4 py-5">
+        <summary className="cursor-pointer font-semibold text-secondary">Também precisa acompanhar o consumo de água do imóvel?</summary>
         <WaterModuleSection />
-      </SectionView>
-      <SectionView name="anuncio_social_proof">
-        <SocialProofSection />
-      </SectionView>
+      </details>
       <SectionView name="anuncio_final_cta" id="contato">
         <FinalCtaSection />
       </SectionView>

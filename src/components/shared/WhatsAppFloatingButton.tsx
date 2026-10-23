@@ -26,7 +26,7 @@ const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className={`${desktopOnly ? 'hidden md:flex' : 'flex'} fixed bottom-24 right-6 z-[70] bg-green-500 text-white h-12 w-12 rounded-full items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300`}
+      className={`${desktopOnly ? 'hidden md:flex' : 'flex'} fixed bottom-24 right-6 z-[70] bg-green-700 text-white h-12 w-12 rounded-full items-center justify-center shadow-lg hover:bg-green-800 transition-all duration-300`}
     >
       <Icon icon="FaWhatsapp" className="text-2xl" />
     </motion.a>

@@ -26,7 +26,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
+          <h6 className="text-cyan-700 uppercase font-bold mb-2">{subtitle}</h6>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
         </motion.div>
 

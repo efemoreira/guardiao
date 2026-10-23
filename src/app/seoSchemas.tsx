@@ -3,21 +3,15 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Guardião Extintores",
-  "alternateName": "Proteja Já",
   "url": "https://guardiaoextintores.com.br",
-  "logo": "https://guardiaoextintores.com.br/logo-guardiao.png",
+  "logo": "https://guardiaoextintores.com.br/img/logo-guardiao.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+5585986718305",
     "contactType": "customer service",
     "areaServed": "BR",
     "availableLanguage": "Portuguese"
-  },
-  "sameAs": [
-    "https://www.facebook.com/guardiaoextintores",
-    "https://www.instagram.com/guardiaoextintores",
-    "https://linkedin.com/company/guardiaoextintores"
-  ]
+  }
 };
 
 // Esquema de negócio local — essencial para o Google entender a área de
@@ -27,8 +21,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://guardiaoextintores.com.br/#localbusiness",
   "name": "Guardião Extintores",
-  "alternateName": "Proteja Já",
-  "image": "https://guardiaoextintores.com.br/logo-guardiao.png",
+  "image": "https://guardiaoextintores.com.br/img/logo-guardiao.png",
   "url": "https://guardiaoextintores.com.br",
   "telephone": "+5585986718305",
   "email": "contato@guardiaoextintores.com.br",
@@ -49,10 +42,6 @@ export const localBusinessSchema = {
       "@type": "City",
       "name": "Fortaleza"
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/guardiaoextintores",
-    "https://www.instagram.com/guardiaoextintores"
   ]
 };
 
@@ -64,14 +53,7 @@ export const aboutSchema = {
     "@type": "Organization",
     "name": "Guardião Extintores",
     "description": "Com mais de 14 anos de experiência, atuamos na intermediação e gestão da manutenção de extintores, com recargas executadas por empresa parceira registrada no INMETRO e treinamentos conduzidos por bombeiro civil habilitado.",
-    "foundingDate": "2014-01-01",
-    "founders": [
-      {
-        "@type": "Person",
-        "name": "Guardião Extintores"
-      }
-    ],
-    "numberOfEmployees": "10+",
+    "foundingDate": "2012-10-29",
     "email": "contato@guardiaoextintores.com.br",
     "knowsAbout": ["Extintores", "Proteção contra incêndio", "Inspeções de segurança"]
   }
@@ -187,7 +169,7 @@ export const howToSchema = {
       "name": "Escolha o Plano",
       "text": "Selecione o melhor plano para sua necessidade",
       "image": "https://guardiaoextintores.com.br/imagens/escolha-plano.jpg",
-      "url": "https://guardiaoextintores.com.br/#planos",
+      "url": "https://guardiaoextintores.com.br/#pricing",
       "position": 1
     },
     {
@@ -278,7 +260,7 @@ export const footerSchema = {
           {
             "@type": "WebPage",
             "name": "Planos",
-            "url": "https://guardiaoextintores.com.br/#planos"
+            "url": "https://guardiaoextintores.com.br/#pricing"
           }
         ]
       }
@@ -306,6 +288,8 @@ export interface Plano {
   inspecoes: number;
   recargas: number;
   preco: number;
+  porExtintor: boolean;
+  mesesAnuidade: number;
 }
 
 // Função para gerar esquema de planos com base nos planos disponíveis
@@ -315,10 +299,17 @@ export const getPlansSchema = (planos: Plano[]) => {
     "itemOffered": {
       "@type": "Service",
       "name": `Plano ${plano.nome}`,
-      "description": `Plano de proteção contra incêndio com ${plano.inspecoes === Infinity ? 'inspeções ilimitadas' : plano.inspecoes + ' inspeções'} e ${plano.recargas} recargas gratuitas.`
+      "description": `Plano de proteção contra incêndio com ${plano.inspecoes === Infinity ? 'inspeções ilimitadas' : plano.inspecoes + ' inspeções'} e ${plano.recargas} recargas inclusas por ano. ${plano.porExtintor ? `Preço mensal por extintor elegível; anuidade à vista de R$ ${plano.preco * plano.mesesAnuidade} por extintor.` : `Preço anual único por cliente; sem recarga inclusa.`}`
     },
     "price": plano.preco,
     "priceCurrency": "BRL",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": plano.preco,
+      "priceCurrency": "BRL",
+      "billingDuration": plano.porExtintor ? "P1M" : "P1Y",
+      "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": plano.porExtintor ? "extintor" : "cliente" }
+    },
     "eligibleRegion": {
       "@type": "Country",
       "name": "BR"

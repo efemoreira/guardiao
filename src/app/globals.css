@@ -6,7 +6,7 @@
 }
 
 @theme {
-  --color-primary: #FF3E41;
+  --color-primary: #C62832;
   --color-secondary: #091E3E;
   --color-light-bg: #F8F9FA;
   --color-dark-text: #212529;
@@ -106,4 +106,13 @@ main {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Controles acessíveis e movimento respeitando a preferência do dispositivo. */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #0e7490;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

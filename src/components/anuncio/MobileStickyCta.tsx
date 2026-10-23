@@ -20,7 +20,7 @@ const MobileStickyCta: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackWhatsAppClick('sticky_mobile')}
-        className="flex-1 inline-flex items-center justify-center gap-2 bg-green-600 text-white py-3 font-bold rounded hover:bg-green-700 transition duration-300"
+        className="flex-1 inline-flex items-center justify-center gap-2 bg-green-700 text-white py-3 font-bold rounded hover:bg-green-800 transition duration-300"
       >
         <Icon icon="FaWhatsapp" className="text-xl" />
         Falar no WhatsApp

@@ -1,54 +1,24 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion } from 'framer-motion';
-
-const COOKIE_NOTICE_DISMISSED_KEY = 'cookieNoticeDismissed';
-
-const CookieConsentBanner: React.FC = () => {
+import { AnalyticsConsent, PREFERENCES_EVENT, readConsent, saveConsent } from '@/lib/consent';
+export default function CookieConsentBanner() {
   const [visible, setVisible] = useState(false);
-
   useEffect(() => {
-    if (localStorage.getItem(COOKIE_NOTICE_DISMISSED_KEY) !== 'true') {
-      setVisible(true);
-    }
+    setVisible(readConsent() === null);
+    const open = () => setVisible(true);
+    window.addEventListener(PREFERENCES_EVENT, open);
+    return () => window.removeEventListener(PREFERENCES_EVENT, open);
   }, []);
-
-  const dismiss = () => {
-    localStorage.setItem(COOKIE_NOTICE_DISMISSED_KEY, 'true');
-    setVisible(false);
-  };
-
-  return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-0 inset-x-0 z-[60] bg-secondary text-white shadow-lg"
-          style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-        >
-          <div className="container mx-auto px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-gray-200 text-center sm:text-left">
-              Este site usa cookies para melhorar sua experiência e medir o uso das páginas.
-            </p>
-            <div className="flex items-center justify-center gap-4 shrink-0">
-              <Link href="/cookies" onClick={dismiss} className="text-sm underline hover:text-primary transition-colors">
-                Saiba mais
-              </Link>
-              <button
-                onClick={dismiss}
-                className="text-sm font-bold bg-primary text-white px-4 py-2 hover:opacity-90 transition-all"
-              >
-                Entendi
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default CookieConsentBanner;
+  function choose(value: AnalyticsConsent) { saveConsent(value); setVisible(false); }
+  if (!visible) return null;
+  return <section aria-label="Preferências de cookies" className="fixed inset-x-0 bottom-0 z-[100] border-t border-slate-300 bg-white px-4 py-4 text-secondary shadow-lg">
+    <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="max-w-xl"><p className="font-bold">Você escolhe como medir sua visita</p><p className="mt-1 text-sm text-slate-600">Com sua permissão, usamos o Google Analytics para medir páginas e cliques. Você pode continuar sem essa medição e mudar sua escolha depois. <Link href="/cookies" className="underline">Saiba mais</Link>.</p></div>
+      <div className="flex shrink-0 flex-wrap gap-3">
+        <button type="button" onClick={() => choose('rejected')} className="rounded-lg border border-slate-400 px-4 py-3 font-semibold">Continuar sem análise</button>
+        <button type="button" onClick={() => choose('accepted')} className="rounded-lg bg-secondary px-4 py-3 font-semibold text-white">Permitir análise</button>
+      </div>
+    </div>
+  </section>;
+}

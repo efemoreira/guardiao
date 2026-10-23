@@ -1,9 +1,23 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import { IconType } from 'react-icons';
-
-// Este é um componente wrapper para resolver problemas de tipagem com react-icons
+import type { IconType } from 'react-icons';
+import {
+  FaArrowRight, FaArrowUp, FaCalendarAlt, FaCalendarCheck, FaCertificate,
+  FaCheck, FaCheckCircle, FaChurch, FaClipboardList, FaClock, FaEnvelope,
+  FaFacebookF, FaFileInvoice, FaFireExtinguisher, FaHeadphones, FaInstagram,
+  FaLinkedinIn, FaMapMarkerAlt, FaMinus, FaPaperPlane, FaPhone, FaPhoneAlt,
+  FaPlus, FaQuoteLeft, FaRegBuilding, FaRegCheckCircle, FaSchool, FaShieldAlt,
+  FaStamp, FaStore, FaTint, FaTools, FaTwitter, FaUserShield, FaUtensils, FaWhatsapp,
+} from 'react-icons/fa';
+// Named imports keep the full Font Awesome catalog out of the browser bundle.
+const icons: Record<string, IconType> = {
+  FaArrowRight, FaArrowUp, FaCalendarAlt, FaCalendarCheck, FaCertificate,
+  FaCheck, FaCheckCircle, FaChurch, FaClipboardList, FaClock, FaEnvelope,
+  FaFacebookF, FaFileInvoice, FaFireExtinguisher, FaHeadphones, FaInstagram,
+  FaLinkedinIn, FaMapMarkerAlt, FaMinus, FaPaperPlane, FaPhone, FaPhoneAlt,
+  FaPlus, FaQuoteLeft, FaRegBuilding, FaRegCheckCircle, FaSchool, FaShieldAlt,
+  FaStamp, FaStore, FaTint, FaTools, FaTwitter, FaUserShield, FaUtensils, FaWhatsapp,
+};
 export const Icon: React.FC<{ icon: string; className?: string }> = ({ icon, className }) => {
-  const IconComponent = FaIcons[icon as keyof typeof FaIcons] as IconType;
-  return IconComponent ? <IconComponent className={className} /> : null;
+  const Component = icons[icon];
+  return Component ? <Component className={className} aria-hidden="true" /> : null;
 };

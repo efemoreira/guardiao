@@ -53,10 +53,7 @@ export const footerStrings: FooterStrings = {
     email: "contato@guardiaoextintores.com.br"
   },
   socialMediaLinks: [
-    { platform: "Facebook", url: "https://facebook.com/", icon: "FaFacebookF" },
-    { platform: "Instagram", url: "https://instagram.com/", icon: "FaInstagram" },
     { platform: "WhatsApp", url: "https://wa.me/5585986718305", icon: "FaWhatsapp" },
-    { platform: "YouTube", url: "https://youtube.com/", icon: "FaYoutube" }
   ],
   servicesColumn: {
     title: "Nossos Serviços",

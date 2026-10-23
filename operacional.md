@@ -1,5 +1,6 @@
 # GUARDIÃO — Painel Operacional de Lançamento
 
+> **Oferta atualizada em 23/10/2026:** mantidos os preços e benefícios do site por decisão do responsável. Referência técnica: `src/lib/catalog.ts`. Completo inclui placa, lacre, suporte ou mangote, pintura personalizada e 10% de desconto avulso; CO₂ 6 kg: R$ 160. As estimativas históricas de custo/margem precisam ser revistas com os custos efetivos desses benefícios.
 *Planos · Anúncios · CRM · Processos · 90 dias*
 
 > **Como usar:** este arquivo é seu painel de controle. Preencha os campos indicados, marque as caixas conforme concluir, e atualize as tabelas semanalmente.
@@ -105,7 +106,7 @@ Grátis e mais rápido que qualquer campanha. Prova a oferta antes de investir e
 |---|---|---|---|---|
 | Vigia | R$ 99/ano (flat) | Não | Acompanhamento de vencimentos + canal direto/prioritário + 1 inspeção visual/ano + 5% off | |
 | Essencial | R$ 11/extintor/mês | 1×/ano | Gestão de vencimentos + recarga no prazo + inspeção semestral + comprovante + 10% off | |
-| Completo | R$ 18/extintor/mês | 1×/ano | Essencial + itens de desgaste (placa/lacre/suporte; mangote no preço avulso normal) + atendimento prioritário (48h) + guia CBMCE | 10% off |
+| Completo | R$ 18/extintor/mês | 1×/ano | Essencial + itens de desgaste (placa/lacre/suporte/mangote e pintura personalizada) + atendimento prioritário (48h) + guia CBMCE | 10% off |
 
 *Status: preencher com [Rascunho / No site / Pausado] para cada plano.*
 
@@ -157,7 +158,7 @@ Preços de mercado pesquisados em praça urbana (Fortaleza/RMF, referência 2025
 | Essencial (mensal cheio) | R$ 132 | ~R$ 55 | recarga + frete + inspeção 2x | ~R$ 71 (54%) |
 | Completo (mensal cheio) | R$ 216 | ~R$ 89 | Essencial + itens de desgaste | ~R$ 127 (59%) |
 
-> **Atenção — diferença entre Essencial e Completo:** a recarga (maior custo unitário) não diferencia o tier. O que justifica o salto de R$11 para R$18/extintor é serviço gerenciado de baixo custo e alta percepção de valor: troca de itens de desgaste inclusa (placa, lacre, suporte; mangote no preço avulso normal), atendimento prioritário (SLA de 48h **para diagnóstico**, não para conclusão da correção), guia de orientação para regularização no CBMCE. Reforce esses pontos na conversa de venda — sem eles, o Completo perde a justificativa do preço mais alto.
+> **Atenção — diferença entre Essencial e Completo:** a recarga (maior custo unitário) não diferencia o tier. O que justifica o salto de R$11 para R$18/extintor é serviço gerenciado de baixo custo e alta percepção de valor: troca de itens de desgaste inclusa (placa, lacre, suporte ou mangote, além de pintura personalizada), atendimento prioritário (SLA de 48h **para diagnóstico**, não para conclusão da correção), guia de orientação para regularização no CBMCE. Reforce esses pontos na conversa de venda — sem eles, o Completo perde a justificativa do preço mais alto.
 
 ### 4. Comparativo de margem (regra de decisão)
 

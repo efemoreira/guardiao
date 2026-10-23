@@ -9,10 +9,10 @@ export interface LandingHeroStrings {
 }
 
 export const landingHeroStrings: LandingHeroStrings = {
-  title: "Extintor Vencido Reprova na Vistoria do Bombeiro",
-  highlightWord: "Vencido",
-  subtitle: "Conformidade e manutenção preventiva recorrente",
-  description: "Gestão de vencimentos, inspeção periódica e recarga no prazo, com a documentação que você precisa para a vistoria do Corpo de Bombeiros. A gente cuida de tudo — você não pensa mais nisso.",
+  title: "Recarga e gestão de extintores em Fortaleza",
+  highlightWord: "Fortaleza",
+  subtitle: "Fortaleza e região metropolitana",
+  description: "Resolva uma recarga, peça extintores novos ou acompanhe seus equipamentos com um plano. Comece pelo que você precisa hoje.",
   buttonText: "Quero inspeção gratuita",
   phoneNumber: "(85) 98671-8305",
   message: "Oi! Vi o anúncio e quero agendar a inspeção gratuita.",

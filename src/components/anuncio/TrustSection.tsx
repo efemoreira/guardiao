@@ -26,7 +26,7 @@ const TrustSection: React.FC<TrustSectionProps> = ({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h6 className="text-cyan-400 uppercase font-bold mb-2">{subtitle}</h6>
+          <h6 className="text-cyan-700 uppercase font-bold mb-2">{subtitle}</h6>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
           <p className="text-gray-600">{description}</p>
         </motion.div>

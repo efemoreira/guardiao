@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import BackToTopButton from '../shared/BackToTopButton';
 import WhatsAppFloatingButton from '../shared/WhatsAppFloatingButton';
-import CookieConsentBanner from '../shared/CookieConsentBanner';
 
 export interface NavItem {
   id: string;
@@ -39,13 +38,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         logo={navLogo} 
         contactInfo={navContactInfo} 
       />
-      <main>
+      <main id="conteudo">
         {children}
       </main>
       <Footer />
       <BackToTopButton />
       <WhatsAppFloatingButton />
-      <CookieConsentBanner />
     </>
   );
 };

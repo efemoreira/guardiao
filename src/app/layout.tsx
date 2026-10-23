@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SEOSchemas from "@/components/common/SEOSchemas";
 import GoogleAnalytics from "@/components/common/GoogleAnalytics";
+import CookieConsentBanner from "@/components/shared/CookieConsentBanner";
 import ScrollDepthTracker from "@/components/shared/ScrollDepthTracker";
 
 const geistSans = Geist({
@@ -79,9 +80,11 @@ export default function RootLayout({
     <html lang="pt-BR" dir="ltr">
       <head>
         <SEOSchemas />
-        <GoogleAnalytics />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded focus:bg-white focus:p-4 focus:text-secondary">Pular para o conteúdo</a>
+        <GoogleAnalytics />
+        <CookieConsentBanner />
         <ScrollDepthTracker />
         {children}
       </body>

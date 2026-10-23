@@ -1,3 +1,4 @@
+import { PREFERENCES_EVENT } from '@/lib/consent';
 import React from 'react';
 import { Icon } from '../../utils/IconUtil';
 import Link from 'next/link';
@@ -93,7 +94,7 @@ const ContactSection: React.FC<{ contactInfo: ContactInfo; socialMediaLinks: Soc
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackWhatsAppClick('footer_phone')}
-          className="text-gray-300 hover:text-primary transition-colors"
+          className="text-gray-300 hover:text-red-300 transition-colors"
         >
           {contactInfo.phone}
         </a>
@@ -103,11 +104,11 @@ const ContactSection: React.FC<{ contactInfo: ContactInfo; socialMediaLinks: Soc
           <Icon icon="FaEnvelope" className="text-white text-lg" />
         </div>
         <p className="font-semibold">Email</p>
-        <p className="text-gray-300">{contactInfo.email}</p>
+        <a className="break-all text-gray-300 underline" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
       </div>
     </div>
     <div className="border-t border-gray-700 pt-6">
-      <h5 className="text-lg font-semibold mb-4">Siga-nos nas redes sociais</h5>
+      <h5 className="text-lg font-semibold mb-4">Converse com a equipe</h5>
       <SocialMediaLinks links={socialMediaLinks} />
     </div>
   </div>
@@ -120,7 +121,7 @@ const LinksColumn: React.FC<FooterColumnProps> = ({ title, links }) => (
       <Link 
         key={index} 
         href={link.url} 
-        className="block py-2 text-white hover:text-primary transition-colors"
+        className="block py-2 text-white hover:text-red-300 transition-colors"
       >
         {link.text}
       </Link>
@@ -156,14 +157,15 @@ const CopyrightSection: React.FC<{ copyright: CopyrightInfo }> = ({ copyright })
   <div className="py-4 border-t border-gray-700" style={{ position: 'relative', zIndex: 2 }}>
     <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
       <div className="mb-4 md:mb-0 text-center md:text-left">
-        <p>&copy; {new Date().getFullYear()} <Link href="/" className="text-primary hover:underline">{copyright.companyName}</Link>, Todos os Direitos Reservados.</p>
+        <p>&copy; {new Date().getFullYear()} <Link href="/" className="text-red-300 hover:underline">{copyright.companyName}</Link>, Todos os Direitos Reservados.</p>
         {copyright.cnpj && (
-          <p className="text-sm text-gray-400">Faço por Você - Serviços &middot; CNPJ: {copyright.cnpj}</p>
+          <p className="text-sm text-gray-400">FELIPE SILVA MOREIRA · Faço por Você - Serviços · CNPJ: {copyright.cnpj}</p>
         )}
       </div>
       <div className="flex flex-wrap justify-center">
+        <button type="button" onClick={() => window.dispatchEvent(new Event(PREFERENCES_EVENT))} className="mx-2 underline hover:text-red-300">Preferências de cookies</button>
         {copyright.links.map((link, index) => (
-          <Link key={index} href={link.url} className="mx-2 hover:text-primary transition-colors">
+          <Link key={index} href={link.url} className="mx-2 hover:text-red-300 transition-colors">
             {link.text}
           </Link>
         ))}
