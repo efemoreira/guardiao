@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { landingHeroStrings } from '@/lib/defaultStrings/landingHeroStrings';
 import { CONTACT } from '@/lib/catalog';
-import { trackPhoneCallClick } from '@/lib/analytics';
+import { trackPhoneCallClick, trackWhatsAppClick } from '@/lib/analytics';
+import { generateWhatsAppLink } from '@/lib/utils/utils';
 
 interface LandingHeroProps { title?: string; description?: string; subtitle?: string; }
 export default function LandingHero({ title = landingHeroStrings.title, description = landingHeroStrings.description, subtitle = landingHeroStrings.subtitle }: LandingHeroProps) {
@@ -14,8 +15,9 @@ export default function LandingHero({ title = landingHeroStrings.title, descript
           <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight md:text-5xl">{title}</h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">{description}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#orcamento" className="rounded-lg bg-red-700 px-6 py-3 font-bold text-white hover:bg-red-800">Preparar meu orçamento</a>
-            <a href="#planos" className="rounded-lg border border-slate-500 px-6 py-3 font-semibold text-white hover:bg-white/10">Comparar planos</a>
+            {/* O anúncio promete inspeção grátis: o CTA principal abre o WhatsApp direto, sem formulário no caminho. */}
+            <a href={generateWhatsAppLink(CONTACT.whatsapp, landingHeroStrings.message)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('landing_hero')} className="rounded-lg bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800">{landingHeroStrings.buttonText}</a>
+            <a href="#orcamento" className="rounded-lg border border-slate-500 px-6 py-3 font-semibold text-white hover:bg-white/10">Preparar meu orçamento</a>
           </div>
           <p className="mt-4 text-sm text-slate-300">Prefere conversar? <a href={`tel:${CONTACT.phone}`} onClick={() => trackPhoneCallClick('landing_hero')} className="underline underline-offset-4">Ligue {CONTACT.phoneDisplay}</a></p>
         </div>

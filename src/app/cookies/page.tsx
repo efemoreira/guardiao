@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <LegalContent title="Política de Cookies" updatedAt="23 de outubro de 2026">
+    <LegalContent title="Política de Cookies" updatedAt="24 de outubro de 2026">
       <p>
         Cookies são pequenos arquivos de texto armazenados no seu navegador que ajudam um site a funcionar
         corretamente e a entender como é utilizado. Esta página explica como o site da{' '}
@@ -21,18 +21,16 @@ export default function CookiesPage() {
         Utilizamos cookies estritamente necessários para o funcionamento básico do site, como guardar sua preferência de medição no armazenamento local do navegador. O formulário pode preparar o pedido sem permitir cookies de análise.
       </p>
 
-      <h2>2. Cookies de análise e publicidade</h2>
+      <h2>2. Cookies de análise e medição de anúncios</h2>
       <p>
         Utilizamos o <strong>Google Analytics</strong> para entender como os visitantes usam o site (páginas
         acessadas, origem do acesso, cliques nos botões de contato) e medir o desempenho de campanhas de anúncio.
-        A ferramenta só é carregada após sua escolha em “Permitir análise”. Não enviamos à ferramenta o texto do pedido, a localização digitada ou suas observações. Caso outras ferramentas de
-        publicidade (como Meta/Google Ads) passem a usar cookies próprios no futuro, esta política será
-        atualizada antes da ativação.
+        Usamos o modo de consentimento do Google: cookies de análise e de medição de anúncios (Google Analytics e Google Ads) só são gravados depois que você escolhe “Permitir cookies”. Sem essa permissão, o Google recebe apenas sinais sem cookies e sem identificador do seu navegador (por exemplo, que houve uma visita ou um clique no WhatsApp), usados para estimar resultados de forma agregada. Não usamos seus dados para personalizar anúncios. Não enviamos à ferramenta o texto do pedido, a localização digitada ou suas observações. Caso outras ferramentas de publicidade (como a Meta) passem a ser usadas, esta política será atualizada antes da ativação.
       </p>
 
       <h2>3. Como gerenciar cookies</h2>
       <p>
-        Use “Preferências de cookies”, no rodapé, para permitir ou recusar a medição. A escolha fica guardada neste navegador. Ao recusar, bloqueamos novos eventos de análise e removemos os cookies do Analytics acessíveis a este site. Você também pode gerenciar cookies nas configurações do navegador.
+        Use “Preferências de cookies”, no rodapé, para permitir ou recusar a medição. A escolha fica guardada neste navegador. Ao recusar, deixamos de gravar cookies do Google e removemos os cookies do Analytics acessíveis a este site; continuam apenas os sinais sem cookies descritos acima. Você também pode gerenciar cookies nas configurações do navegador.
       </p>
 
       <h2>4. Atualizações desta política</h2>

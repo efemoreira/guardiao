@@ -1,5 +1,3 @@
-import { readConsent } from './consent';
-
 // ID público do GA4 (não é segredo: qualquer site expõe esse valor no HTML/JS do navegador).
 export const GA_MEASUREMENT_ID = 'G-EFQZQNXG5Q';
 
@@ -12,8 +10,9 @@ declare global {
   }
 }
 
+// O consentimento é aplicado pelo Consent Mode em GoogleAnalytics.tsx: sem permissão o evento vai sem cookies.
 export const trackEvent = (eventName: string, params?: GtagEventParams): void => {
-  if (typeof window === 'undefined' || readConsent() !== 'accepted' || !window.gtag) return;
+  if (typeof window === 'undefined' || !window.gtag) return;
   window.gtag('event', eventName, params);
 };
 

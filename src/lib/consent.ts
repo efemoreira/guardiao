@@ -1,18 +1,18 @@
 export type AnalyticsConsent = 'accepted' | 'rejected';
-const KEY = 'guardiao.analytics-consent.v1';
+export const CONSENT_KEY = 'guardiao.analytics-consent.v1';
 export const CONSENT_EVENT = 'guardiao:analytics-consent';
 export const PREFERENCES_EVENT = 'guardiao:cookie-preferences';
 let memoryConsent: AnalyticsConsent | null = null;
 export function readConsent(): AnalyticsConsent | null {
   if (typeof window === 'undefined') return null;
   try {
-    const value = window.localStorage.getItem(KEY);
+    const value = window.localStorage.getItem(CONSENT_KEY);
     return value === 'accepted' || value === 'rejected' ? value : memoryConsent;
   } catch { return memoryConsent; }
 }
 export function saveConsent(value: AnalyticsConsent) {
   memoryConsent = value;
-  try { window.localStorage.setItem(KEY, value); } catch { /* Preference remains valid for this page. */ }
+  try { window.localStorage.setItem(CONSENT_KEY, value); } catch { /* Preference remains valid for this page. */ }
   if (value === 'rejected') {
     const domains = [undefined, window.location.hostname, `.${window.location.hostname}`];
     const parts = window.location.hostname.split('.');
