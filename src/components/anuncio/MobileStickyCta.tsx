@@ -4,7 +4,7 @@ import { Icon } from '../../utils/IconUtil';
 import { trackWhatsAppClick, trackPhoneCallClick } from '../../lib/analytics';
 import { generateWhatsAppLink } from '../../lib/utils/utils';
 
-const WHATSAPP_NUMBER = '(85) 98671-8305';
+const WHATSAPP_NUMBER = '(85) 8804-0691';
 const WHATSAPP_MESSAGE = 'Oi! Quero agendar a inspeção gratuita dos meus extintores.';
 const CALL_HREF = 'tel:+5585986999181';
 

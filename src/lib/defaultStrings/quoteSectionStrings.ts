@@ -53,7 +53,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   ],
   contactInfo: {
     address: 'Fortaleza - CE',
-    phone: '(85) 98671-8305',
+    phone: '(85) 8804-0691',
     email: 'contato@guardiaoextintores.com.br',
     addressIcon: 'FaMapMarkerAlt',
     phoneIcon: 'FaPhoneAlt',
@@ -62,7 +62,7 @@ export const quoteSectionStrings: QuoteSectionStrings = {
   callout: {
     icon: 'FaShieldAlt',
     title: 'Proteção é prevenção!',
-    phone: '(85) 98671-8305'
+    phone: '(85) 8804-0691'
   },
   submitButtonText: 'Solicitar Avaliação',
   namePlaceholder: 'Seu Nome',

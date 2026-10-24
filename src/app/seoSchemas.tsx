@@ -7,7 +7,7 @@ export const organizationSchema = {
   "logo": "https://guardiaoextintores.com.br/img/logo-guardiao.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+5585986718305",
+    "telephone": "+558588040691",
     "contactType": "customer service",
     "areaServed": "BR",
     "availableLanguage": "Portuguese"
@@ -23,7 +23,7 @@ export const localBusinessSchema = {
   "name": "Guardião Extintores",
   "image": "https://guardiaoextintores.com.br/img/logo-guardiao.png",
   "url": "https://guardiaoextintores.com.br",
-  "telephone": "+5585986718305",
+  "telephone": "+558588040691",
   "email": "contato@guardiaoextintores.com.br",
   "priceRange": "$$",
   "description": "Recarga, inspeção e gestão de vencimento de extintores em Fortaleza e em todo o Ceará, com recarga executada por empresa parceira registrada no INMETRO.",
@@ -207,7 +207,7 @@ export const contactSchema = {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+5585986718305",
+        "telephone": "+558588040691",
         "contactType": "customer service",
         "availableLanguage": "Portuguese",
         "contactOption": "TollFree"

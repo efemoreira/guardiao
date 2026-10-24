@@ -214,7 +214,7 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 
 **Função:** o site existe para (a) converter o tráfego dos anúncios em conversa no WhatsApp e (b) passar credibilidade (INMETRO, CBMCE, CNPJ). Não é vitrine institucional.
 
-**Destino dos anúncios:** rota `/anuncio` — landing page de uma página só, sem Navbar de navegação, hero estático com CTA único, blocos em sequência: conformidade → planos → diferencial de água (case da Igreja ~40% economia) → tabela de avulsos → prova social → CTA final "Inspeção gratuita". WhatsApp: **(85) 98671-8305**.
+**Destino dos anúncios:** rota `/anuncio` — landing page de uma página só, sem Navbar de navegação, hero estático com CTA único, blocos em sequência: conformidade → planos → diferencial de água (case da Igreja ~40% economia) → tabela de avulsos → prova social → CTA final "Inspeção gratuita". WhatsApp: **(85) 8804-0691**.
 
 **Home institucional (`/`):** mantida separada da landing page, com Navbar completa — não é o destino de anúncios, serve para tráfego orgânico/direto.
 
@@ -226,7 +226,7 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 - [x] Páginas legais: `/privacidade`, `/termos`, `/cookies`
 - [x] Landing page `/anuncio` com todos os 7 blocos
 - [x] Botão de WhatsApp flutuante global (home + landing + páginas legais)
-- [x] Número atualizado para (85) 98671-8305 em todo o site
+- [x] Número atualizado para (85) 8804-0691 em todo o site
 
 ### O que falta
 - [-] Trocar e-mail de contato para domínio da marca (mantido `contato@felipesmoreira.com` por ora)
@@ -239,7 +239,7 @@ Tom: direto, sem "bom dia, tudo bem?", focado no problema do cliente. Sempre com
 
 ## 9. Bot do WhatsApp
 
-**Stack:** TypeScript + Node.js + Vercel serverless + Meta WhatsApp Cloud API + Google Sheets + Upstash Redis. Projeto em `/Users/felipemoreira/development/waclientmedidor`. Número: **(85) 98671-8305** (configurado via PHONE_NUMBER_ID nas env vars da Vercel). Admins: Oscar/admVendas (+55 85 98699-9181) e Felipe/admTI (+55 85 99722-3863).
+**Stack:** TypeScript + Node.js + Vercel serverless + Meta WhatsApp Cloud API + Google Sheets + Upstash Redis. Projeto em `/Users/felipemoreira/development/waclientmedidor`. Número: **(85) 8804-0691** (configurado via PHONE_NUMBER_ID nas env vars da Vercel). Admins: Oscar/admVendas (+55 85 98699-9181) e Felipe/admTI (+55 85 99722-3863).
 
 **Hoje:** recebe leituras de hidrômetro/energia/gás → registra em Google Sheets → alerta anomalias → relatórios semanais/mensais. Arquitetura bem estruturada e pronta para expansão (ver `waclientmedidor/ARQUITETURA.md`).
 

@@ -71,7 +71,7 @@ const ComoFuncionaSection: React.FC = () => {
 
         <div className="text-center mt-10">
           <Link
-            href={generateWhatsAppLink('(85) 98671-8305', 'Oi! Quero agendar a inspeção gratuita dos meus extintores.')}
+            href={generateWhatsAppLink('(85) 8804-0691', 'Oi! Quero agendar a inspeção gratuita dos meus extintores.')}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('landing_como_funciona')}

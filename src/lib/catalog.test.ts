@@ -22,9 +22,9 @@ describe('Condições comerciais', () => {
   });
 });
 describe('WhatsApp', () => {
-  it.each(['(85) 98671-8305', '85986718305', '5585986718305'])('normaliza %s sem duplicar o país', phone => {
+  it.each(['(85) 8804-0691', '8588040691', '558588040691'])('normaliza %s sem duplicar o país', phone => {
     const url = new URL(generateWhatsAppLink(phone, 'Quero recarga, não compra.'));
-    expect(url.pathname).toBe('/5585986718305');
+    expect(url.pathname).toBe('/558588040691');
     expect(url.searchParams.get('text')).toBe('Quero recarga, não compra.');
   });
 });

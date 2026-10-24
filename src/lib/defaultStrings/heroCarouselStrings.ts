@@ -7,7 +7,7 @@ export interface HeroCarouselStrings {
   height: string;
 }
 
-const whatsappNumber = "(85) 98671-8305";
+const whatsappNumber = "(85) 8804-0691";
 
 export const heroCarouselStrings: HeroCarouselStrings = {
   items: [

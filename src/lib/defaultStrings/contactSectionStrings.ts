@@ -51,7 +51,7 @@ export const contactSectionStrings: ContactSectionStrings = {
     addressTitle: "Endereço",
     address: "Fortaleza, CE",
     phoneTitle: "Telefone",
-    phone: "(85) 98671-8305",
+    phone: "(85) 8804-0691",
     emailTitle: "Email",
     email: "contato@guardiaoextintores.com.br",
     socialMedia: [

@@ -16,6 +16,6 @@ export const waterModuleSectionStrings: WaterModuleSectionStrings = {
   caseTitle: "Case real",
   caseText: "Em uma das igrejas que atendemos, a leitura mensal de hidrômetro identificou um consumo de água muito acima do esperado — a investigação revelou um vazamento que, corrigido, gerou uma economia de cerca de 40% na conta de água do imóvel.",
   ctaText: "Conhecer o Módulo Água",
-  ctaLink: "(85) 98671-8305",
+  ctaLink: "(85) 8804-0691",
   ctaMessage: "Olá! Gostaria de saber mais sobre o Módulo Água (leitura de hidrômetro).",
 };

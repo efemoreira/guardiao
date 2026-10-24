@@ -24,6 +24,6 @@ export const avulsosSectionStrings: AvulsosSectionStrings = {
   items: services.map(service => ({ ...service, price: service.price === 0 ? 'Grátis' : `R$ ${service.price.toLocaleString('pt-BR')}` })),
   note: 'Preços avulsos sem desconto. Vigia: 5%; Essencial e Completo: 10% de desconto. A equipe confirma tipo, capacidade, deslocamento e condições antes de contratar.',
   ctaText: "Solicitar um desses serviços",
-  ctaLink: "(85) 98671-8305",
+  ctaLink: "(85) 8804-0691",
   ctaMessage: "Olá! Gostaria de solicitar um serviço avulso.",
 };

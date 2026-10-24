@@ -68,7 +68,7 @@ export default function TermosPage() {
       <p>
         Dúvidas sobre estes Termos podem ser enviadas para{' '}
         <a href="mailto:contato@guardiaoextintores.com.br">contato@guardiaoextintores.com.br</a> ou pelo WhatsApp{' '}
-        <a href="https://wa.me/5585986718305" target="_blank" rel="noopener noreferrer">(85) 98671-8305</a>.
+        <a href="https://wa.me/558588040691" target="_blank" rel="noopener noreferrer">(85) 8804-0691</a>.
       </p>
     </LegalContent>
   );

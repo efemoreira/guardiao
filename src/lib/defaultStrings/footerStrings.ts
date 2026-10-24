@@ -49,11 +49,11 @@ export const footerStrings: FooterStrings = {
   showNewsletterColumn: false, // Desabilitado temporariamente - conteúdo em desenvolvimento
   contactInfo: {
     address: "Fortaleza, CE",
-    phone: "(85) 98671-8305",
+    phone: "(85) 8804-0691",
     email: "contato@guardiaoextintores.com.br"
   },
   socialMediaLinks: [
-    { platform: "WhatsApp", url: "https://wa.me/5585986718305", icon: "FaWhatsapp" },
+    { platform: "WhatsApp", url: "https://wa.me/558588040691", icon: "FaWhatsapp" },
   ],
   servicesColumn: {
     title: "Nossos Serviços",

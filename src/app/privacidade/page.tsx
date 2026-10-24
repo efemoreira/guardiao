@@ -55,7 +55,7 @@ export default function PrivacidadePage() {
       <p>
         Dúvidas sobre esta política ou sobre o tratamento dos seus dados podem ser enviadas para{' '}
         <a href="mailto:contato@guardiaoextintores.com.br">contato@guardiaoextintores.com.br</a> ou pelo WhatsApp{' '}
-        <a href="https://wa.me/5585986718305" target="_blank" rel="noopener noreferrer">(85) 98671-8305</a>.
+        <a href="https://wa.me/558588040691" target="_blank" rel="noopener noreferrer">(85) 8804-0691</a>.
       </p>
 
       <h2>7. Alterações desta política</h2>

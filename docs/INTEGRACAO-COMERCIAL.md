@@ -15,7 +15,7 @@
 
 ## Conexão com CRMIA: trabalho ainda necessário
 
-1. Confirmar que o WhatsApp `+55 85 98671-8305` está ligado ao tenant correto e recebe mensagens em produção.
+1. Confirmar que o WhatsApp `+55 85 8804-0691` está ligado ao tenant correto e recebe mensagens em produção.
 2. Homologar três conversas: compra, recarga e assinatura. O Gabriel atual prioriza venda; mensagens de serviço devem chegar à equipe ou ao fluxo adequado, preservando o pedido original.
 3. Se a referência for capturada pelo backend, criar campo específico e registrar sua origem. Não usar o texto de cliente como comando administrativo.
 4. Mapear os estados reais do CRM (recebido, qualificado, proposta, fechado), com confirmação humana onde necessária. Não tratar clique como venda.

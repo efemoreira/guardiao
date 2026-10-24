@@ -13,7 +13,7 @@ interface AnuncioLayoutProps {
   children: ReactNode;
 }
 
-const phoneNumber = '(85) 98671-8305';
+const phoneNumber = '(85) 8804-0691';
 const message = 'Oi! Vi o anúncio da Guardião Extintores e quero falar com vocês.';
 
 const AnuncioLayout: React.FC<AnuncioLayoutProps> = ({ children }) => {

@@ -1,6 +1,6 @@
 // Oferta vigente: preços e benefícios do site confirmados em 23/10/2026.
 export const CONTACT = {
-  whatsapp: '5585986718305', phone: '+5585986999181',
+  whatsapp: '558588040691', phone: '+5585986999181',
   phoneDisplay: '(85) 98699-9181', email: 'contato@guardiaoextintores.com.br',
 };
 export type PlanKey = 'vigia' | 'essencial' | 'completo';
