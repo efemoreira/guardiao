@@ -33,6 +33,8 @@ export interface PricingSectionProps {
   description?: string;
   plans?: PricingPlan[];
   backgroundColor?: string;
+  /** Na landing de anúncio, o simulador manda direto para o WhatsApp. */
+  whatsapp?: boolean;
 }
 
 const PriceCard: React.FC<PricingPlan> = ({
@@ -131,7 +133,8 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   subtitle = pricingSectionStrings.subtitle,
   description = pricingSectionStrings.description,
   plans = pricingSectionStrings.plans,
-  backgroundColor = pricingSectionStrings.backgroundColor
+  backgroundColor = pricingSectionStrings.backgroundColor,
+  whatsapp = false,
 }) => {
   return (
     <section className={`py-16 ${backgroundColor}`}>
@@ -154,7 +157,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           ))}
         </div>
         <p className="mx-auto mt-5 max-w-4xl text-sm text-slate-600">{PLAN_ELIGIBILITY} Vigia não inclui recarga. No Completo, 48h úteis é o prazo de diagnóstico, não de conclusão do reparo.</p>
-        <PlanSimulator />
+        <PlanSimulator whatsapp={whatsapp} />
       </div>
     </section>
   );

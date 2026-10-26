@@ -1,9 +1,12 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { calculatePlan, commercialPlans, formatBRL, PLAN_ELIGIBILITY } from '@/lib/catalog';
+import { calculatePlan, commercialPlans, CONTACT, formatBRL, PLAN_ELIGIBILITY } from '@/lib/catalog';
+import { trackWhatsAppClick } from '@/lib/analytics';
+import { generateWhatsAppLink } from '@/lib/utils/utils';
 
-export default function PlanSimulator() {
+// Na landing de anúncio (`whatsapp`), "Pedir proposta" abre o WhatsApp direto em vez de passar pelo /orcamento.
+export default function PlanSimulator({ whatsapp = false }: { whatsapp?: boolean }) {
   const [quantity, setQuantity] = useState('10');
   const [special, setSpecial] = useState(false);
   const [annual, setAnnual] = useState(false);
@@ -28,7 +31,9 @@ export default function PlanSimulator() {
               <h4 className="font-bold text-secondary">{plan.name}</h4>
               {needsQuote ? <p className="mt-3 font-semibold">Orçamento específico</p> : <p className="mt-3 text-2xl font-bold text-secondary">{formatBRL(yearly ? estimate.annual : estimate.monthly!)}<span className="ml-1 text-sm font-normal">/{yearly ? 'ano' : 'mês'}</span></p>}
               <p className="mt-2 text-sm text-slate-600">{needsQuote ? 'Vamos avaliar os tipos e capacidades antes de calcular.' : !plan.perExtinguisher ? 'Valor único por cliente. Não inclui recarga.' : yearly ? `Pagamento à vista. Economia de ${formatBRL(estimate.saving)} frente a 12 mensalidades.` : `Total mensal para ${amount} extintor${amount === 1 ? '' : 'es'}.`}</p>
-              <Link href={`/orcamento?servico=plano&plano=${plan.key}&quantidade=${amount}&pagamento=${yearly ? 'anual' : 'mensal'}`} className="mt-4 inline-block font-semibold text-red-700 underline underline-offset-4">Pedir proposta {plan.name}</Link>
+              {whatsapp
+                ? <a href={generateWhatsAppLink(CONTACT.whatsapp, `Oi! Quero uma proposta do plano ${plan.name} para ${amount} extintor${amount === 1 ? '' : 'es'} (pagamento ${yearly ? 'anual' : 'mensal'}).`)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick(`plan_simulator_${plan.key}`)} className="mt-4 inline-block font-semibold text-red-700 underline underline-offset-4">Pedir proposta {plan.name}</a>
+                : <Link href={`/orcamento?servico=plano&plano=${plan.key}&quantidade=${amount}&pagamento=${yearly ? 'anual' : 'mensal'}`} className="mt-4 inline-block font-semibold text-red-700 underline underline-offset-4">Pedir proposta {plan.name}</Link>}
             </div>;
           })}
         </div>

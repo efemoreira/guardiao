@@ -1,5 +1,10 @@
 import Link from 'next/link';
-export default function ServicePreview() {
+import { CONTACT } from '@/lib/catalog';
+import { trackWhatsAppClick } from '@/lib/analytics';
+import { generateWhatsAppLink } from '@/lib/utils/utils';
+
+// Na landing de anúncio (`whatsapp`), o CTA abre o WhatsApp direto em vez de passar pelo /orcamento.
+export default function ServicePreview({ whatsapp = false }: { whatsapp?: boolean }) {
   return (
     <section className="bg-white py-10 md:py-14">
       <div className="mx-auto grid max-w-6xl items-center gap-7 px-4 md:grid-cols-2">
@@ -8,7 +13,9 @@ export default function ServicePreview() {
           <h2 className="mt-3 text-3xl font-bold text-secondary">Cada extintor tem um lugar e um histórico.</h2>
           <p className="mt-4 leading-relaxed text-slate-600">Tipo, capacidade, localização e vencimento reunidos em um inventário. É a base para avaliar os equipamentos e planejar a próxima manutenção.</p>
           <p className="mt-3 text-sm text-slate-600">Na conversa, peça um exemplo de relatório e confirme como será entregue o acompanhamento do seu imóvel.</p>
-          <Link href="/orcamento?servico=inspecao" className="mt-5 inline-block font-semibold text-red-700 underline underline-offset-4">Quero avaliar meus extintores</Link>
+          {whatsapp
+            ? <a href={generateWhatsAppLink(CONTACT.whatsapp, 'Oi! Vi o anúncio e quero avaliar meus extintores.')} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('landing_preview')} className="mt-5 inline-block font-semibold text-red-700 underline underline-offset-4">Quero avaliar meus extintores</a>
+            : <Link href="/orcamento?servico=inspecao" className="mt-5 inline-block font-semibold text-red-700 underline underline-offset-4">Quero avaliar meus extintores</Link>}
         </div>
         <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4"><h3 className="font-bold text-secondary">Inventário do imóvel</h3><span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-600">Exemplo fictício</span></div>
